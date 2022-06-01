@@ -30,20 +30,20 @@ body {
     gap: 12px;
 }
 
-.header-item{
+.header-item {
     font-family: 'Lato', sans-serif;
     color: #000E56;
     font-weight: 600;
     font-size: 14px;
 }
 
-.header-second{
+.header-second {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.header-button{
+.header-button {
     width: 69px;
     height: 23.49px;
     left: 1142px;
@@ -54,4 +54,57 @@ body {
     color: #FFFF;
     font-weight: 600;
     font-size: 12px;
+}
+
+.content {
+    background-image: url(/tcc/images/background.png);
+    width: 100%;
+    height: 640px;
+    left: 0px;
+    background-position: absolut;
+    background-size: cover;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-written {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.yellow-word {
+    color: #FFC90A;
+}
+
+.blue-word {
+    color: #000E56;
+}
+
+.main-button {
+    width: 249px;
+    height: 67.55px;
+    left: 204px;
+    top: 473.32px;
+    background: #000E56;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    color: #FFFF;
+    font-weight: 600;
+    font-size: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.woman-first {
+    display: flex;
+    padding: 42px;
+    gap: 7px;
 }
