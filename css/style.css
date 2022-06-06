@@ -7,9 +7,7 @@
     text-decoration: none;
 }
 
-body {
-    font-size: 100%;
-}
+
 
 .head {
     display: flex;
@@ -71,6 +69,7 @@ body {
     background-image: url(/tcc/images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 900px;
 }
 
 .main-content {
@@ -87,6 +86,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 45px;
+    padding-top: 160px;
 }
 
 .yellow-word {
@@ -119,6 +119,71 @@ body {
 
 .woman-first {
     display: flex;
-    padding: 42px;
+    padding: 30px;
     gap: 7px;
+    padding-top: 150px;
+}
+
+
+
+.example {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    padding-left: 180px;
+}
+
+.example-main {
+    gap: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000E56;
+}
+
+.example-lower {
+    padding-top: 15px;
+    gap: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000E56;
+    padding-bottom: 25px;
+}
+
+.icone-example {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detail-image {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 40px;
+}
+
+.detail-description{
+    display: inline-block;
+}
+
+.detail-description h2{
+    color: #000E56;
+    font-family: 'Lato';
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 7px;
+}
+
+.detail-description h3{
+    color: #000E56;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+
+.detail-description img{
+    float: right;
+    position: absolute;
+    right: 270px;
+    top: 1170px;
 }
