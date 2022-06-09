@@ -61,6 +61,7 @@
     font-weight: 600;
     font-size: 12px;
     border: none;
+    cursor: pointer
 }
 
 .header-button:hover {
@@ -118,6 +119,7 @@
 .main-button:hover {
     background-color: #FFC90A;
     color: black;
+    cursor: pointer
 }
 
 .woman-first {
@@ -347,7 +349,6 @@
 .security-position {
     overflow: auto;
     position: relative;
-    clear: both;
     float: right;
     padding-top: 90px;
     padding-right: 25px;
@@ -380,15 +381,22 @@
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    padding-bottom: 20px;
     color: #000E56;
 }
 
-.security-img-position{
+.security-img-position {
     float: right;
     position: relative;
     right: 140px;
     bottom: 400px;
     padding-top: 30px;
+    padding-left: 800px;
+}
+
+.button-security {
+    float: left;
+    position: relative;
+    right: 753px;
+    bottom: 500px;
     padding-left: 800px;
 }
