@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/*------------------------Header--------------------------*/
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bet {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  gap: 7px;
+}
+
+.header-first {
+  display: flex;
+  gap: 12px;
+}
+
+.header-item {
+  font-family: 'Lato', sans-serif;
+  color: #000E56;
+  font-weight: 600;
+  font-size: 14px;
+  
+}
+
+.header-item:hover {
+  color: #FFC90A;
+}
+
+.header-second {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-button {
+  width: 69px;
+  height: 23.49px;
+  left: 1142px;
+  top: 24.43px;
+  background: #000E56;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  color: #FFFF;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+}
+
+.header-button:hover {
+  background-color: #FFC90A;
+}
+
+/*------------------------Main Cad 1--------------------------*/
+main{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg,#3b31ff,#160FAA,#160FAA);
+}
+
+
+input[type=text],[type=email],[type=password]{
+  border-radius: 5px;
+  border-width: 0px;
+  margin-top: 30px;
+  padding: 7px 12px;
+  height: 43px;
+  width: 540px;
+  font-size: 24px;
+  font-weight:normal;
+}
+
+input[type=password]{
+  width: 380px;
+}
+
+h1{
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 56px;
+  margin-top: 100px;
+}
+
+button{
+  background-color:#FFC90A;
+  border-radius: 5px;
+  padding: 6px 30px;
+  border-width: 0px;
+
+  margin-top: 46px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color:#cfa81d;
+  transition: 0.2s;
+}
+
+/*------------------------Main Cad 2/ Senha 1 --------------------------*/
+
+#main2{
+  background: linear-gradient(45deg,#160FAA,#0B0753,#0B0753)
+}
+
+#token{
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffca0ab3;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 7px 0 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#token:hover{
+  cursor: pointer;
+}
+
+#tokenNum{
+  width: 418px;
+  text-align: center;
+  padding: 0 10px 0 20px;
+  font-size: 50px;
+  margin-top: 0px;
+  font-weight: bold;
+  height: 75px;
+  letter-spacing: 18px;
+}
+
+.division{
+  margin-bottom: 20px;
+}
+
+.buttonDivision{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.division h2{
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/*------------Redefinicao-------------*/
+
+#main3{
+background: #02082C ;
+}
+.division{
+  margin-bottom: 20px;
+}
+
+input[type=text],[type=email]{
+  border-radius: 5px;
+  border-width: 0px;
+  margin-top: 30px;
+  padding: 7px 12px;
+  height: 43px;
+  width: 540px;
+  font-size: 24px;
+  font-weight:normal;
+}
+
+#token:hover{
+  cursor: pointer;
+}
+
+
