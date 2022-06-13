@@ -400,3 +400,25 @@
     bottom: 500px;
     padding-left: 800px;
 }
+
+/* -------------------------------------------  */
+.footer1{
+    display: flex;
+    margin-top: 165px;
+}
+
+.support{
+    margin-right: 52px;
+    color: #000E56;
+}
+
+.redes{
+    margin-left: 170px;
+}
+
+.footer2{
+    color: #000E56;
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+}
