@@ -121,6 +121,10 @@ html{
     border: none;
 }
 
+.main-button a{
+    color: #FFF;
+}
+
 .main-button:hover {
     background-color: #FFC90A;
     color: black;
