@@ -67,7 +67,7 @@
 /*------------------------Main Cad 1--------------------------*/
 main{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   background: linear-gradient(45deg,#3b31ff,#160FAA,#160FAA);
 }
@@ -157,5 +157,74 @@ background: #02082C ;
 .division h2{
   color: #fff;
   font-size: 24px;
+  font-weight: normal;
+}
+/*-----imagem-foguete------*/
+.fgt{
+  width: 600px;
+}
+
+.config_txt{
+  margin-left: 212px;
+}
+
+
+/*--------------------itens-show---------------------*/
+.bet li {
+  float: left;
+  list-style: none;
+}
+
+.bet ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+  padding: 5px 5px;
+}
+
+
+.bet ul li ul{
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #000000;
+  padding: 2px 2px;
+}
+
+.bet ul li:hover ul{
+  display: block;
+}
+
+.bet ul li ul li {
+  padding: 10px 14px;
+}
+
+.bet ul li ul li a{
+  padding: 10px 14px;
+}
+
+.bet ul li ul li a:hover{
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+
+/*---------cad3------*/
+#main4{
+  background: #020021;
+  color: white;
+}
+
+.moon_img{
+  position: fixed;
+  right: -350px;
+  top: 634px;
+}
+
+.moon {
+  width: 1000px;
+}
+
+.texto_cad3{
+  font-size: 32px;
   font-weight: normal;
 }

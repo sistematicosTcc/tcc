@@ -67,7 +67,7 @@
 /*------------------------Main Cad 1--------------------------*/
 main{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   background: linear-gradient(45deg, #3b31ff9e, #3A31FF, #3A31FF);
 }
@@ -175,8 +175,56 @@ h3 {
 .subImg {
   color: #000E56;
   margin-top: 0px;
+  margin-left: 100px;
 }
 
 .top{
   color:#FFC90A;
+}
+/*--------------------itens-show---------------------*/
+.bet li {
+  float: left;
+  list-style: none;
+}
+
+.bet ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+  padding: 5px 5px;
+}
+
+
+.bet ul li ul{
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #000000;
+  padding: 2px 2px;
+}
+
+.bet ul li:hover ul{
+  display: block;
+}
+
+.bet ul li ul li {
+  padding: 10px 14px;
+}
+
+.bet ul li ul li a{
+  padding: 10px 14px;
+}
+
+.bet ul li ul li a:hover{
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+
+/*-----imagem-foguete------*/
+.fgt{
+  width: 600px;
+}
+
+.config_txt{
+  margin-left: 212px;
 }

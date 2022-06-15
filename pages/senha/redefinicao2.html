@@ -4,13 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
   <title>Document</title>
 </head>
 <body>
   <header class="head">
     <div class="bet">
     <img class="head-logo" src="../../images/logo_crp.png" alt="Logo do Cryptop">
-    <img class="header-opt" src="../../images/opt_down.png">
+    <ul>
+      <li>
+        <img class="header-opt" src="../../images/opt_down.png" />
+        <ul>
+          <li><a href="#" class="options">nome1</a></li>
+          <li><a href="#" class="options">nome2</a></li>
+          <li><a href="#" class="options">nome3</a></li>
+          <li><a href="#" class="options">nome4</a></li>
+          <li><a href="#" class="options">nome5</a></li>
+        </ul>
+      </li>
+    </ul>
     <nav class="header-first">
       <a href="#" class="header-item">Compre Crypto</a>
       <a href="#" class="header-item">Mercado</a>
@@ -25,14 +37,26 @@
       </form>
     </nav>
   </header>
-  <main>
-    <h1>Redefinindo a Senha</h1>
-    <form>
-      <input type="password" placeholder="Digite seu Senha" id="password"> <br>
-      <input type="password" placeholder="Digite seu Senha novamente" id="passwordConfirm"> <br>
-      <input type="button" value="continue">
-    </form>
-    <img src="../../images/foguete.png" alt="fogueteimg">
+  <main id="redef2">
+    <div class="config_txt">
+      <h1>Esqueceu sua Senha</h1>
+      <form>
+        <input type="password" placeholder="Digite seu Senha" id="password" />
+          <br />
+          <input
+            type="password"
+            placeholder="Digite seu Senha novamente"
+            id="passwordConfirm"
+          />
+        <div class="buttonDivision">
+          <button>Voltar</button>
+          <button>Continuar</button>
+        </div>
+      </form>
+    </div>
+    <div class="img_fgt">
+      <img src="../../images/fgt_senha2.png" alt="fogueteimg" class="fgt"/>
+    </div>
   </main>
 </body>
 </html>

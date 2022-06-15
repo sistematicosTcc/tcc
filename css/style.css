@@ -3,6 +3,9 @@
     src: url('lato.semibold.ttf') format('truetype');
 }
 
+html{
+    height: 100vh;
+}
 * {
     margin: 0;
     padding: 0;
@@ -402,18 +405,33 @@
 }
 
 /* -------------------------------------------  */
+.separador{
+    display: flex;
+    justify-content: center;
+    margin: 0 100px 0 0;
+}
+
 .footer1{
+    margin-left: 200px;
     display: flex;
     margin-top: 165px;
 }
 
 .support{
-    margin-right: 52px;
+    width: 180px;
     color: #000E56;
 }
 
 .redes{
-    margin-left: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+}
+.redes img{
+    padding: 10px;
+}
+.redes li{
+    width: 120px;
 }
 
 .footer2{
@@ -422,3 +440,53 @@
     display: flex;
     justify-content: center;
 }
+
+.support ul li{
+    font-size: 16px;
+    margin-top: 20px;
+
+}
+
+.imgclass{
+    display: flex;
+}
+
+/*--------------------itens-show---------------------*/
+.bet li {
+    float: left;
+    list-style: none;
+  }
+  
+  .bet ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+    padding: 5px 5px;
+  }
+  
+  
+  .bet ul li ul{
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #000000;
+    padding: 2px 2px;
+  }
+  
+  .bet ul li:hover ul{
+    display: block;
+  }
+  
+  .bet ul li ul li {
+    padding: 10px 14px;
+  }
+  
+  .bet ul li ul li a{
+    padding: 10px 14px;
+  }
+  
+  .bet ul li ul li a:hover{
+    border-radius: 5px;
+    background-color: #f3f3f3;
+  }
+  
