@@ -60,6 +60,10 @@
   border: none;
 }
 
+.header-button a{
+  color:#FFF;
+}
+
 .header-button:hover {
   background-color: #FFC90A;
 }
@@ -79,13 +83,9 @@ input[type=text],[type=email],[type=password]{
   margin-top: 10px;
   padding: 7px 12px;
   height: 43px;
-  width: 540px;
+  width: 380px;
   font-size: 24px;
   font-weight:normal;
-}
-
-input[type=password]{
-  width: 380px;
 }
 
 h1{
@@ -95,18 +95,22 @@ h1{
   margin-top: 100px;
 }
 
-button{
+.Continue-button{
   background-color:#FFC90A;
   border-radius: 5px;
   padding: 6px 30px;
   border-width: 0px;
-
+  margin-right: 75px;
   margin-top: 46px;
   font-size: 16px;
   font-weight: bold;
 }
 
-button:hover{
+.Continue-button a{
+  color: #000E56;
+}
+
+.Continue-button:hover{
   background-color:#cfa81d;
   transition: 0.2s;
 }
@@ -128,6 +132,11 @@ background: #02082C ;
   margin: 7px 0 0 0;
   padding: 0;
   font-size: 16px;
+  border: none;
+}
+
+#token a{
+  color: #ffca0ab3 ;
 }
 
 #token:hover{
@@ -151,7 +160,6 @@ background: #02082C ;
 
 .buttonDivision{
   display: flex;
-  justify-content:space-evenly;
 }
 
 .division h2{
@@ -199,7 +207,7 @@ h3 {
   display: none;
   border-radius: 5px;
   position: absolute;
-  background-color: #000000;
+  background-color: #FFF;
   padding: 2px 2px;
 }
 
@@ -208,11 +216,13 @@ h3 {
 }
 
 .bet ul li ul li {
-  padding: 10px 14px;
+  margin: 5px 7px;
+  width: 130px;
 }
 
 .bet ul li ul li a{
   padding: 10px 14px;
+  color: #cda61d;
 }
 
 .bet ul li ul li a:hover{
