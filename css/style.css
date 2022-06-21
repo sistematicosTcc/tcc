@@ -320,6 +320,9 @@ html{
     float: left;
 }
 
+.pai-mae{
+    display: flex;
+}
 
 .growth-card-main {
     padding-top: 30px;
