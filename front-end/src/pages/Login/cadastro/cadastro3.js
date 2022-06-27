@@ -1,41 +1,15 @@
+/* eslint-disable jsx-a11y/alt-text */
+import Header from "../../../component/header/header";
+import './style.css';
 
-function Cadastros3() {
+import { Link } from "react-router-dom";
+import FgtCad from "../../../images/fgt_cad3.png"
+import Moon from "../../../images/moon.png"
+
+export const Cadastros3 = () =>{
   return (
     <>
-      <header class="head">
-      <div class="bet">
-        <a href="../../index.html">
-          <img
-          class="head-logo"
-          src="../../images/logo_crp.png"
-          alt="Logo do Cryptop"
-          />
-        </a>
-        <ul>
-          <li>
-            <img class="header-opt" src="../../images/opt_down.png" />
-            <ul>
-              <li><a href="#" class="options">Exchange</a></li>
-              <li><a href="#" class="options">Trust Wallet</a></li>
-            </ul>
-          </li>
-        </ul>
-        <nav class="header-first">
-          <a href="#" class="header-item">Compre Crypto</a>
-          <a href="#" class="header-item">Mercado</a>
-          <a href="#" class="header-item">Trade</a>
-          <a href="#" class="header-item">NFT</a>
-        </nav>
-      </div>
-      <nav class="header-second">
-        <a href="/tcc/pages/login.html" class="header-item">Entrar</a>
-        <form action="#">
-          <button class="header-button" >
-            <a href="/tcc/pages/cadastro/cadastro.html">Registrar</a>
-          </button>
-        </form>
-      </nav>
-    </header>
+      <Header />
     <main id="main4">
       <div class="config_txt">
         <h1>Sucesso</h1>
@@ -45,13 +19,13 @@ function Cadastros3() {
             botão entrar.
           </h2>
         <div class="buttonDivision">
-          <button class="Continue-button bigButton"><a href="../login.html">Entrar</a></button>
+          <button class="Continue-button bigButton"><Link to="/login">Entrar</Link></button>
         </div>
       </div>
       <div class="img_fgt">
-        <img src="../../images/fgt_cad3.png" alt="" class="fgt"/>
+        <img src={FgtCad} alt="" class="fgt"/>
         <div class="moon_img">
-          <img src="../../images/moon.png" class="moon" />
+          <img src={Moon} class="moon" />
         </div>
       </div>
     </main>

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lato';
-  src: url('lato.semibold.ttf') format('truetype');
+  src: url('../lato.semibold.ttf') format('truetype');
 }
 
 html{
@@ -13,69 +13,8 @@ html{
   text-decoration: none;
 }
 
-.head {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.bet {
-  display: flex;
-  align-items: center;
-  padding: 18px;
-  gap: 7px;
-}
-
-.header-first {
-  display: flex;
-  gap: 12px;
-}
-
-.header-item {
-  font-family: 'Lato', sans-serif;
-  color: #000E56;
-  font-weight: 600;
-  font-size: 14px;
-  
-}
-
-.header-item:hover {
-  color: #FFC90A;
-}
-
-.header-second {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.header-button {
-  width: 69px;
-  height: 23.49px;
-  left: 1142px;
-  top: 24.43px;
-  background: #000E56;
-  border-radius: 5px;
-  font-family: 'Lato', sans-serif;
-  color: #FFFF;
-  font-weight: 600;
-  font-size: 12px;
-  border: none;
-  cursor: pointer
-}
-
-.header-button a{
-  color:#FFF;
-}
-
-.header-button:hover {
-  background-color: #FFC90A;
-  color: black;
-}
-
 .content {
-  background-image: url(/tcc/images/background.png);
+  background-image: url('../images/background.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
@@ -95,6 +34,7 @@ html{
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 45px;
+  padding-left: 100px;
   padding-top: 160px;
 }
 
@@ -198,7 +138,7 @@ html{
 .detail-description img{
   float: right;
   position: absolute;
-  right: 270px;
+  right: 100px;
   top: 1170px;
 }
 
@@ -236,6 +176,7 @@ html{
   position: relative;
   padding: 10px;
   width: 300px;
+  height: 510px;
   background: #F0F0F0;
   margin: 20px;
   transition: 0.5s;
@@ -402,28 +343,37 @@ html{
   right: 140px;
   bottom: 400px;
   padding-top: 30px;
-  padding-left: 800px;
+  padding-left: 500px;
+}
+.security-img-position img {
+  padding-left: 100px;
+  left: 100px;
 }
 
 .button-security {
-  float: left;
-  position: relative;
-  right: 753px;
-  bottom: 500px;
-  padding-left: 800px;
+  display: flex;
+  align-items: flex-end;
 }
 
-/* -------------------------------------------  */
+.cu{
+  margin-left: 200px;
+  flex-direction: column;
+  display: flex;
+  width: 500px;
+}
+/* -------------------------FOOOTER ------------------  */
+.footerf{
+  display: flex;
+  margin-top: 800px;
+}
+
 .separador{
   display: flex;
   justify-content: center;
-  margin: 0 100px 0 0;
 }
 
 .footer1{
-  margin-left: 200px;
   display: flex;
-  margin-top: 165px;
 }
 
 .support{
@@ -446,6 +396,7 @@ html{
 .footer2{
   color: #000E56;
   margin-top: 44px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }

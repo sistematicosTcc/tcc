@@ -1,38 +1,33 @@
+import Header from '../component/header/header';
 import './home.css';
 
-function Home(){
+import { Link } from "react-router-dom";
+
+import Profile from "../images/profile.png"
+import WomanNot from "../images/woman_not.png"
+import Wallet from "../images/wallet.png"
+import Trading from "../images/trading.png"
+import Platt from "../images/platt.png"
+import WomanBook from "../images/woman_book.png"
+import Neftguax from "../images/neft_guax.png"
+import WomanTree from "../images/woman_tree.png"
+import Calendary from "../images/calendary.png"
+import People from "../images/people.png"
+import Top from "../images/top.png"
+import Nft from "../images/nft.png"
+import Line1 from "../images/Line1.png"
+import WomanSecurity from "../images/woman_security.png"
+import Instagram from "../images/instagram.png"
+import Facebook from "../images/facebook.png"
+import Twitter from "../images/twitter.png"
+
+
+
+
+ export function Home () {
   return (
     <>
-      <header class="head">
-        <div class="bet">
-          <a href="index.html">
-            <img class="head-logo" src="" alt="Logo do Cryptop" />
-          </a>
-          <ul>
-            <li>
-              <img class="header-opt" src="images/opt_down.png" />
-              <ul>
-                <li><a href="#" class="options">Exchange</a></li>
-                <li><a href="#" class="options">Trust Wallet</a></li>
-              </ul>
-            </li>
-          </ul>
-          <nav class="header-first">
-            <a href="#" class="header-item">Compre Crypto</a>
-            <a href="#" class="header-item">Mercado</a>
-            <a href="#" class="header-item">Trade</a>
-            <a href="#" class="header-item">NFT</a>
-          </nav>
-        </div>
-        <nav class="header-second">
-          <a href="/tcc/pages/login.html" class="header-item">Entrar</a>
-          <form action="#">
-            <button class="header-button" >
-              <a href="/tcc/pages/cadastro/cadastro.html">Registrar</a>
-            </button>
-          </form>
-        </nav>
-      </header>
+      <Header />
       <main class="content">
         <section class="main-content">
           <div class="main-written">
@@ -41,10 +36,10 @@ function Home(){
               <p class="yellow-word">controle financeiro </p>na<b class="blue-word">Cryptop</b>
             </h1>
               <button class="main-button">
-                <a href="../tcc/pages/cadastro/cadastro.html"> Começar </a>
+                <Link to="/cad">Começar</Link> 
               </button>
           </div>
-          <img class="woman-first" src="images/woman_not.png" alt="Imagem da mulher no not" />
+          <img class="woman-first" src={WomanNot} alt="Imagem da mulher no not" />
         </section>
       </main>
       <section class="example">
@@ -53,7 +48,7 @@ function Home(){
       </section>
       <section class="icone-example">
         <div class="detail-image">
-          <img src="images/profile.png" alt="Icone de perfil" />
+          <img src={Profile} alt="Icone de perfil" />
         </div>
         <div class="detail-description">
           <h2>Crie sua conta</h2>
@@ -62,7 +57,7 @@ function Home(){
       </section>
       <section class="icone-example">
         <div class="detail-image">
-          <img src="images/wallet.png" alt="Icone de carteira" />
+          <img src={Wallet} alt="Icone de carteira" />
         </div>
         <div class="detail-description">
           <h2>Crie sua carteira digital</h2>
@@ -73,12 +68,12 @@ function Home(){
       </section>
       <section class="icone-example">
         <div class="detail-image">
-          <img src="images/trading.png" alt="Icone de trading" />
+          <img src={Trading}alt="Icone de trading" />
         </div>
         <div class="detail-description">
           <h2>Inicie o Trading</h2>
           <h3>Agora você já está pronto para simular toda a experiência de compra e venda! Aproveite toda essa experiência com a segurança que só a CrypTop pode oferecer.
-              <img src="images/platt.png" alt="Icone de trading" />
+              <img src={Platt} alt="Icone de trading" />
           </h3>
         </div>
         <section>
@@ -91,7 +86,7 @@ function Home(){
         <section class="card-main">
           <section class="card-tree">
             <div class="card">
-              <img src="images/woman_book.png" />
+              <img src={WomanBook} alt="mulher_com_livro"/>
               <h1>Conheça a história dos criptoativos</h1>
               <div class="card-content">
                 <p>
@@ -104,7 +99,7 @@ function Home(){
           </section>
           <section class="card-tree">
             <div class="card">
-              <img src="images/neft_guax.png" />
+              <img src={Neftguax} alt="neftGuax"/>
               <h1>Rentabilidade em NFT</h1>
               <div class="card-content">
                 <p>
@@ -117,7 +112,7 @@ function Home(){
           </section>
           <section class="card-tree">
             <div class="card">
-              <img src="images/woman_tree.png" />
+              <img src={WomanTree} alt="mulher e arvore"/>
               <h1>Aprender para ganhar</h1>
               <div class="card-content">
                 <p>
@@ -137,7 +132,7 @@ function Home(){
               <h1>Mercado de critptoativos está em <b>crescimento</b> constante</h1>
             </div>
             <section class="growth">
-              <img src="images/calendary.png" />
+              <img src={Calendary} alt="calendario"/>
               <div class="growth-lower-text">
                 <p>Número de investidores cresce 1.266% no Brasil em</p>
                 <p>2021 e o mercado cresceu mais de 200% nos últimos anos.</p>
@@ -148,7 +143,7 @@ function Home(){
             <section class="growth-card-main">
               <div class="growth-card">
                 <div class="growth-card-img">
-                  <img src="images/people.png" alt="Icone de pessoas" />
+                  <img src={People} alt="Icone de pessoas" />
                 </div>
                 <div class="growth-card-info">
                   <h1 class="growth-card-tittle">+ de 10 Milhões</h1>
@@ -163,7 +158,7 @@ function Home(){
             <section class="growth-card-main">
               <div class="growth-card">
                 <div class="growth-card-img">
-                  <img src="images/top.png" alt="Icone de Top" />
+                  <img src={Top} alt="Icone de Top" />
                 </div>
                 <div class="growth-card-info">
                   <h1 class="growth-card-tittle">+ de 60%</h1>
@@ -177,7 +172,7 @@ function Home(){
             <section class="growth-card-main">
               <div class="growth-card">
                 <div class="growth-card-img">
-                  <img src="images/nft.png" alt="Icone de pessoas" />
+                  <img src={Nft} alt="Icone de pessoas" />
                 </div>
                 <div class="growth-card-info">
                   <h1 class="growth-card-tittle">$25 Bilhões</h1>
@@ -190,32 +185,36 @@ function Home(){
           </section>
         </div>
         <section class="security-position" >
-          <div class="security-line">
-            <img src="images/Line 1.png" />
+          <div class="cu">
+            <div class="security-line">
+              <img src={Line1} alt="line1" />
+            </div>
+            <div class="security-yellow">
+              <h3>Sua segurança na nova economia</h3>
+            </div>
+            <div class="security-blue">
+              <h1>
+                <p>Soluções de segurança para o seu investimento.</p>
+              </h1>
+              <h3>
+                <p>
+                Conheça sobre as fraudes, diferenças em cada rede
+                onde o seu dinheiro vai parar quando envia para
+                outra carteira.
+                </p>
+              </h3>
+            </div>
+            <section class="button-security">
+              <button class="main-button">
+              <Link to="/cad">Começar</Link>
+              </button>
+            </section>
           </div>
-          <div class="security-yellow">
-            <h3>Sua segurança na nova economia</h3>
-          </div>
-          <div class="security-blue">
-            <h1>
-              <p>Soluções de segurança para o seu investimento.</p>
-            </h1>
-            <h3>
-              <p>
-              Conheça sobre as fraudes, diferenças em cada rede
-              onde o seu dinheiro vai parar quando envia para
-              outra carteira.
-              </p>
-            </h3>
-          </div>
-          <section class="security-img-position">
-            <img src="images/woman_security.png" />
-          </section>
+            <section class="security-img-position">
+              <img src={WomanSecurity} alt="woman book" />
+            </section>
         </section>
-        <section class="button-security">
-          <button class="main-button">
-            <a href="../tcc/pages/cadastro/cadastro.html"> Começar </a>
-          </button>
+        <div class="footerf ">
           <div class="separador">
             <div class="footer1"> 
               <div class="support">
@@ -259,17 +258,15 @@ function Home(){
             </div>
           </div>
           <div class="redes">
-            <img src="images/instagram.png" alt="logoinsta" />
-            <img src="images/facebook.png" alt="logoface" />
-            <img src="images/twitter.png" alt="twitter" />
+            <img src={Instagram} alt="logoinsta" />
+            <img src={Facebook} alt="logoface" />
+            <img src={Twitter} alt="twitter" />
           </div>
-          <div class="footer2">
-            <p> <b> Powered by Sistematicos - Unip 2022 - Tcc </b></p>
-          </div>
-        </section>
+        </div>
+        <div class="footer2">
+          <p> <b> Powered by Sistematicos - Unip 2022 - Tcc </b></p>
+        </div>
       </section>
     </>
   );
 }
-
-export default Home;

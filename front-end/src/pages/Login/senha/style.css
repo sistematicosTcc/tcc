@@ -7,66 +7,6 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-/*------------------------Header--------------------------*/
-
-.head {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.bet {
-  display: flex;
-  align-items: center;
-  padding: 18px;
-  gap: 7px;
-}
-
-.header-first {
-  display: flex;
-  gap: 12px;
-}
-
-.header-item {
-  font-family: 'Lato', sans-serif;
-  color: #000E56;
-  font-weight: 600;
-  font-size: 14px;
-  
-}
-
-.header-item:hover {
-  color: #FFC90A;
-}
-
-.header-second {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.header-button {
-  width: 69px;
-  height: 23.49px;
-  left: 1142px;
-  top: 24.43px;
-  background: #000E56;
-  border-radius: 5px;
-  font-family: 'Lato', sans-serif;
-  color: #FFFF;
-  font-weight: 600;
-  font-size: 12px;
-  border: none;
-}
-
-.header-button a{
-  color:#FFF;
-}
-
-.header-button:hover {
-  background-color: #FFC90A;
-}
 
 /*------------------------Main Cad 1--------------------------*/
 main{
@@ -101,7 +41,7 @@ h1{
   padding: 6px 30px;
   border-width: 0px;
   margin-right: 75px;
-  margin-top: 46px;
+  margin-top: 30px;
   font-size: 16px;
   font-weight: bold;
   color: #000E56;
@@ -225,22 +165,28 @@ background: #02082C ;
 }
 
 /*---------cad3------*/
-#main4{
-  background: #020021;
-  color: white;
+/*-----imagem-foguete------*/
+.fgt{
+  width: 600px;
 }
 
-.moon_img{
-  position: fixed;
-  right: -350px;
-  top: 634px;
+.config_txt{
+  margin-left: 212px;
 }
 
-.moon {
-  width: 1000px;
+.battery{
+  right: 100px;
+}
+
+#redef2{
+  background: radial-gradient(#110B8E,#000E56);
 }
 
 .texto_cad3{
   font-size: 32px;
   font-weight: normal;
+}
+
+#redef3{
+  color: white;
 }
