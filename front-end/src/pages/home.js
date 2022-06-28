@@ -185,7 +185,7 @@ import Twitter from "../images/twitter.png"
           </section>
         </div>
         <section class="security-position" >
-          <div class="cu">
+          <div class="divisionSec">
             <div class="security-line">
               <img src={Line1} alt="line1" />
             </div>

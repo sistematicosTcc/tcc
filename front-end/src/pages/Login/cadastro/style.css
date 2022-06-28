@@ -20,7 +20,6 @@ main{
 input[type=text],[type=email],[type=password]{
   border-radius: 5px;
   border-width: 0px;
-  margin-top: 30px;
   padding: 7px 12px;
   height: 43px;
   width: 380px;
@@ -182,5 +181,6 @@ background: #02082C ;
 
 .texto_cad3{
   font-size: 32px;
+  margin-top: 20px;
   font-weight: normal;
 }

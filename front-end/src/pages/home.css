@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lato';
-  src: url('../lato.semibold.ttf') format('truetype');
+  src: url('../../lato.semibold.ttf') format('truetype');
 }
 
 html{
@@ -343,7 +343,7 @@ html{
   right: 140px;
   bottom: 400px;
   padding-top: 30px;
-  padding-left: 500px;
+  padding-left: 675px;
 }
 .security-img-position img {
   padding-left: 100px;
@@ -353,9 +353,10 @@ html{
 .button-security {
   display: flex;
   align-items: flex-end;
+  margin-top: 30px;
 }
 
-.cu{
+.divisionSec{
   margin-left: 200px;
   flex-direction: column;
   display: flex;
@@ -364,7 +365,7 @@ html{
 /* -------------------------FOOOTER ------------------  */
 .footerf{
   display: flex;
-  margin-top: 800px;
+  margin-top: 850px;
 }
 
 .separador{
@@ -406,7 +407,6 @@ html{
   margin-top: 20px;
   list-style: none;
 }
-
 
 .imgclass{
   display: flex;

@@ -8,23 +8,23 @@ function Header(){
     <>
       <header class="head">
         <div class="bet">
-            <Link to="/home" >
+            <Link to="/" >
               <img class="head-logo" src={Logo} alt="logo"/>
             </Link>
           <ul>
             <li>
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
-                <li><Link to="/home" className='options'>Exchange</Link></li>
-                <li><Link to="/home" className='options'>Trust Wallet</Link></li>
+                <li><Link to="/" className='options'>Exchange</Link></li>
+                <li><Link to="/" className='options'>Trust Wallet</Link></li>
               </ul>
             </li>
           </ul>
           <nav class="header-first">
-            <Link to="/home" className='header-item'>Compre Crypto</Link>
-            <Link to="/home" className='header-item'>Mercado</Link>
-            <Link to="/home" className='header-item'>Trade</Link>
-            <Link to="/home" className='header-item'>NFT</Link>
+            <Link to="/" className='header-item'>Compre Crypto</Link>
+            <Link to="/" className='header-item'>Mercado</Link>
+            <Link to="/" className='header-item'>Trade</Link>
+            <Link to="/" className='header-item'>NFT</Link>
           </nav>
         </div>
         <nav class="header-second">
