@@ -32,8 +32,8 @@ import Twitter from "../images/twitter.png"
         <section class="main-content">
           <div class="main-written">
             <h1 class="main-written-buy">
-              <p>Compre, negocie e aprenda a ter o </p>
-              <p class="yellow-word">controle financeiro </p>na<b class="blue-word">Cryptop</b>
+              <p class="black-word">Compre, negocie</p> <p class="black-word">e aprenda a ter o</p>
+              <p class="yellow-word">controle financeiro </p>na<b class="blue-word"> Cryptop</b>
             </h1>
               <button class="main-button">
                 <Link to="/cad">Começar</Link> 
@@ -52,7 +52,7 @@ import Twitter from "../images/twitter.png"
         </div>
         <div class="detail-description">
           <h2>Crie sua conta</h2>
-          <h3>Realize o processo de criação de conta dentro da nossa plataforma e possua acesso completo.</h3>
+          <h3><p>Realize o processo de criação de conta dentro</p> da nossa plataforma e possua acesso completo.</h3>
         </div>
       </section>
       <section class="icone-example">
@@ -62,7 +62,8 @@ import Twitter from "../images/twitter.png"
         <div class="detail-description">
           <h2>Crie sua carteira digital</h2>
           <h3>Após possuir sua conta, dentro da plataforma
-            <p>irá criar uma carteira digital fictícia que irá armazenar todas os seus criptoativos </p>
+            <p>irá criar uma carteira digital fictícia que irá </p>
+            <p>armazenar todas os seus criptoativos </p>
           </h3>
         </div>
       </section>
@@ -72,7 +73,10 @@ import Twitter from "../images/twitter.png"
         </div>
         <div class="detail-description">
           <h2>Inicie o Trading</h2>
-          <h3>Agora você já está pronto para simular toda a experiência de compra e venda! Aproveite toda essa experiência com a segurança que só a CrypTop pode oferecer.
+          <h3>Agora você já está pronto para simular toda 
+            <p>a experiência de compra e venda! Aproveite</p>
+            <p>toda essa experiência com a segurança que</p>
+            <p>só a CrypTop pode oferecer.</p>
               <img src={Platt} alt="Icone de trading" />
           </h3>
         </div>

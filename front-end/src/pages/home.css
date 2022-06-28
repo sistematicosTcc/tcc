@@ -34,8 +34,12 @@ html{
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 45px;
-  padding-left: 100px;
-  padding-top: 160px;
+  padding-left: 190px;
+  padding-bottom: 200px;
+}
+
+.black-word {
+  color: black;
 }
 
 .yellow-word {
@@ -75,7 +79,9 @@ html{
   display: flex;
   padding: 30px;
   gap: 7px;
-  padding-top: 150px;
+  padding-top: 120px;
+  padding-left: 340px;
+  padding-bottom: 90px;
 }
 
 
@@ -229,16 +235,17 @@ html{
   padding-bottom: 55px;
 }
 
-.growth-main-text {
+
+.growth-main-text b {
+  color: #FFC90A;
+}
+
+.growth-main-text h1 {
   padding-bottom: 100px;
   font-family: 'Lato', sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: #000E56;
-}
-
-.growth-main-text b {
-  color: #FFC90A;
 }
 
 .growth-lower-text {
