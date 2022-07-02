@@ -12,14 +12,14 @@ export const Cadastro = () => {
         <div class="config_txt">
           <h1>Crie Sua Conta</h1>
           <form>
-            <input type="text" placeholder="Digite seu Nome" />
-            <input type="email" placeholder="Digite seu Email" id="input-email" />
-            <input type="password" placeholder="Digite sua Senha" id="password" />
+            <input type="text" placeholder="Digite seu Nome" /> <br/>
+            <input type="email" placeholder="Digite seu Email" id="input-email" /> <br/>
+            <input type="password" placeholder="Digite sua Senha" id="password" /> <br/>
             <input
               type="password"
               placeholder="Digite sua Senha novamente"
               id="passwordConfirm"
-            />
+            /> <br/>
           </form>
           <div class="buttonDivision">
           <Link to="/cad2" className="Link-Margin">

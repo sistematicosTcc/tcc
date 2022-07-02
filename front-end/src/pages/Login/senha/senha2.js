@@ -12,20 +12,20 @@ export const Senha2 = () =>{
         <div class="config_txt">
           <h1>Esqueceu sua Senha</h1>
           <form>
-            <input type="password" placeholder="Digite seu Senha" id="password" />
+            <input type="password" placeholder="Digite sua Senha" id="password" />
               <br />
               <input
                 type="password"
-                placeholder="Digite seu Senha novamente"
+                placeholder="Digite sua Senha novamente"
                 id="passwordConfirm"
               />
             <div class="buttonDivision">
-            <Link to="/login" className="Link-Margin">
+            <Link to="/senha" className="Link-Margin">
                 <button class="Continue-button">
                   Voltar
                 </button>
               </Link>
-              <Link to="/senha2" className="Link-Margin">
+              <Link to="/senha3" className="Link-Margin">
                 <button class="Continue-button">
                   Continuar
                 </button>

@@ -66,5 +66,6 @@
 }
 
 .header-button:hover {
+  cursor: pointer;
   background-color: #FFC90A;
 }

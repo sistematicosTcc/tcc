@@ -20,6 +20,7 @@ import WomanSecurity from "../images/woman_security.png"
 import Instagram from "../images/instagram.png"
 import Facebook from "../images/facebook.png"
 import Twitter from "../images/twitter.png"
+import Listing from '../../../coinmarketcap-clone/pages';
 
 
 

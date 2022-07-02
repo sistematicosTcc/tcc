@@ -38,6 +38,9 @@ html{
   padding-left: 190px;
   padding-bottom: 200px;
 }
+.main-written a{
+  width: 250px;
+}
 
 .black-word {
   color: black;
