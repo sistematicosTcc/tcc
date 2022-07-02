@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad3.png"
 import Moon from "../../../images/moon.png"
 
-export const Cadastros3 = () =>{
+export const Cadastro3 = () =>{
   return (
     <>
       <Header />
@@ -19,7 +19,11 @@ export const Cadastros3 = () =>{
             botão entrar.
           </h2>
         <div class="buttonDivision">
-          <button class="Continue-button bigButton"><Link to="/login">Entrar</Link></button>
+          <Link to="/login" className="Link-Margin">
+            <button class="Continue-button" id="bigButton">
+              Entrar
+            </button>
+          </Link>
         </div>
       </div>
       <div class="img_fgt">
@@ -33,4 +37,4 @@ export const Cadastros3 = () =>{
   );
 }
 
-export default Cadastros3;
+export default Cadastro3;

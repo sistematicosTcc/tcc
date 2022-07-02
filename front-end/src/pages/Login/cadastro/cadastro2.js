@@ -4,7 +4,7 @@ import './style.css';
 import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad2.png"
 
-export const Cadastros2 = () =>{
+export const Cadastro2 = () =>{
   return (
     <>
       <Header />
@@ -26,8 +26,16 @@ export const Cadastros2 = () =>{
               <input type="text" id="tokenNum" /> <br />
             </div>
             <div class="buttonDivision">
-              <button class="Continue-button"><Link to="/cad">Voltar</Link></button>
-              <button class="Continue-button"><Link to="/cad3">Continuar</Link></button>
+            <Link to="/cad" className="Link-Margin">
+                <button class="Continue-button" >
+                    Voltar
+                </button>
+              </Link>
+              <Link to="/cad3" className="Link-Margin">
+                <button class="Continue-button" >
+                    Continuar
+                </button>
+              </Link>
             </div>
           </form>
         </div>
@@ -39,4 +47,4 @@ export const Cadastros2 = () =>{
   );
 }
 
-export default Cadastros2;
+export default Cadastro2;

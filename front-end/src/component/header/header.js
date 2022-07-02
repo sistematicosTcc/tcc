@@ -30,9 +30,11 @@ function Header(){
         <nav class="header-second">
         <Link to="/login" className='header-item'>Entrar</Link>
           <form action="/">
-            <button class="header-button" >
-              <Link to="/cad">Registrar</Link>
-            </button>
+              <Link to="/cad">
+                <button class="header-button" >
+                    Registrar
+                </button>
+              </Link>
           </form>
         </nav>
       </header>

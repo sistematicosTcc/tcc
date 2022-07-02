@@ -20,8 +20,16 @@ export const Senha2 = () =>{
                 id="passwordConfirm"
               />
             <div class="buttonDivision">
-              <button class="Continue-button"><Link to="/senha">Voltar</Link></button>
-              <button class="Continue-button"><Link to="/senha3">Continuar</Link></button>
+            <Link to="/login" className="Link-Margin">
+                <button class="Continue-button">
+                  Voltar
+                </button>
+              </Link>
+              <Link to="/senha2" className="Link-Margin">
+                <button class="Continue-button">
+                  Continuar
+                </button>
+              </Link>
             </div>
           </form>
         </div>

@@ -35,9 +35,11 @@ import Twitter from "../images/twitter.png"
               <p class="black-word">Compre, negocie</p> <p class="black-word">e aprenda a ter o</p>
               <p class="yellow-word">controle financeiro </p>na<b class="blue-word"> Cryptop</b>
             </h1>
-              <button class="main-button">
-                <Link to="/cad">Começar</Link> 
-              </button>
+              <Link to="/cad">
+                <button class="main-button">
+                    Começar
+                </button>
+              </Link> 
           </div>
           <img class="woman-first" src={WomanNot} alt="Imagem da mulher no not" />
         </section>
@@ -46,40 +48,50 @@ import Twitter from "../images/twitter.png"
         <h1 class="example-main">Aprenda todas as etapas na compra de criptoativos</h1>
         <h4 class="example-lower">Possua toda a experiência com esses passos simples!</h4>
       </section>
-      <section class="icone-example">
-        <div class="detail-image">
-          <img src={Profile} alt="Icone de perfil" />
+
+      <div class='separadorEtapas'>
+        <div class='separadorExp'>
+          <section class="icone-example">
+            <div class="detail-image">
+              <img src={Profile} alt="Icone de perfil" />
+            </div>
+            <div class="detail-description">
+              <h2>Crie sua conta</h2>
+              <h3><p>Realize o processo de criação de conta dentro</p> da nossa plataforma e possua acesso completo.</h3>
+            </div>
+          </section>
+          <section class="icone-example">
+            <div class="detail-image">
+              <img src={Wallet} alt="Icone de carteira" />
+            </div>
+            <div class="detail-description">
+              <h2>Crie sua carteira digital</h2>
+              <h3>Após possuir sua conta, dentro da plataforma
+                <p>irá criar uma carteira digital fictícia que irá </p>
+                <p>armazenar todas os seus criptoativos </p>
+              </h3>
+            </div>
+          </section>
+          <section class="icone-example">
+          <div class="detail-image">
+            <img src={Trading} alt="Icone de trading" />
+          </div>
+            <div class="detail-description">
+              <h2>Inicie o Trading</h2>
+              <h3>Agora você já está pronto para simular toda 
+                <p>a experiência de compra e venda! Aproveite</p>
+                <p>toda essa experiência com a segurança que</p>
+                <p>só a CrypTop pode oferecer.</p>
+              </h3>
+            </div>
+          </section>
         </div>
-        <div class="detail-description">
-          <h2>Crie sua conta</h2>
-          <h3><p>Realize o processo de criação de conta dentro</p> da nossa plataforma e possua acesso completo.</h3>
+        <div class='notebookImg'>
+          <div class="detail-image">
+            <img src={Platt}alt="Icone de trading" />
+          </div>
         </div>
-      </section>
-      <section class="icone-example">
-        <div class="detail-image">
-          <img src={Wallet} alt="Icone de carteira" />
-        </div>
-        <div class="detail-description">
-          <h2>Crie sua carteira digital</h2>
-          <h3>Após possuir sua conta, dentro da plataforma
-            <p>irá criar uma carteira digital fictícia que irá </p>
-            <p>armazenar todas os seus criptoativos </p>
-          </h3>
-        </div>
-      </section>
-      <section class="icone-example">
-        <div class="detail-image">
-          <img src={Trading}alt="Icone de trading" />
-        </div>
-        <div class="detail-description">
-          <h2>Inicie o Trading</h2>
-          <h3>Agora você já está pronto para simular toda 
-            <p>a experiência de compra e venda! Aproveite</p>
-            <p>toda essa experiência com a segurança que</p>
-            <p>só a CrypTop pode oferecer.</p>
-              <img src={Platt} alt="Icone de trading" />
-          </h3>
-        </div>
+      </div>
         <section>
           <script src="coinmarketcap-clone/pages/index.js">
           </script>
@@ -188,7 +200,8 @@ import Twitter from "../images/twitter.png"
             </section>
           </section>
         </div>
-        <section class="security-position" >
+        <div class="separadorSecurity">
+          <section class="security-position" >
           <div class="divisionSec">
             <div class="security-line">
               <img src={Line1} alt="line1" />
@@ -209,15 +222,18 @@ import Twitter from "../images/twitter.png"
               </h3>
             </div>
             <section class="button-security">
-              <button class="main-button">
-              <Link to="/cad">Começar</Link>
-              </button>
+              <Link to="/cad">
+                <button class="main-button">
+                  Começar
+                </button>
+                </Link>
             </section>
           </div>
             <section class="security-img-position">
               <img src={WomanSecurity} alt="woman book" />
             </section>
-        </section>
+          </section>
+        </div>
         <div class="footerf ">
           <div class="separador">
             <div class="footer1"> 
@@ -270,7 +286,6 @@ import Twitter from "../images/twitter.png"
         <div class="footer2">
           <p> <b> Powered by Sistematicos - Unip 2022 - Tcc </b></p>
         </div>
-      </section>
     </>
   );
 }

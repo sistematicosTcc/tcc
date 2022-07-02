@@ -16,7 +16,11 @@ export const Senha3 = () =>{
               Clique no botão e retorne ao menu.
             </h2>
             <div class="buttonDivision">
-              <button class="Continue-button bigButton"><Link to="/login">Entrar</Link></button>
+              <Link to="/login" className="Link-Margin">
+                <button class="Continue-button" id="bigButton">
+                  Entrar
+                </button>
+              </Link>
             </div>
           </div>
           <div class="img_fgt">

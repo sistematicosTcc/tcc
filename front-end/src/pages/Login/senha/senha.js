@@ -26,8 +26,16 @@ export const Senha = () =>{
               <input type="text" id="tokenNum" /> <br />
             </div>
             <div class="buttonDivision">
-              <button class="Continue-button"><Link to="/login">Voltar</Link></button>
-              <button class="Continue-button"><Link to="/senha2">Continuar</Link></button>
+              <Link to="/login" className="Link-Margin">
+                <button class="Continue-button">
+                  Voltar
+                </button>
+              </Link>
+              <Link to="/senha2" className="Link-Margin">
+                <button class="Continue-button">
+                  Continuar
+                </button>
+              </Link>
             </div>
           </form>
         </div>

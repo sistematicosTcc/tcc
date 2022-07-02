@@ -19,11 +19,23 @@ export const Login = () =>{
             <div class="space">
               <h3> Senha </h3>
               <input type="password" placeholder="Digite sua Senha" id="password" />
-              <button id="token"><Link to="/senha">Redefinição de senha</Link></button>
+                <Link to="/senha">
+                  <button id="tokenSenha">
+                    Redefinição de senha
+                  </button>
+                </Link>
             </div>
             <div class="buttonDivision">
-              <button class="Continue-button"><Link to="#">Continuar</Link></button>
-              <button class="Continue-button"> <Link to="/cad">Cadastre-se</Link></button>
+                <Link to="#" className="Link-Margin">
+                  <button class="Continue-button">
+                    Continuar
+                  </button>
+                </Link>
+                <Link to="/cad" className="Link-Margin">
+                  <button class="Continue-button">
+                    Cadastre-se
+                  </button>
+                </Link>
             </div>
           </form>
         </div>

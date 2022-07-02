@@ -4,7 +4,7 @@ import './style.css';
 import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad1.png"
 
-export const Cadastros = () => {
+export const Cadastro = () => {
   return (
     <>
       <Header />
@@ -12,20 +12,23 @@ export const Cadastros = () => {
         <div class="config_txt">
           <h1>Crie Sua Conta</h1>
           <form>
-            <input type="text" placeholder="Digite seu Nome" /> <br />
+            <input type="text" placeholder="Digite seu Nome" />
             <input type="email" placeholder="Digite seu Email" id="input-email" />
-            <br />
             <input type="password" placeholder="Digite sua Senha" id="password" />
-            <br />
             <input
               type="password"
               placeholder="Digite sua Senha novamente"
               id="passwordConfirm"
             />
-            <br />
-            <button class="Continue-button" ><Link to="/cad2">Continuar</Link></button>
           </form>
-        </div>
+          <div class="buttonDivision">
+          <Link to="/cad2" className="Link-Margin">
+            <button class="Continue-button" >
+                Continuar
+            </button>
+          </Link>
+          </div>
+        </div>      
         <div class="img_fgt">
           <img src={FgtCad} alt="fogueteimg" class="fgt" />
         </div>
@@ -34,4 +37,4 @@ export const Cadastros = () => {
   );
 }
 
-export default Cadastros;
+export default Cadastro;

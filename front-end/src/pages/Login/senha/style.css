@@ -39,11 +39,14 @@ h1{
   border-radius: 5px;
   padding: 6px 30px;
   border-width: 0px;
-  margin-right: 75px;
-  margin-top: 30px;
   font-size: 16px;
   font-weight: bold;
   color: #000E56;
+}
+
+.Link-Margin{
+  margin-right: 75px;
+  margin-top: 30px;
 }
 
 .Continue-button a{
@@ -51,16 +54,17 @@ h1{
 }
 
 .Continue-button:hover{
+  cursor: pointer;
   background-color:#cfa81d;
   transition: 0.2s;
 }
 
-.bigButton{
+#bigButton{
   font-size: 26px;
   padding: 18px 38px;
 }
 
-.bigButton a{
+#bigButton a{
   color: #000E56;
 }
 /*------------------------Main Cad 2/ Senha 1 --------------------------*/
@@ -77,7 +81,6 @@ background: #02082C ;
   color: #ffca0ab3;
   font-size: 16px;
   font-weight: normal;
-  margin: 7px 0 0 0;
   padding: 0;
   font-size: 16px;
   border: none;
