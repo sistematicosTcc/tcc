@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from '../../component/header/header';
 import './login.css';
 
+import React from "react";
+
 import Fgt from "../../images/foguete.png"
 
 

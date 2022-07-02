@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lato';
-  src: url('../../lato.semibold.ttf') format('truetype');
+  src: url('') format('truetype');
 }
 
 html{
@@ -374,6 +374,7 @@ html{
 .footerf{
   display: flex;
   justify-content: center;
+  background-color: rgb(249, 249, 249);
 }
 
 .separador{
@@ -408,6 +409,7 @@ html{
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .support ul li{

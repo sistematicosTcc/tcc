@@ -2,6 +2,8 @@
 import Header from "../../../component/header/header";
 import './style.css';
 
+import React from "react";
+
 import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad3.png"
 import Moon from "../../../images/moon.png"

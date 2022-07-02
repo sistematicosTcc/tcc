@@ -4,6 +4,8 @@ import './style.css';
 import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad2.png"
 
+import React from "react";
+
 export const Cadastro2 = () =>{
   return (
     <>

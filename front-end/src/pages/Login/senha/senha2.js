@@ -4,6 +4,8 @@ import './style.css';
 import { Link } from "react-router-dom";
 import FgtSenha from "../../../images/fgt_senha2.png"
 
+import React from "react";
+
 export const Senha2 = () =>{
   return(
     <>
