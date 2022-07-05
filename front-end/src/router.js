@@ -11,6 +11,7 @@ import { Cadastro3 } from './pages/Login/cadastro/cadastro3';
 
 import { Login } from './pages/Login/login'
 import { Home } from './pages/home.js'
+import {CoinList} from './component/coingecko/coingecko';
 
 export function Routers () {
   return (
@@ -24,6 +25,7 @@ export function Routers () {
         <Route path="/senha" element={<Senha />}/>
         <Route path="/senha2" element={<Senha2 />}/>
         <Route path="/senha3" element={<Senha3 />}/>
+        <Route path="/coins" element={<CoinList/>} />
       </Routes>
     </BrowserRouter>
   )
