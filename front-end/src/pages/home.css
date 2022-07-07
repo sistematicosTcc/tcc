@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lato';
-  src: url('../../lato.semibold.ttf') format('truetype');
+  src: url('../lato.semibold.ttf') format('truetype');
 }
 
 html{
@@ -87,6 +87,11 @@ html{
   padding-left: 340px;
   padding-bottom: 90px;
 }
+
+.cryptohopper-web-widget {
+  padding-top: 180px;
+}
+
 
 .example {
   padding-top: 90px;
@@ -252,6 +257,10 @@ html{
 
 .growth-lower-text {
   padding-bottom: 100px;
+
+}
+
+.growth-lower-text p {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -337,7 +346,7 @@ html{
   color: #000E56;
 }
 
-.security-blue h3 {
+.security-blue h3 p {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -353,7 +362,7 @@ html{
 }
 
 .security-img-position img {
-  padding-left: 100px;
+  padding-left: 160px;
   left: 100px;
 }
 

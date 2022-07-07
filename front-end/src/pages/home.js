@@ -1,8 +1,7 @@
 import Header from '../component/header/header';
 import './home.css';
-
+import {Helmet} from "react-helmet";
 import { Link } from "react-router-dom";
-
 import Profile from "../images/profile.png"
 import WomanNot from "../images/woman_not.png"
 import Wallet from "../images/wallet.png"
@@ -22,6 +21,7 @@ import Facebook from "../images/facebook.png"
 import Twitter from "../images/twitter.png"
 
 import React from "react";
+
 
  export function Home () {
   return (
@@ -43,11 +43,15 @@ import React from "react";
           <img class="woman-first" src={WomanNot} alt="Imagem da mulher no not" />
         </section>
       </main>
+      <Helmet>
+        <script src="https://www.cryptohopper.com/widgets/js/script" type="text/javascript" />
+      </Helmet>
+      <div class="cryptohopper-web-widget" data-id="1" data-chart_color="#000e56" data-price_format="2" data-table_title="" data-realtime="on" data-currency="BRL" data-table_length="5"> 
+      </div>
       <section class="example">
         <h1 class="example-main">Aprenda todas as etapas na compra de criptoativos</h1>
         <h4 class="example-lower">Possua toda a experiência com esses passos simples!</h4>
       </section>
-
       <div class='separadorEtapas'>
         <div class='separadorExp'>
           <section class="icone-example">
