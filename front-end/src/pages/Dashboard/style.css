@@ -29,6 +29,17 @@
     --border-radius-2: 6px;
 }
 
+.dark-theme {
+    --color-white: #131316;
+    --color-light: #23232a;
+    --color-dark: #ddd;
+    --color-gray-ligth: #ffffff;
+    --color-gray-dark: #b5b0ac;
+    --color-primary: rgb(64, 67, 255);
+    
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -315,4 +326,199 @@ main aside .updates a {
 
 main aside .updates a:hover {
     box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+
+.card-coin {
+    display: flex;
+    position: relative;
+}
+
+.card-price {
+    width: 100%;
+
+}
+.card-format {
+    background-color: rgb(255, 255, 255); 
+    border-radius: 29px; 
+    border: 1px solid rgba(28, 27, 27, 0.15); 
+    padding: 24px 34px; color: rgb(28, 27, 27); 
+    width: 400px; 
+    cursor: pointer; 
+    height: 149px; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+}
+
+
+.format {
+    display: flex; 
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+    
+.format-img {
+    display: flex; 
+    margin-right: 20px;
+}
+
+.img-ok {
+    height: 40px; 
+    width: 40px;
+}
+
+.bit-name {
+    font-size: 15px; 
+    font-weight: bold; 
+    opacity: 0.8; 
+    display: flex; 
+    align-items: center;
+}
+
+.change-price {
+    display: flex; 
+    align-items: center;
+
+}
+.coin-price {
+    font-size: 34px; 
+    font-weight: 300;
+}
+
+.change-price-organize {
+    display: flex; 
+    flex-shrink: 0; 
+    width: 40px; 
+    justify-content: center; 
+    margin-right: 20px;
+}
+
+.change-price-collor {
+    border-radius: 4px; 
+    background-color: rgb(197, 204, 0); 
+    font-size: 12px; 
+    letter-spacing: 1px; 
+    font-weight: bold; 
+    text-align: center; 
+    padding: 1px 4px; 
+    color: rgb(255, 255, 255);
+}
+
+.min-price {
+    display: flex; 
+    margin-left: 6px; 
+    margin-top: 11%;
+}
+
+.min-price-organize{
+    display: flex; 
+    align-items: flex-end; 
+    margin-bottom: 8%; 
+    margin-top: 3%;
+}
+
+.min-price-svg {
+    display: initial; 
+    max-width: initial;
+}
+
+.price-btc {
+    font-size: 20px; 
+    font-weight: 300; 
+    color: rgb(79, 138, 91);
+}
+
+@media screen and (max-width: 1024px) {
+    nav .search-bar {
+        display: none;
+    }
+
+
+    nav .profile-area {
+        gap: 2rem;
+    }
+
+    nav .profile-area button#menu-btn {
+        display: inline;
+        background: transparent;
+        color: var(--color-dark);
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    main aside {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 3;
+        background: var(--color-white);
+        width: 22rem;
+        height: 100vh;
+        box-shadow: 2rem 0 2rem var(--color-primary-light);
+        display: none;
+        animation: showSideBar 500ms ease forwards;
+    }
+
+    @keyframes showSideBar {
+        to{
+            left: 0;
+        }
+    }
+
+    main aside button#close-btn {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 4;
+        background: transparent;
+        color: var(--color-dark);
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    main aside .sidebar {
+        margin-top: 4rem;
+    }
+
+    main aside .updates {
+        display: none;
+    }
+
+    main section.middle {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main section.right {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav .profile-area {
+        gap: 2.6rem;
+    }
+
+    nav .profile h5,
+    nav .profile span {
+        display: none;
+    }
+
+    main section.middle {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 3rem;
+        gap: 1.4rem;
+    }
+
+    .tradingview-widget-container {
+        width: 100%;
+    }
 }
