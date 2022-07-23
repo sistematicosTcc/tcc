@@ -1,6 +1,6 @@
 import Header from '../component/header/header';
 import './home.css';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Profile from "../images/profile.png"
 import WomanNot from "../images/woman_not.png"

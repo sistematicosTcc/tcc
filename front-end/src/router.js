@@ -12,6 +12,9 @@ import { Cadastro3 } from './pages/Login/cadastro/cadastro3';
 import { Login } from './pages/Login/login'
 import { Home } from './pages/home.js'
 
+import {Dashboard} from './pages/Dashboard/index.js'
+import {Teste} from './pages/Dashboard/teste.js'
+
 export function Routers () {
   return (
     <BrowserRouter>
@@ -24,6 +27,8 @@ export function Routers () {
         <Route path="/senha" element={<Senha />}/>
         <Route path="/senha2" element={<Senha2 />}/>
         <Route path="/senha3" element={<Senha3 />}/>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/teste" element={<Teste />} />
       </Routes>
     </BrowserRouter>
   )
