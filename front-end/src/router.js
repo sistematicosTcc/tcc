@@ -20,8 +20,6 @@ import {Analise} from './pages/Dashboard/analise.js'
 import {Ajuda} from './pages/Dashboard/ajuda.js'
 import {Configuracoes} from './pages/Dashboard/configuracoes.js'
 
-import{App} from './back-end/backApp'
-
 export function Routers () {
   return (
     <BrowserRouter>
@@ -41,7 +39,6 @@ export function Routers () {
         <Route path="/analise" element={<Analise />} />
         <Route path="/ajuda" element={<Ajuda />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
-        <Route path="/back" element={<App />} />
       </Routes>
     </BrowserRouter>
   )
