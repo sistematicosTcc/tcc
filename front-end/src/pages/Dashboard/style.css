@@ -523,3 +523,55 @@ nav .profile-area button {
         width: 100%;
     }
 }
+
+/*============================== transacoes ==============================*/
+
+.transacoesBorder {
+    width: 800px;
+    height: 100px;
+    display: flex;
+    border: 1px solid black;
+  
+    border-radius: 10px;
+}
+  
+  .transacoesColumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 25%;
+    height: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+  
+  .borderRight {
+    border-right: 1px solid black;
+}
+
+  /*============================== Wallet ==============================*/
+
+.walletBorder {
+    width: 800px;
+    height: 100px;
+    display: flex;
+    border: 1px solid black;
+  
+    border-radius: 10px;
+}
+  
+  .walletColumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 25%;
+    height: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+  
+  .borderRight {
+border-right: 1px solid black;
+  }
