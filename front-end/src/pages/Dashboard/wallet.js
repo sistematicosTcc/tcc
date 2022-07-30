@@ -45,12 +45,12 @@ export const Wallet = () => {
           </Link>
         </div>
       </aside>
-    </div>
-    <div class="walletBorder">
-      <div class="walletColumn borderRight">Moeda</div>
-      <div class="walletColumn borderRight">Quantidade</div>
-      <div class="walletColumn borderRight">Valor Total</div>
-      <div class="walletColumn">Preco</div>
+      <div class="walletBorder">
+        <div class="walletColumn borderRight">Moeda</div>
+        <div class="walletColumn borderRight">Quantidade</div>
+        <div class="walletColumn borderRight">Valor Total</div>
+        <div class="walletColumn">Preco</div>
+      </div>
     </div>
   </>
   );

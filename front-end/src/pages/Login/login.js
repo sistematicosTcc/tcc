@@ -28,9 +28,9 @@ export const Login = () =>{
                 </Link>
             </div>
             <div class="buttonDivision">
-                <Link to="#" className="Link-Margin">
+                <Link to="/dashboard" className="Link-Margin">
                   <button class="Continue-button">
-                    Continuar
+                    Entrar
                   </button>
                 </Link>
                 <Link to="/cad" className="Link-Margin">

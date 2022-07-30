@@ -142,6 +142,16 @@ small {
 }
 
 /*====================================== Header ========================================*/
+.profile-area{
+  display: flex;
+  align-items: center
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

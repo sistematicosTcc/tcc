@@ -1,5 +1,5 @@
-new TradingView.MediumWidget({
-  "symbols":[
+        new TradingView.MediumWidget({
+            "symbols":[
       [
           "BTC",
           "BINANCE:BTCUSDT|1D"
@@ -39,4 +39,4 @@ new TradingView.MediumWidget({
   "fontColor": "#787b86",
   "gridLineColor": "rgba(42, 46, 57, 0.06)",
   "container_id": "tradingview_1dbe3"
-});
+    })

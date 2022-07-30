@@ -19,6 +19,8 @@ import {Transacoes} from './pages/Dashboard/transacoes.js'
 import {Analise} from './pages/Dashboard/analise.js'
 import {Ajuda} from './pages/Dashboard/ajuda.js'
 import {Configuracoes} from './pages/Dashboard/configuracoes.js'
+import {BackEnd} from './back-end/backApp'
+
 
 export function Routers () {
   return (
@@ -39,6 +41,7 @@ export function Routers () {
         <Route path="/analise" element={<Analise />} />
         <Route path="/ajuda" element={<Ajuda />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
+        <Route path="/backend" element={<BackEnd />} />
       </Routes>
     </BrowserRouter>
   )

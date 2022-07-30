@@ -45,13 +45,13 @@ export const Transacoes = () => {
           </Link>
         </div>
       </aside>
+      <div class="transacoesBorder">
+        <div class="transacoesColumn borderRight">Moeda</div>
+        <div class="transacoesColumn borderRight">Quantidade</div>
+        <div class="transacoesColumn borderRight">Data</div>
+        <div class="transacoesColumn">Status</div>
+      </div>
     </div>
-    <div class="transacoesBorder">
-      <div class="transacoesColumn borderRight">Moeda</div>
-      <div class="transacoesColumn borderRight">Quantidade</div>
-      <div class="transacoesColumn borderRight">Data</div>
-      <div class="transacoesColumn">Status</div>
-  </div>
   </>
   );
 }

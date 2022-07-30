@@ -1,12 +1,13 @@
 import './headBoard.css'
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo_crp.png"
+import UserLogo from "../../images/profile-simple.png"
 
 import React from "react";
 
 function HeaderDashboard(){
   return(
-    <>
+    <nav>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
       <div className="container">
             <Link to="/" >
@@ -23,7 +24,7 @@ function HeaderDashboard(){
           </div>
           <div className="profile">
             <div className="profile-photo">
-                <img src="../../images/profile-simple.png" alt="perfil simples"/>
+                <img src={UserLogo} alt="perfil simples"/>
             </div>
             <h5>Seu cu</h5>
             <span className="material-icons-sharp">expand_more</span>
@@ -33,7 +34,7 @@ function HeaderDashboard(){
           </button>
         </div>
       </div>
-    </>
+    </nav>
   )
 }
 

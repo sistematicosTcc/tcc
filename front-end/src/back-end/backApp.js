@@ -1,7 +1,7 @@
-import React, { useState } from "react"; 
+import React from "react"; 
+import "./backcss.css"
 
-
-function App() {
+export const BackEnd = () =>{
     return (
         <div>
             <div>
@@ -10,15 +10,17 @@ function App() {
                 <input type="text" />
                 <label> Senha </label>
                 <input type = "text" />
-                <button> Cadastre-se </button>
+                <button class="Continue-button"> Cadastre-se </button>
             </div>
             <div>
             <h1>Cadastro</h1>
             <input type="text" placeholder="Email..." /> 
             <input type = "text" placeholder="Senha..."/>
-                <button> Cadastre-se </button>
+                <button class="Continue-button"> Cadastre-se </button>
             </div>
 
         </div>
     )
 }
+
+export default BackEnd;
