@@ -12,6 +12,20 @@ const db = mysql.createConnection({
     database: "cryptop",
 }); 
 
+app.post("/register", (req, res) => {
+
+    const email = req.body.nome
+    const senha = req.body.senha
+
+    db.query(
+        "INSERT INTO usuarios (email, senha) VALUES (?, ?)", 
+        [email, senha],
+        (err, result) => {
+            console.log(err);
+        }
+    );
+});
+
 app.listen(3306, () => { 
     console.log("Running server...");
 });
