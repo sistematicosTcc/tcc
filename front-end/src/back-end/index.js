@@ -28,6 +28,30 @@ app.post('/backend', (req, res) => {
     });
 });
 
+app.post('/login', (req, res) => { 
+    const email = req.body.email;
+    const senha = req.body.senha;
+
+
+    db.query("SELECT * FROM usuarios WHERE email = ? AND senha = ?",
+    [email, password],
+    (err, result) => {
+
+        if (err) {
+            res.send({err: err})
+        } 
+
+        
+            if (result.lenght > 0){
+                res.send(result)
+            } else {
+                res.send({message: "Usuário ou senha incorretos."});
+        }
+        }
+
+    )
+})
+
 app.listen(3306, () => { 
     console.log("Running server...");
 });

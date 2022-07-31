@@ -6,14 +6,34 @@ export const BackEnd = () =>{
     const [emailReg, setEmailReg] = useState("");
     const [senhaReg, setSenhaReg] = useState("");
 
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+
+    const [loginStatus, setLoginStatus] = useState("");
+ 
     const register = () => {
-        Axios.post('http://localhost3000/3006', {
+        Axios.post('http://localhost3000/register', {
             email: emailReg, 
             senha: senhaReg
         }).then((response) => {
             console.log(response)
         })
+
+        const login = () => {
+            Axios.post('http://localhost3000/login', {
+                email: email, 
+                senha: senha
+            }).then((response) => {
+
+                if(response.data.message){
+                    setLoginStatus(response.data.message)
+                } else{
+                    setLoginStatus(response.data[0].email)
+                }
+            })
     }
+
+}
 
 
     return (
@@ -31,11 +51,17 @@ export const BackEnd = () =>{
                 <button class="Continue-button" onClick={register}> Register </button>
             </div>
             <div>
-            <h1>Cadastro</h1>
-            <input type="text" placeholder="Email..." /> 
-            <input type = "text" placeholder="Senha..."/>
-                <button class="Continue-button"> Cadastre-se </button>
+            <h1>Login</h1>
+            <input type="text" placeholder="Email..."  onChange={(e) => {
+                    setEmail(e.target.value);
+                    }}  /> 
+            <input type = "text" placeholder="Senha..." onChange={(e) => {
+                    setSenha(e.target.value);
+                    }}  />
+                <button class="Continue-button" onClick={login}> Login </button>
             </div>
+
+            <h1>{loginStatus}</h1>
 
         </div>
     )
