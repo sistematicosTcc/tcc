@@ -11,29 +11,28 @@ export const BackEnd = () =>{
 
     const [loginStatus, setLoginStatus] = useState("");
  
-    const register = () => {
+    function register (){
         Axios.post('http://localhost3000/register', {
             email: emailReg, 
             senha: senhaReg
         }).then((response) => {
             console.log(response)
         })
-
-        const login = () => {
-            Axios.post('http://localhost3000/login', {
-                email: email, 
-                senha: senha
-            }).then((response) => {
-
-                if(response.data.message){
-                    setLoginStatus(response.data.message)
-                } else{
-                    setLoginStatus(response.data[0].email)
-                }
-            })
     }
 
-}
+    function login (){
+        Axios.post('http://localhost3000/login', {
+            email: email, 
+            senha: senha
+        }).then((response) => {
+
+            if(response.data.message){
+                setLoginStatus(response.data.message)
+            } else{
+                setLoginStatus(response.data[0].email)
+            }
+        })
+    }
 
 
     return (

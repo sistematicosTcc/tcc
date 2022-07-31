@@ -46,59 +46,61 @@ export const Dashboard = () => {
           </div>
         </aside>
       </div>
-      <section className="middle">
-            <script>
-              new TradingView.MediumWidget({
-                  "symbols"}:[
-                  [
-                      "BTC",
-                      "BINANCE:BTCUSDT|1D"
-                  ],
-                  [
-                      "ETH",
-                      "BINANCE:ETHUSDT|1D"
-                  ],
-                  [
-                      "BNB",
-                      "BINANCE:BNBUSDT|1D"
-                  ],
-                  [
-                      "SHIB",
-                      "BINANCE:SHIBUSDT|1D"
-                  ],
-                  [
-                      "DOGE",
-                      "BINANCE:DOGEUSDT|1D"
-                  ]
-              ],
-                "chartOnly": false,
-                "width": "100%",
-                "height": 500,
-                "locale": "br",
-                "colorTheme": "light",
-                "isTransparent": false,
-                "autosize": false,
-                "showVolume": false,
-                "hideDateRanges": false,
-                "scalePosition": "right",
-                "scaleMode": "Normal",
-                "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-                "noTimeScale": false,
-                "valuesTracking": "1",
-                "chartType": "line",
-                "fontColor": "#787b86",
-                "gridLineColor": "rgba(42, 46, 57, 0.06)",
-                "container_id": "tradingview_1dbe3"
-              );
-            </script>
-        <div className="tradingview-widget-container">
-          <div id="tradingview_1dbe3"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript" src="/indexAuxiliar.js" />
-        </div>
-        <script src="https://cdn.jsdelivr.net/gh/coinponent/coinponent@1.2.6/dist/coinponent.js"></script>
-        <coin-ponent > </coin-ponent>
-      </section>
+      <section class="middle">
+
+            <div class="tradingview-widget-container">
+                <div id="tradingview_1dbe3"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.MediumWidget(
+                        {
+                            "symbols"}: [
+                                [
+                                    "BTC",
+                                    "BINANCE:BTCUSDT|1D"
+                                ],
+                                [
+                                    "ETH",
+                                    "BINANCE:ETHUSDT|1D"
+                                ],
+                                [
+                                    "BNB",
+                                    "BINANCE:BNBUSDT|1D"
+                                ],
+                                [
+                                    "SHIB",
+                                    "BINANCE:SHIBUSDT|1D"
+                                ],
+                                [
+                                    "DOGE",
+                                    "BINANCE:DOGEUSDT|1D"
+                                ]
+                            ],
+                            "chartOnly": false,
+                            "width": "100%",
+                            "height": 500,
+                            "locale": "br",
+                            "colorTheme": "light",
+                            "isTransparent": false,
+                            "autosize": false,
+                            "showVolume": false,
+                            "hideDateRanges": false,
+                            "scalePosition": "right",
+                            "scaleMode": "Normal",
+                            "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                            "noTimeScale": false,
+                            "valuesTracking": "1",
+                            "chartType": "line",
+                            "fontColor": "#787b86",
+                            "gridLineColor": "rgba(42, 46, 57, 0.06)",
+                            "container_id": "tradingview_1dbe3"
+                        }
+                    );
+                </script>
+            </div>
+            <script src="https://cdn.jsdelivr.net/gh/coinponent/coinponent@1.2.6/dist/coinponent.js"></script>
+            <coin-ponent > </coin-ponent>
+        </section>
       <section className="right ">
           <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
           <div className="livecoinwatch-widget-3" lcw-base="BRL" lcw-d-head="false" lcw-d-name="true" lcw-d-code="true"

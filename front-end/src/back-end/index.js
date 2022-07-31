@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express(); 
 
 app.use(express.json()); 
-app.use('cors');
+app.use(cors());
 
 const db = mysql.createConnection({ 
     user: "root",
@@ -52,6 +52,6 @@ app.post('/login', (req, res) => {
     )
 })
 
-app.listen(3306, () => { 
+app.listen(3000, () => { 
     console.log("Running server...");
 });
