@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
+import { Helmet } from 'react-helmet';
 
 export const Teste = () => {
   return (
@@ -47,13 +48,19 @@ export const Teste = () => {
         </div>
       </aside>
     </div>
-        {/* <section className="middle">
+         <section className="middle">
+    <Helmet>
             <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=0.1&amountFiat=1500&backgroundColor=FFFFFF&darkMode=false&from=btc&fromFiat=eur&horizontal=false&isFiat&lang=en-US&link_id=f279f037e83259&locales=true&logo=false&primaryColor=000E56&to=eth&toFiat=eth&toTheMoon=true' style="height: 356px; width: 100%; border: none" />
+    </Helmet>
+    <Helmet>
             <script defer type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
-        </section> */}
+    </Helmet>
+        </section> 
         <section className="right ">
         </section>
-    <script type="text/javascript" src="main.js"></script>
+        <Helmet>
+          <script type="text/javascript" src="main.js"></script>
+        </Helmet>
   </>
   );
 }
