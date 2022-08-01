@@ -12,7 +12,7 @@ export const BackEnd = () =>{
     const [loginStatus, setLoginStatus] = useState("");
  
     function register (){
-        Axios.post('http://localhost3000/register', {
+        Axios.post('http://localhost:3000/register', {
             email: emailReg, 
             senha: senhaReg
         }).then((response) => {
@@ -21,7 +21,7 @@ export const BackEnd = () =>{
     }
 
     function login (){
-        Axios.post('http://localhost3000/login', {
+        Axios.post('http://localhost:3000/login', {
             email: email, 
             senha: senha
         }).then((response) => {
