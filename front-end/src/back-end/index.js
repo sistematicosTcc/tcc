@@ -29,12 +29,6 @@ app.post('/backend', (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
-
-   res.send('Pau no cu desse projeto de merda!!')
-
-});
-
 app.post('/login', (req, res) => { 
     const email = req.body.email;
     const senha = req.body.senha;
