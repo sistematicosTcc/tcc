@@ -17,12 +17,13 @@ const db = mysql.createConnection({
 
 app.post('/backend', (req, res) => {
 
+    const nome = req.body.nome;
     const email = req.body.email;
     const senha = req.body.senha;
 
 
-    db.query("INSERT INTO USUARIOS (EMAIL, SENHA) VALUES(?, ?)", 
-    [email, senha], 
+    db.query("INSERT INTO USUARIOS (NOME, EMAIL, SENHA) VALUES(?, ?, ?)", 
+    [nome, email, senha], 
     (err, result) => {
         console.log(err)
     });
@@ -52,6 +53,6 @@ app.post('/login', (req, res) => {
     )
 })
 
-app.listen(3000, () => { 
+app.listen(3333, () => { 
     console.log("Running server...");
 });

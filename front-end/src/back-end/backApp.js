@@ -3,6 +3,7 @@ import Axios from "axios";
 import "./backcss.css"
 
 export const BackEnd = () =>{
+    const [nomeReg, setNomeReg] = useState("");
     const [emailReg, setEmailReg] = useState("");
     const [senhaReg, setSenhaReg] = useState("");
 
@@ -12,7 +13,8 @@ export const BackEnd = () =>{
     const [loginStatus, setLoginStatus] = useState("");
  
     function register (){
-        Axios.post('http://localhost:3000/register', {
+        Axios.post('http://localhost:3333/backend', {
+            nome: nomeReg,
             email: emailReg, 
             senha: senhaReg
         }).then((response) => {
@@ -21,7 +23,7 @@ export const BackEnd = () =>{
     }
 
     function login (){
-        Axios.post('http://localhost:3000/login', {
+        Axios.post('http://localhost:3333/login', {
             email: email, 
             senha: senha
         }).then((response) => {
@@ -39,6 +41,10 @@ export const BackEnd = () =>{
         <div>
             <div>
                 <h1>Cadastro</h1>
+                <label> Nome </label>
+                <input type="text" onChange={(e) => {
+                    setNomeReg(e.target.value);
+                    }}  />
                 <label> E-mail </label>
                 <input type="text" onChange={(e) => {
                     setEmailReg(e.target.value);
