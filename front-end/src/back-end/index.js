@@ -35,7 +35,7 @@ app.post('/login', (req, res) => {
 
 
     db.query("SELECT * FROM usuarios WHERE email = ? AND senha = ?",
-    [email, password],
+    [email, senha],
     (err, result) => {
 
         if (err) {

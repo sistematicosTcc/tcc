@@ -55,7 +55,7 @@ export const Dashboard = () => {
                   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>    
                 </Helmet>
                 <Helmet>
-                  <script type="text/javascript"> new TradingView.MediumWidget({
+                  {/* <script type="text/javascript"> new TradingView.MediumWidget({
                     "symbols"}: [
                                 [
                                     "BTC",
@@ -98,7 +98,7 @@ export const Dashboard = () => {
                             "container_id": "tradingview_1dbe3"
                         
                      });
-                  </script>
+                  </script> */}
                 </Helmet>
             </div>
             <Helmet>
