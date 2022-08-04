@@ -6,7 +6,24 @@ import FgtCad from "../../../images/fgt_cad2.png"
 
 import React from "react";
 
+import emailjs from 'emailjs-com';
+
 export const Cadastro2 = () =>{
+
+  //{{to_name}} do emailjs é preciso trocar o ID da variave l{{____}} anerior
+
+  function sendEmail(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm('service_ajllfkb', 'service_ajllfkb', e.target, 'ufx27yWKy1INzZZ-k')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
   return (
     <>
       <Header />
@@ -21,7 +38,7 @@ export const Cadastro2 = () =>{
                 id="inputEmail"
               />
               <br />
-              <button id="token">Reenviar o Token de Verificação</button>
+              <button id="token" onClick={sendEmail()} >Reenviar o Token de Verificação</button>
             </div>
             <div class="division">
               <h2>Token</h2>
@@ -34,7 +51,7 @@ export const Cadastro2 = () =>{
                 </button>
               </Link>
               <Link to="/cad3" className="Link-Margin">
-                <button class="Continue-button" >
+                <button class="Continue-button">
                     Continuar
                 </button>
               </Link>
@@ -44,7 +61,7 @@ export const Cadastro2 = () =>{
         <div class="img_fgt">
           <img src={FgtCad} alt="fogueteimg" class="fgt" />
         </div>
-      </main>
+      </main>    
     </>
   );
 }
