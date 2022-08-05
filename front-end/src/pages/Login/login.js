@@ -22,7 +22,7 @@ export const Login = () =>{
         senha: senha
     }).then((response) => {
 
-        if(response.data.message){
+        if(response.data[0] != null){
             setLoginStatus(response.data.message)
         } else{
             setLoginStatus(response.data[0].email)
