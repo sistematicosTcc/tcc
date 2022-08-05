@@ -4,9 +4,24 @@ import './style.css';
 import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad1.png"
 
-import React from "react";
+import React, { useState } from "react"; 
+import Axios from "axios";
 
 export const Cadastro = () => {
+    const [nomeReg, setNomeReg] = useState("");
+    const [emailReg, setEmailReg] = useState("");
+    const [senhaReg, setSenhaReg] = useState("");
+ 
+    function register (){
+        Axios.post('http://localhost:3333/cad', {
+            nome: nomeReg,
+            email: emailReg, 
+            senha: senhaReg
+        }).then((response) => {
+            console.log(response)
+        })
+    }
+    
   return (
     <>
       <Header />
@@ -14,9 +29,15 @@ export const Cadastro = () => {
         <div class="config_txt">
           <h1>Crie Sua Conta</h1>
           <form>
-            <input type="text" placeholder="Digite seu Nome" /> <br/>
-            <input type="email" placeholder="Digite seu Email" id="input-email" /> <br/>
-            <input type="password" placeholder="Digite sua Senha" id="password" /> <br/>
+          <input type="text" placeholder = "Digite seu nome" onChange={(e) => {
+                    setNomeReg(e.target.value);
+                    }}  /> <br/>
+            <input type="text" placeholder = "Digite seu email"onChange={(e) => {
+                    setEmailReg(e.target.value);
+                    }}  /> <br/>
+            <input type="password" placeholder = "Digite seu Senha" onChange={(e) => {
+                    setSenhaReg(e.target.value);
+                    }}  /> <br/>
             <input
               type="password"
               placeholder="Digite sua Senha novamente"
@@ -25,7 +46,7 @@ export const Cadastro = () => {
           </form>
           <div class="buttonDivision">
           <Link to="/cad2" className="Link-Margin">
-            <button class="Continue-button" >
+            <button class="Continue-button" onClick={register}>
                 Continuar
             </button>
           </Link>
