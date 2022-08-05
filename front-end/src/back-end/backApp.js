@@ -57,10 +57,10 @@ export const BackEnd = () =>{
             </div>
             <div>
             <h1>Login</h1>
-            <input type="text" placeholder="Email..."  onChange={(e) => {
+            <input type="text" placeholder="Digite seu Email"  onChange={(e) => {
                     setEmail(e.target.value);
                     }}  /> 
-            <input type = "text" placeholder="Senha..." onChange={(e) => {
+            <input type = "text" placeholder="Digite sua Senha" onChange={(e) => {
                     setSenha(e.target.value);
                     }}  />
                 <button class="Continue-button" onClick={login}> Login </button>
