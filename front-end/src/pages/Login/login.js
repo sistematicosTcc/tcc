@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../component/header/header';
 import './login.css';
 
@@ -11,6 +11,7 @@ import Fgt from "../../images/foguete.png"
 
 export const Login = () =>{
 
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -23,11 +24,13 @@ export const Login = () =>{
         email: email, 
         senha: senha
     }).then((response) => {
+        console.log('teladelogin')
         console.log(response.data)
+
         if(response.data[0] != null){
-            setLoginStatus(response.data.message)
+          navigate("/dashboard").alert('Usuário logado com sucesso')
         } else{
-            setLoginStatus(response.data[0].email)
+            alert('Usuário ou senha incorretos')
         }
     })
   }
@@ -40,7 +43,7 @@ export const Login = () =>{
           <h1>Entre na sua conta</h1>
           <form>
             <h3>Email</h3>
-              <input type="email" placeholder="Digite seu Email"  id="input-email" onChange={(e) => {
+              <input type="email" placeholder="Digite seu Email"  id="inputEmail" onChange={(e) => {
                     setEmail(e.target.value);
                     }} />
             <div class="space">
@@ -55,7 +58,7 @@ export const Login = () =>{
                 </Link>
             </div>
             <div class="buttonDivision">
-                  <button class="Continue-button" onClick={login}>
+                  <button class="Continue-button Link-Margin"  onClick={login}>
                     Entrar
                   </button>
                 <Link to="/cad" className="Link-Margin">
