@@ -1,7 +1,8 @@
 import Header from "../../../component/header/header";
 import "./style.css";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
+
 import FgtCad from "../../../images/fgt_cad2.png";
 
 import React, { useState, useRef } from "react";
@@ -11,6 +12,7 @@ import emailjs from "@emailjs/browser";
 
 export const Cadastro2 = () => {
 
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const form = useRef();
 
@@ -48,6 +50,17 @@ export const Cadastro2 = () => {
       );
   }
 
+
+  function tokenCerto(){
+    var tokenCorreto = document.querySelector("#tokenNum").value;
+    console.log(tokenCorreto)
+    if(tokenCorreto === "123"){
+      navigate("/cad3").alert('Token Correto')
+    } else {
+      alert('Token Incorreto')
+    }
+  }
+
   return (
     <>
       <Header />
@@ -69,15 +82,13 @@ export const Cadastro2 = () => {
           </form>
           <div class="division">
             <h2>Token</h2>
-            <input type="text" id="tokenNum" /> <br />
+            <input type="text" id="tokenNum"/> <br />
           </div>
           <div class="buttonDivision">
             <Link to="/cad" className="Link-Margin">
               <button class="Continue-button">Voltar</button>
             </Link>
-            <Link to="/cad3" className="Link-Margin">
-              <button class="Continue-button">Continuar</button>
-            </Link>
+              <button class="Continue-button Link-Margin" onClick={tokenCerto}>Continuar</button>
           </div>
         </div>
         <div class="img_fgt">

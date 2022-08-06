@@ -16,19 +16,21 @@ export const Login = () =>{
 
   const [loginStatus, setLoginStatus] = useState("");
 
-  function login (){
+  function login (e){
+    e.preventDefault();
+    
     Axios.post('http://localhost:3333/login', {
         email: email, 
         senha: senha
     }).then((response) => {
-
+        console.log(response.data)
         if(response.data[0] != null){
             setLoginStatus(response.data.message)
         } else{
             setLoginStatus(response.data[0].email)
         }
     })
-}
+  }
 
   return(
     <>
@@ -47,17 +49,15 @@ export const Login = () =>{
                     setSenha(e.target.value);
                     }} />
                 <Link to="/senha">
-                  <button id="tokenSenha">
+                  <button id="tokenSenha"> {/* adicionar um <Link> tem Prioridade */}
                     Redefinição de senha
                   </button>
                 </Link>
             </div>
             <div class="buttonDivision">
-                <Link to="/dashboard" className="Link-Margin">
                   <button class="Continue-button" onClick={login}>
                     Entrar
                   </button>
-                </Link>
                 <Link to="/cad" className="Link-Margin">
                   <button class="Continue-button">
                     Cadastre-se
