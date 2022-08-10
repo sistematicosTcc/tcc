@@ -7,6 +7,7 @@ import { Senha3 } from './pages/Login/senha/senha3'
 
 import { Cadastro } from './pages/Login/cadastro/cadastro';
 import { Cadastro2 } from './pages/Login/cadastro/cadastro2';
+// import {Verificacao} from './pages/Login/cadastro/verificacao'
 import { Cadastro3 } from './pages/Login/cadastro/cadastro3';
 
 import { Login } from './pages/Login/login'
@@ -30,6 +31,7 @@ export function Routers () {
         <Route path="/login" element={<Login />}/>
         <Route path="/cad" exact element={<Cadastro />}/>
         <Route path="/cad2" element={<Cadastro2 />}/>
+        {/* <Route path="/verificacao" element={<Verificacao />}/> */}
         <Route path="/cad3" element={<Cadastro3 />}/>
         <Route path="/senha" exact element={<Senha />}/>
         <Route path="/senha2" element={<Senha2 />}/>

@@ -15,12 +15,18 @@ const db = mysql.createConnection({
     database: "cryptop",
 });
 
-app.post('/cad', (req, res) => {
+app.post('/cad', (req, res) => { //trocar local... por `${currentUrl}/...`
 
     const nome = req.body.nome;
     const email = req.body.email;
     const senha = req.body.senha;
 
+/* se der sucesso isso vai pra um PENDING,  (data.status === "PENDING"){
+    const {email} = credentials;
+    history.push(`/verificacao/${email}`) ?????  react-router-dom
+
+    path="verificacao/:email"
+    */
 
     db.query("INSERT INTO USUARIOS (NOME, EMAIL, SENHA) VALUES(?, ?, ?)",
         [nome, email, senha],
@@ -82,4 +88,10 @@ app.post('/email', (req, res) => {
 app.listen(3333, () => {
     console.log("Running server...");
 });
+
+//-------------------------Autenticaocao seguranca------------------------------
+
+const remoteUrl = "http://localhost:3333/";
+const localUrl = "http://localhost:3000";
+const currentUrl = localUrl;
 
