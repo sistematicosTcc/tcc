@@ -91,7 +91,3 @@ app.listen(3333, () => {
 
 //-------------------------Autenticaocao seguranca------------------------------
 
-const remoteUrl = "http://localhost:3333/";
-const localUrl = "http://localhost:3000";
-const currentUrl = localUrl;
-
