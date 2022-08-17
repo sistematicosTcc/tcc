@@ -15,7 +15,7 @@ export const Login = () =>{
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  const [loginStatus, setLoginStatus] = useState("");
+  const [loginStatus] = useState("");
 
   function login (e){
     e.preventDefault();
