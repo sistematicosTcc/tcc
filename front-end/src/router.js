@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 
 import { Senha } from "./pages/Login/senha/senha";
 import { Senha2 } from "./pages/Login/senha/senha2";

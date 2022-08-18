@@ -1,34 +1,24 @@
-import Api from "../../../Api";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+
+
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 
 import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { auth } from "../../../firebaseConfig";
-export const LoginArea = () => {
-  //onReceiveGoogle parentses
-  // const actionLoginGoogle = async () => {
-  //   let result = await Api.googleLogar();
 
-  //   if (result) {
-  //     onReceiveGoogle(result.user);
-  //   } else {
-  //     alert("error");
-  //   }
-  //};
+import { auth } from "../../../firebaseConfig";
+
+import { useNavigate } from "react-router-dom";
+export const LoginArea = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-
-  const [user, setUser] = useState({});
-
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  
+  const navigate = useNavigate();
+  const auth = getAuth();
 
   const register = async (e) => {
     e.preventDefault();
@@ -38,9 +28,15 @@ export const LoginArea = () => {
         registerEmail,
         registerPassword
       );
-      console.log(user);
-    } catch (err) {
-      console.log(err.message);
+      sendEmailVerification(auth.currentUser)
+        .then(() => {
+          alert("email enviado" + registerEmail);
+        })
+        .catch((e) => {
+          console.log("erro em:" + e.message);
+        });
+    } catch (e) {
+      console.log("erro em:" + e.message);
     }
   };
 
@@ -51,7 +47,14 @@ export const LoginArea = () => {
         auth,
         loginEmail,
         loginPassword
-      );
+      ).then(() => {
+        if (!getAuth().currentUser.emailVerified) {
+          alert('Verifique seu email para prosseguir')
+          return;
+        } else {
+          navigate("/dashboard").alert('Usuario logado com sucesso');
+        }
+      });
       console.log(user);
     } catch (err) {
       console.log(err.message);
@@ -61,7 +64,6 @@ export const LoginArea = () => {
   const logout = async () => {
     await signOut(auth);
   };
-
   return (
     <>
       <div>
@@ -87,7 +89,9 @@ export const LoginArea = () => {
               }}
             />
           </div>
-          <button onClick={register}>criar</button>
+          <button id="token" onClick={register}>
+            criar
+          </button>
         </form>
       </div>
       <div>
@@ -113,10 +117,6 @@ export const LoginArea = () => {
           </div>
           <button onClick={login}>logar</button>
         </form>
-      </div>
-      <div>
-        <h2>user Logged in: --- {user?.email} --- </h2>
-        <button onClick={logout}>Sign Out</button>
       </div>
     </>
   );
