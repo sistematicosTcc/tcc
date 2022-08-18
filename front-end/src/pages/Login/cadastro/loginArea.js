@@ -30,7 +30,8 @@ export const LoginArea = () => {
     setUser(currentUser);
   });
 
-  const register = async () => {
+  const register = async (e) => {
+    e.preventDefault();
     try {
       const user = await createUserWithEmailAndPassword(
         auth,
@@ -43,7 +44,8 @@ export const LoginArea = () => {
     }
   };
 
-  const login = async () => {
+  const login = async (e) => {
+    e.preventDefault();
     try {
       const user = await signInWithEmailAndPassword(
         auth,
@@ -65,7 +67,6 @@ export const LoginArea = () => {
       <div>
         <h1>faca login em sua conta</h1>
         <button> fazer login com o google</button>
-        {/*actionLoginGoogle*/}
         <p>ou</p>
         <form>
           <div>
