@@ -1,69 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, {useContext} from "react";
+import { UserContext } from "../../../contexts/UserContexts";
 
-
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
-
-import {
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
-
-import { auth } from "../../../firebaseConfig";
-
-import { useNavigate } from "react-router-dom";
 export const LoginArea = () => {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  
-  const navigate = useNavigate();
-  const auth = getAuth();
-
-  const register = async (e) => {
-    e.preventDefault();
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      sendEmailVerification(auth.currentUser)
-        .then(() => {
-          alert("email enviado" + registerEmail);
-        })
-        .catch((e) => {
-          console.log("erro em:" + e.message);
-        });
-    } catch (e) {
-      console.log("erro em:" + e.message);
-    }
-  };
-
-  const login = async (e) => {
-    e.preventDefault();
-    try {
-      const user = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      ).then(() => {
-        if (!getAuth().currentUser.emailVerified) {
-          alert('Verifique seu email para prosseguir')
-          return;
-        } else {
-          navigate("/dashboard").alert('Usuario logado com sucesso');
-        }
-      });
-      console.log(user);
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-
-  const logout = async () => {
-    await signOut(auth);
-  };
+  const {setRegisterEmail, setRegisterPassword, setLoginEmail, setLoginPassword, register, login, sendVerification} = useContext(UserContext)
   return (
     <>
       <div>
@@ -94,6 +33,7 @@ export const LoginArea = () => {
           </button>
         </form>
       </div>
+      <button onClick={sendVerification}>Verificando email</button>
       <div>
         <h1>login</h1>
         <form>

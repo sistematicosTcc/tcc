@@ -102,15 +102,15 @@ export const Dashboard = () => {
               </Helmet>
               <coin-ponent > </coin-ponent>
           </section>
-        </div>
-        <section className="right ">
-        <Helmet>
-          <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
-        </Helmet>
+      </div>
+        <section className="right">
+          <Helmet>
+            <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
+          </Helmet>
           <div className="livecoinwatch-widget-3" lcw-base="BRL" lcw-d-head="false" lcw-d-name="true" lcw-d-code="true"
               lcw-d-icon="true" lcw-color-tx="#000000" lcw-color-bg="#ffffff" lcw-border-w="0">
           </div>
-      </section>
+        </section>
       <Helmet>
         <script type="text/javascript" src="main.js"></script>
       </Helmet>

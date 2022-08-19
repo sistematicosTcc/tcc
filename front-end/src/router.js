@@ -1,6 +1,10 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import React from "react";
 
+import PrivateRouter from "./component/helper/PrivateRouter";
+
+import { UserStorage } from "./contexts/UserContexts";
+
 import { Senha } from "./pages/Login/senha/senha";
 import { Senha2 } from "./pages/Login/senha/senha2";
 import { Senha3 } from "./pages/Login/senha/senha3";
@@ -23,28 +27,36 @@ import { BackEnd } from "./back-end/backApp";
 import { LoginArea } from "./pages/Login/cadastro/loginArea.js";
 
 export function Routers() {
-
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="*" exact element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cad" element={<Cadastro />} />
-        <Route path="/loginarea" element={<LoginArea />} />
-        <Route path="/cad2" element={<Cadastro2 />} />
-        <Route path="/cad3" element={<Cadastro3 />} />
-        <Route path="/senha" element={<Senha />} />
-        <Route path="/senha2" element={<Senha2 />} />
-        <Route path="/senha3" element={<Senha3 />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/teste" element={<Teste />} />
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/transacoes" element={<Transacoes />} />
-        <Route path="/analise" element={<Analise />} />
-        <Route path="/ajuda" element={<Ajuda />} />
-        <Route path="/configuracoes" element={<Configuracoes />} />
-        <Route path="/backend" element={<BackEnd />} />
-      </Routes>
+      <UserStorage>
+        <Routes>
+          <Route path="*" exact element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cad" element={<Cadastro />} />
+          <Route path="/loginarea" element={<LoginArea />} />
+          <Route path="/cad2" element={<Cadastro2 />} />
+          <Route path="/cad3" element={<Cadastro3 />} />
+          <Route path="/senha" element={<Senha />} />
+          <Route path="/senha2" element={<Senha2 />} />
+          <Route path="/senha3" element={<Senha3 />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRouter>
+                <Dashboard />
+              </PrivateRouter>
+            }
+          />
+          <Route path="/teste" element={<Teste />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/transacoes" element={<Transacoes />} />
+          <Route path="/analise" element={<Analise />} />
+          <Route path="/ajuda" element={<Ajuda />} />
+          <Route path="/configuracoes" element={<Configuracoes />} />
+          <Route path="/backend" element={<BackEnd />} />
+        </Routes>
+      </UserStorage>
     </BrowserRouter>
   );
 }
