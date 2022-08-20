@@ -20,12 +20,12 @@
     --color-danger-light: rgb(255, 67, 54, 0.2);
     --color-purple-light: rgb(160, 99, 245, 0.2);
 
-    --card-padding: 1.6rem;
-    --padding-1: 1rem;
+    --card-padding: 1.6px;
+    --padding-1: 1px;
     --padding-2: 8px;
 
-    --card-border-radius: 1.6rem;
-    --border-radius-1: 1rem;
+    --card-border-radius: 1.6px;
+    --border-radius-1: 1px;
     --border-radius-2: 6px;
 }
 
@@ -67,38 +67,38 @@ img {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.2px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.5px;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.2px;
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1px;
 }
 
 h5 {
-    font-size: 0.86rem;
+    font-size: 0.86px;
     font-weight: 500;
 }
 
 h7 {
-    font-size: 7.6rem;
+    font-size: 7.6px;
 }
 
 p {
-    font-size: 0.86rem;
+    font-size: 0.86px;
     color: var(--color-gray-dark);
 }
 
 small {
     font-weight: 300;
-    font-size: 0.77rem;
+    font-size: 0.77px;
 }
 
 .text-muted {
@@ -123,33 +123,33 @@ small {
 
 .bg-primary {
     background: var(--color-primary);
-    box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
+    box-shadow: 0 0.8px 0.8px var(--color-primary-light);
 }
 
 .bg-danger {
     background: var(--color-danger);
-    box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
+    box-shadow: 0 0.8px 0.8px var(--color-danger-light);
 }
 
 .bg-success {
     background: var(--color-success);
-    box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
+    box-shadow: 0 0.8px 0.8px var(--color-success-light);
 }
 
 .bg-purple {
     background: var(--color-purple);
-    box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
+    box-shadow: 0 0.8px 0.8px var(--color-purple-light);
 }
 
 .bg-dark {
     background: var(--color-dark);
-    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.8px 0.8px rgba(0, 0, 0, 0.2);
 }
 
 nav {
     width: 100%;
     background: var(--color-white);
-    padding: 1rem 0;
+    padding: 1px 0;
 }
 
 nav .container {
@@ -162,7 +162,7 @@ nav .container {
 }
 
 nav img.logo {
-    width: 10rem;
+    width: 10px;
 }
 
 nav .search-bar {
@@ -172,7 +172,7 @@ nav .search-bar {
     border-radius: var(--border-radius-2);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1px;
     color: var(--color-gray-ligth);
     position: absolute;
     left: 15%;
@@ -192,14 +192,14 @@ nav .profile-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 4px;
 }
 
 nav .profile-area .theme-btn {
     display: flex;
     background: var(--color-light);
-    width: 5rem;
-    height: 2rem;
+    width: 5px;
+    height: 2px;
     border-radius: var(--border-radius-2);
     cursor: pointer;
 }
@@ -210,7 +210,7 @@ nav .profile-area .theme-btn span {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.3px;
 }
 
 nav .profile-area .theme-btn .active {
@@ -221,14 +221,14 @@ nav .profile-area .theme-btn .active {
 
 nav .profile-area .profile {
     display: flex;
-    gap: 1rem;
+    gap: 1px;
     align-items: center;
 }
 
 nav .profile-area .profile-photo {
     display: block;
-    width: 3rem;
-    height: 3rem;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -241,10 +241,10 @@ nav .profile-area button {
 .mainContent {
     background-color: var(--color-light);
     display: grid;
-    grid-template-columns: 16rem auto 30rem;
-    gap: 2rem;
+    grid-template-columns: 16px auto 30px;
+    gap: 2px;
     width: 96%;
-    margin: 1rem auto 4rem;
+    margin: 1px auto 4px;
 }
 
 .mainContent aside {
@@ -261,15 +261,15 @@ nav .profile-area button {
 .mainContent aside .sidebar a {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    height: 4.2rem;
+    gap: 1.2px;
+    height: 4.2px;
     color: var(--color-gray-ligth);
     position: relative;
 }
 
 .mainContent aside .sidebar a span {
-    font-size: 1.7rem;
-    margin-left: 3rem;
+    font-size: 1.7px;
+    margin-left: 3px;
     transition: all 300ms ease;
 }
 
@@ -291,7 +291,7 @@ nav .profile-area button {
 }
 
 .mainContent aside .sidebar a:hover span {
-    margin-left: 2rem;
+    margin-left: 2px;
 }
 
 .mainContent aside .sidebar h4 {
@@ -307,11 +307,11 @@ nav .profile-area button {
 }
 
 .mainContent aside .updates span {
-    font-size: 2.8rem;
+    font-size: 2.8px;
 }
 
 .mainContent aside .updates h4 {
-    margin: 1rem 0;
+    margin: 1px 0;
 }
 
 .mainContent aside .updates a {
@@ -320,13 +320,13 @@ nav .profile-area button {
     background: var(--color-primary);
     color: var(--color-white);
     border-radius: var(--border-radius-1);
-    padding: 0.8rem 0;
-    margin-top: 2rem;
+    padding: 0.8px 0;
+    margin-top: 2px;
     transition: all 300ms ease;
 }
 
 .mainContent aside .updates a:hover {
-    box-shadow: 0 1rem 2rem var(--color-primary-light);
+    box-shadow: 0 1px 2px var(--color-primary-light);
 }
 
 .card-coin {
@@ -436,7 +436,7 @@ nav .profile-area button {
 
 
     nav .profile-area {
-        gap: 2rem;
+        gap: 2xp;
     }
 
     nav .profile-area button#menu-btn {
@@ -455,9 +455,9 @@ nav .profile-area button {
         left: -100%;
         z-index: 3;
         background: var(--color-white);
-        width: 22rem;
+        width: 22xp;
         height: 100vh;
-        box-shadow: 2rem 0 2rem var(--color-primary-light);
+        box-shadow: 2xp 0 2xp var(--color-primary-light);
         display: none;
         animation: showSideBar 500ms ease forwards;
     }
@@ -470,11 +470,11 @@ nav .profile-area button {
 
     .mainContent aside button#close-btn {
         display: inline-block;
-        width: 3rem;
-        height: 3rem;
+        width: 3px;
+        height: 3px;
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 1px;
+        right: 1px;
         z-index: 4;
         background: transparent;
         color: var(--color-dark);
@@ -485,7 +485,7 @@ nav .profile-area button {
     }
 
     .mainContent aside .sidebar {
-        margin-top: 4rem;
+        margin-top: 4px;
     }
 
     .mainContent aside .updates {
@@ -497,13 +497,13 @@ nav .profile-area button {
     }
 
     .mainContent section.right {
-        margin-top: 3rem;
+        margin-top: 3px;
     }
 }
 
 @media screen and (max-width: 600px) {
     nav .profile-area {
-        gap: 2.6rem;
+        gap: 2.6px;
     }
 
     nav .profile h5,
@@ -515,8 +515,8 @@ nav .profile-area button {
         grid-template-columns: 1fr;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 3rem;
-        gap: 1.4rem;
+        margin-top: 3px;
+        gap: 1.4px;
     }
 
     .tradingview-widget-container {
