@@ -3,9 +3,6 @@
     src: url('../../lato.semibold.ttf') format('truetype');
   }
 
-  .testando {
-    font-size: 12px;
-}
 :root {
     --color-white: white;
     --color-light: #f0eff5;
