@@ -16,7 +16,7 @@ export const LoginArea = () => {
 
     const handleClick = (event) => {
       const registrar = register;
-      const value = sendVerification;
+      const enviarEmail = sendVerification;
     };
 
   return (
