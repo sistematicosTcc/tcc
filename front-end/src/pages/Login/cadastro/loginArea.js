@@ -1,63 +1,75 @@
 import React, {useContext} from "react";
 import { UserContext } from "../../../contexts/UserContexts";
+import { Link } from "react-router-dom";
+import FgtCad from "../../../images/fgt_cad1.png"
+import Header from "../../../component/header/header";
 
 export const LoginArea = () => {
-  const {setRegisterEmail, setRegisterPassword, setLoginEmail, setLoginPassword, register, login, sendVerification} = useContext(UserContext)
+  const {
+    setRegisterEmail, 
+    setRegisterPassword, 
+    setLoginEmail, 
+    setLoginPassword, 
+    register, 
+    login, 
+    sendVerification} = useContext(UserContext)
+
+    const handleClick = (event) => {
+      const registrar = register;
+      const value = sendVerification;
+    };
+
   return (
     <>
-      <div>
-        <h1>faca login em sua conta</h1>
-        <button> fazer login com o google</button>
-        <p>ou</p>
+    <Header />
+    <main>
+      <div class="config_txt">
+        <h1>Crie Sua Conta</h1>
+        {/* <button> fazer login com o google</button>
+        <p>ou</p> */}
         <form>
-          <div>
-            <label>E-mail</label>
             <input
-              type="email"
+              type="text"
+              placeholder = "Digite seu Email"
               onChange={(e) => {
                 setRegisterEmail(e.target.value);
               }}
-            />
-          </div>
-          <div>
-            <label>Senha</label>
+            /> <br/>
+
             <input
               type="password"
+              placeholder = "Digite sua Senha"
               onChange={(e) => {
                 setRegisterPassword(e.target.value);
               }}
-            />
-          </div>
-          <button id="token" onClick={register}>
-            criar
-          </button>
-        </form>
-      </div>
-      <button onClick={sendVerification}>Verificando email</button>
-      <div>
-        <h1>login</h1>
-        <form>
-          <div>
-            <label>E-mail</label>
-            <input
-              type="email"
-              onChange={(e) => {
-                setLoginEmail(e.target.value);
-              }}
-            />
-          </div>
-          <div>
-            <label>Senha</label>
+            /> <br/>
+
             <input
               type="password"
-              onChange={(e) => {
-                setLoginPassword(e.target.value);
-              }}
-            />
-          </div>
-          <button onClick={login}>logar</button>
+              placeholder="Digite sua Senha novamente"
+              id="passwordConfirm"
+            /> <br/>    
         </form>
+        <div class="buttonDivision">
+        {/* <button onClick={sendVerification}>Verificando email</button> */}
+        {/* <a  onClick={sendVerification}>
+                Reenviar o Email
+            </a> */}
+
+              <button id="token" type="submit" onClick={sendVerification}>
+                Reenviar o Email de Verificação
+              </button>
+          <Link to="/cad3" className="Link-Margin">
+            <button class="Continue-button" onClick={handleClick}>
+                Registrar
+            </button>
+          </Link>
+          </div>
       </div>
+      <div class="img_fgt">
+          <img src={FgtCad} alt="fogueteimg" class="fgt" />
+        </div>
+      </main>
     </>
   );
 };
