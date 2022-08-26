@@ -7,16 +7,13 @@ import Header from "../../../component/header/header";
 export const LoginArea = () => {
   const {
     setRegisterEmail, 
-    setRegisterPassword, 
-    setLoginEmail, 
-    setLoginPassword, 
-    register, 
-    login, 
+    setRegisterPassword,  
+    register,  
     sendVerification} = useContext(UserContext)
 
-    const handleClick = (event) => {
-      const registrar = register;
-      const enviarEmail = sendVerification;
+    const handleClick = (e) => {
+      register(e);
+      sendVerification(e);
     };
 
   return (
@@ -25,8 +22,6 @@ export const LoginArea = () => {
     <main>
       <div class="config_txt">
         <h1>Crie Sua Conta</h1>
-        {/* <button> fazer login com o google</button>
-        <p>ou</p> */}
         <form>
             <input
               type="text"
@@ -49,7 +44,6 @@ export const LoginArea = () => {
               placeholder="Digite sua Senha novamente"
               id="passwordConfirm"
             /> <br/>    
-        </form>
         <div class="buttonDivision">
         {/* <button onClick={sendVerification}>Verificando email</button> */}
         {/* <a  onClick={sendVerification}>
@@ -59,12 +53,13 @@ export const LoginArea = () => {
               <button id="token" type="submit" onClick={sendVerification}>
                 Reenviar o Email de Verificação
               </button>
-          <Link to="/cad3" className="Link-Margin">
             <button class="Continue-button" onClick={handleClick}>
                 Registrar
             </button>
-          </Link>
+          
+          
           </div>
+          </form>
       </div>
       <div class="img_fgt">
           <img src={FgtCad} alt="fogueteimg" class="fgt" />

@@ -22,14 +22,14 @@ function Header(){
               </ul>
             </li>
           </ul>
-          <nav class="header-first">
+          <div class="header-first">
             <Link to="/" className='header-item'>Compre Crypto</Link>
             <Link to="/" className='header-item'>Mercado</Link>
             <Link to="/" className='header-item'>Trade</Link>
             <Link to="/" className='header-item'>NFT</Link>
-          </nav>
+          </div>
         </div>
-        <nav class="header-second">
+        <div class="header-second">
         <Link to="/login" className='header-item'>Entrar</Link>
           <form action="/">
               <Link to="/cad">
@@ -38,7 +38,7 @@ function Header(){
                 </button>
               </Link>
           </form>
-        </nav>
+        </div>
       </header>
     </>
   )
