@@ -9,7 +9,7 @@ import { Senha } from "./pages/Login/senha/senha";
 import { Senha2 } from "./pages/Login/senha/senha2";
 import { Senha3 } from "./pages/Login/senha/senha3";
 
-import { Cadastro } from "./pages/Login/cadastro/cadastro";
+import { Cadastro } from "./pages/Login/cadastro/loginArea";
 import { Cadastro2 } from "./pages/Login/cadastro/cadastro2";
 import { Cadastro3 } from "./pages/Login/cadastro/cadastro3";
 
@@ -24,7 +24,6 @@ import { Analise } from "./pages/Dashboard/analise.js";
 import { Ajuda } from "./pages/Dashboard/ajuda.js";
 import { Configuracoes } from "./pages/Dashboard/configuracoes.js";
 import { BackEnd } from "./back-end/backApp";
-import { LoginArea } from "./pages/Login/cadastro/loginArea.js";
 
 export function Routers() {
   return (
@@ -34,7 +33,6 @@ export function Routers() {
           <Route path="*" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cad" element={<Cadastro />} />
-          <Route path="/loginarea" element={<LoginArea />} />
           <Route path="/cad2" element={<Cadastro2 />} />
           <Route path="/cad3" element={<Cadastro3 />} />
           <Route path="/senha" element={<Senha />} />

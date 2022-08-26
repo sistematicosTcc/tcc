@@ -10,11 +10,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { authf } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 
-
 export const UserContext = createContext();
 
 export function UserStorage({ children }) {
-
   const navigate = useNavigate();
 
   const [userLogado, setUserLogado] = useState(null);
@@ -31,6 +29,7 @@ export function UserStorage({ children }) {
       sendEmailVerification(authf.currentUser)
         .then(() => {
           alert("email enviado : " + registerEmail);
+          navigate("/cad3")
         })
         .catch((e) => {
           console.log("erro em: " + e.message);
@@ -49,7 +48,7 @@ export function UserStorage({ children }) {
           const user = userCredential.user;
           if (user.emailVerified) {
             setUserLogado(true);
-            navigate("/dashboard")
+            navigate("/dashboard");
           } else {
             alert("Verifique seu email para prosseguir");
             return;
@@ -63,13 +62,9 @@ export function UserStorage({ children }) {
 
   const sendVerification = async () => {
     var user = authf.currentUser;
-    sendEmailVerification(user)
-      .then(() => {
-        alert("verificacao enviada");
-      })
-      .catch((error) => {
-        alert("error = " + error);
-      });
+    sendEmailVerification(user).catch((error) => {
+      alert("error = " + error);
+    });
   };
 
   return (

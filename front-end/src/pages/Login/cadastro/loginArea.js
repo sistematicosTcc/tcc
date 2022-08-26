@@ -1,10 +1,9 @@
 import React, {useContext} from "react";
 import { UserContext } from "../../../contexts/UserContexts";
-import { Link } from "react-router-dom";
 import FgtCad from "../../../images/fgt_cad1.png"
 import Header from "../../../component/header/header";
 
-export const LoginArea = () => {
+export const Cadastro = () => {
   const {
     setRegisterEmail, 
     setRegisterPassword,  
@@ -44,11 +43,11 @@ export const LoginArea = () => {
               placeholder="Digite sua Senha novamente"
               id="passwordConfirm"
             /> <br/>    
-        <div class="buttonDivision">
-        {/* <button onClick={sendVerification}>Verificando email</button> */}
-        {/* <a  onClick={sendVerification}>
-                Reenviar o Email
-            </a> */}
+            <div class="buttonDivision">
+            {/* <button onClick={sendVerification}>Verificando email</button> */}
+            {/* <a  onClick={sendVerification}>
+                    Reenviar o Email
+                </a> */}
 
               <button id="token" type="submit" onClick={sendVerification}>
                 Reenviar o Email de Verificação
@@ -56,12 +55,10 @@ export const LoginArea = () => {
             <button class="Continue-button" onClick={handleClick}>
                 Registrar
             </button>
-          
-          
           </div>
-          </form>
+        </form>
       </div>
-      <div class="img_fgt">
+        <div class="img_fgt">
           <img src={FgtCad} alt="fogueteimg" class="fgt" />
         </div>
       </main>
@@ -69,4 +66,4 @@ export const LoginArea = () => {
   );
 };
 
-export default LoginArea;
+export default Cadastro;
