@@ -9,7 +9,7 @@ import { Senha } from "./pages/Login/senha/senha";
 import { Senha2 } from "./pages/Login/senha/senha2";
 import { Senha3 } from "./pages/Login/senha/senha3";
 
-import { Cadastro } from "./pages/Login/cadastro/loginArea";
+import { Cadastro } from "./pages/Login/cadastro/cadastro";
 import { Cadastro2 } from "./pages/Login/cadastro/cadastro2";
 import { Cadastro3 } from "./pages/Login/cadastro/cadastro3";
 

@@ -47,6 +47,11 @@ h1{
   transition: 0.2s;
 }
 
+.buttonDivision {
+  display: flex;
+  margin-top: 8px;
+}
+
 /*------------------------Main Cad 2/ Senha 1 --------------------------*/
 
 #main2{

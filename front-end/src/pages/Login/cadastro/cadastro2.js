@@ -1,7 +1,7 @@
 import Header from "../../../component/header/header";
-import "./style.css";
+import "./cadastroStyle.css";
 
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import FgtCad from "../../../images/fgt_cad2.png";
 
@@ -18,17 +18,17 @@ export const Cadastro2 = () => {
 
   function verifyEmail(e) {
     e.preventDefault();
-      Axios.post('http://localhost:3333/email', {
-          email: email
-      }).then((response) => {
-        
-          if(response.data[0] != null){
-              sendEmail(response.data)
-              alert('Email foi enviado com sucesso!')
-          } else{
-              alert('Email não cadastrado')
-          }
-      })
+    Axios.post('http://localhost:3333/email', {
+      email: email
+    }).then((response) => {
+
+      if (response.data[0] != null) {
+        sendEmail(response.data)
+        alert('Email foi enviado com sucesso!')
+      } else {
+        alert('Email não cadastrado')
+      }
+    })
   }
 
   function sendEmail(e) {
@@ -51,10 +51,10 @@ export const Cadastro2 = () => {
   }
 
 
-  function tokenCerto(){
+  function tokenCerto() {
     var tokenCorreto = document.querySelector("#tokenNum").value;
     console.log(tokenCorreto)
-    if(tokenCorreto === "123"){
+    if (tokenCorreto === "123") {
       navigate("/cad3").alert('Token Correto')
     } else {
       alert('Token Incorreto')
@@ -69,8 +69,9 @@ export const Cadastro2 = () => {
           <h1>Verificação de Cadastro</h1>
           <form onSubmit={verifyEmail} ref={form}>
             <div class="division">
-              <input type="text" placeholder = "Digite seu email"onChange={(e) => {
-                    setEmail(e.target.value)}}
+              <input type="text" placeholder="Digite seu email" onChange={(e) => {
+                setEmail(e.target.value)
+              }}
                 id="inputEmail"
                 name="email"
               />
@@ -82,13 +83,13 @@ export const Cadastro2 = () => {
           </form>
           <div class="division">
             <h2>Token</h2>
-            <input type="text" id="tokenNum"/> <br />
+            <input type="text" id="tokenNum" /> <br />
           </div>
           <div class="buttonDivision">
             <Link to="/cad" className="Link-Margin">
               <button class="Continue-button">Voltar</button>
             </Link>
-              <button class="Continue-button Link-Margin" onClick={tokenCerto}>Continuar</button>
+            <button class="Continue-button Link-Margin" onClick={tokenCerto}>Continuar</button>
           </div>
         </div>
         <div class="img_fgt">
