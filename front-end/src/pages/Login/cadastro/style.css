@@ -108,7 +108,7 @@ background: #02082C ;
 
 .buttonDivision{
   display: flex;
-  margin-top: 9px;
+  margin-top: -12px;
 }
 
 .division h2{

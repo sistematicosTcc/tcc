@@ -32,7 +32,7 @@ h1{
   border-radius: 5px;
   padding: 6px 30px;
   border-width: 0px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -64,7 +64,7 @@ background: #02082C ;
   font-weight: normal;
   margin: 7px 0 0 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   display: flex;
   width: 300px;
