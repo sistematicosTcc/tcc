@@ -44,18 +44,16 @@ export const Cadastro = () => {
               id="passwordConfirm"
             /> <br/>    
             <div class="buttonDivision">
-            {/* <button onClick={sendVerification}>Verificando email</button> */}
-            {/* <a  onClick={sendVerification}>
-                    Reenviar o Email
-                </a> */}
-
               <button id="token" type="submit" onClick={sendVerification}>
                 Reenviar o Email de Verificação
               </button>
+              </div>
+            <div class="buttonDivision">
             <button class="Continue-button" onClick={handleClick}>
                 Registrar
             </button>
-          </div>
+            </div>
+          
         </form>
       </div>
         <div class="img_fgt">

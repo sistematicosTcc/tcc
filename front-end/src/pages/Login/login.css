@@ -24,7 +24,7 @@ h1{
   color: #000000;
   font-weight: bold;
   font-size: 56px;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .Continue-button{
@@ -108,14 +108,14 @@ background: #02082C ;
 .space {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: 12px;
 }
 
 .space a{
   width: 150px;
 }
 
-h3 {
+.space h3 {
   font-size: 24px;
   font-weight: normal;
   margin-top: 20px;

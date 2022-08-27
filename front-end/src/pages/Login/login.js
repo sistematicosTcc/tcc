@@ -16,12 +16,12 @@ export const Login = () => {
       <main>
         <div class="config_txt">
           <div>
-            <h1>Entre na sua conta</h1>
+            <h1>Entre na sua Conta</h1>
             <form>
-              <div>
-                <label>E-mail</label>
+              <div class="space">
+                <h3>Email</h3>
                 <input
-                  type="email"
+                  type="email" placeholder="Digite seu Email"  id="inputEmail"
                   onChange={(e) => {
                     setLoginEmail(e.target.value);
                   }}
@@ -58,7 +58,6 @@ export const Login = () => {
           <img src={Fgt} class="fgt" />
           <h1 class="subImg">CRYP<span class="top">TOP</span></h1>
         </div>
-        {/* <h1>{loginStatus}</h1> */}
       </main>
     </>
   );
