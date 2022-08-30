@@ -29,8 +29,9 @@ html{
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 45px;
-  padding-left: 190px;
+  padding-left: 120px;
   padding-bottom: 200px;
+  padding-top: 0px;
 }
 .main-written a{
   width: 250px;
@@ -38,14 +39,17 @@ html{
 
 .black-word {
   color: black;
+  font-size: 50px;
 }
 
 .yellow-word {
-  color: #FFC90A;
+  color: #FFFF00;
+  font-size: 50px;
 }
 
 .blue-word {
   color: #000E56;
+  font-size: 50px;
 }
 
 .main-button {
@@ -79,11 +83,11 @@ html{
   gap: 7px;
   padding-top: 120px;
   padding-left: 340px;
-  padding-bottom: 90px;
+  padding-bottom: 250px;
 }
 
 .cryptohopper-web-widget {
-  padding-top: 180px;
+  padding-top: 0px;
 }
 
 
@@ -137,7 +141,7 @@ html{
 .detail-description h3{
   color: #000E56;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   padding-bottom: 50px;
 }
@@ -223,6 +227,7 @@ html{
   color: black;
   margin-top: -30px;
   box-shadow: 2px 15px 20px #000E56;
+  border-radius: 0px;
 }
 
 .growth {
@@ -469,7 +474,7 @@ html{
 /*----------------------finalizacoes---------------------*/
 @media(max-width:1510px){
   .woman-first {
-    padding-left: 0px;
+    padding-left: 116px;
   }
 }
 

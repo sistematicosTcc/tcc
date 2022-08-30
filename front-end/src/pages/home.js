@@ -31,8 +31,10 @@ import React from "react";
         <section class="main-content">
           <div class="main-written">
             <h1 class="main-written-buy">
-              <p class="black-word">Compre, negocie</p> <p class="black-word">e aprenda a ter o</p>
-              <p class="yellow-word">controle financeiro </p>na<b class="blue-word"> Cryptop</b>
+              <p class="black-word">Compre, negocie e aprenda a ter o</p> 
+              <p class="yellow-word">controle financeiro </p>
+              <span class="black-word">na</span> 
+              <b class="blue-word"> Cryptop</b>
             </h1>
               <Link to="/cad">
                 <button class="main-button">
@@ -60,7 +62,8 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua conta</h2>
-              <h3><p>Realize o processo de criação de conta dentro</p> da nossa plataforma e possua acesso completo.</h3>
+              <h3>Realize o processo de criação de conta dentro</h3>
+              <h3>da nossa plataforma e possua acesso completo.</h3>
             </div>
           </section>
           <section class="icone-example">
