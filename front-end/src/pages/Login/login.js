@@ -30,14 +30,14 @@ export const Login = () => {
               <div class="space">
                 <h3>Senha</h3>
                 <input
-                  type="text" placeholder="Digite sua Senha" id="password"
+                  type="password" placeholder="Digite sua Senha" id="password"
                   onChange={(e) => {
                     setLoginPassword(e.target.value);
                   }}
                 />
                 <Link to="/senha">
-                  <button id="tokenSenha"> {/* adicionar um <Link> tem Prioridade */}
-                    Redefinição de senha
+                  <button id="tokenSenha">
+                    Esqueceu sua senha?
                   </button>
                 </Link>
               </div>

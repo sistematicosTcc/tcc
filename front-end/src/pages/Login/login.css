@@ -4,7 +4,7 @@
 main{
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+  height: 91vh;
   background: linear-gradient(45deg, #3b31ff9e, #3A31FF, #3A31FF);
 }
 
@@ -129,7 +129,8 @@ background: #02082C ;
 .subImg {
   color: #000E56;
   margin-top: 0px;
-  margin-left: 100px;
+  margin-left: 30px;
+  font-size: 70px;
 }
 
 .top{
