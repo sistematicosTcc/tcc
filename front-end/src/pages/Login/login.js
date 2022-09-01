@@ -55,7 +55,7 @@ export const Login = () => {
           </div>
         </div>
         <div class="img_fgt">
-          <img src={Fgt} class="fgt" />
+          <img src={Fgt} class="fgt" alt="foguete"/>
           <h1 class="subImg">CRYP<span class="top">TOP</span></h1>
         </div>
       </main>
