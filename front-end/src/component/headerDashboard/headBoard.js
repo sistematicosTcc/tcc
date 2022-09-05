@@ -10,7 +10,7 @@ function HeaderDashboard(){
     <nav>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
       <div className="container">
-            <Link to="/" >
+            <Link to="/homeLogin" >
               <img class="head-logo" src={Logo} alt="logo"/>
             </Link>
         <div className="search-bar">
@@ -26,7 +26,7 @@ function HeaderDashboard(){
             <div className="profile-photo">
                 <img src={UserLogo} alt="perfil simples"/>
             </div>
-            <h5>Seu cu</h5>
+            <h5>Usuario Name</h5>
             <span className="material-icons-sharp">expand_more</span>
           </div>
           <button id="menu-btn">

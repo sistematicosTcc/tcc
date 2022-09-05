@@ -9,6 +9,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { authf } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export const UserContext = createContext();
 
@@ -22,6 +23,7 @@ export function UserStorage({ children }) {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
+  // --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {
     e.preventDefault();
     try {
@@ -29,7 +31,7 @@ export function UserStorage({ children }) {
       sendEmailVerification(authf.currentUser)
         .then(() => {
           alert("email enviado : " + registerEmail);
-          navigate("/cad3")
+          navigate("/cad3");
         })
         .catch((e) => {
           console.log("erro em: " + e.message);
@@ -48,6 +50,7 @@ export function UserStorage({ children }) {
           const user = userCredential.user;
           if (user.emailVerified) {
             setUserLogado(true);
+            window.localStorage.setItem("userlogado", JSON.stringify(true));
             navigate("/dashboard");
           } else {
             alert("Verifique seu email para prosseguir");
@@ -66,6 +69,15 @@ export function UserStorage({ children }) {
       alert("error = " + error);
     });
   };
+
+  useEffect(() => {
+    const userLoginOn = JSON.parse(window.localStorage.getItem("userlogado"));
+      if (userLoginOn) {
+        setUserLogado(true);
+        navigate("/dashboard")
+        console.log("aaaaaaaaaa "+userLogado)
+    }
+  }, []);
 
   return (
     <UserContext.Provider

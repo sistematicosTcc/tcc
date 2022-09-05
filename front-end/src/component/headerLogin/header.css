@@ -1,4 +1,76 @@
-/*====================================== Header ========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/*------------------------Header--------------------------*/
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 100px 0 100px;
+}
+
+.bet {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  gap: 7px;
+}
+
+.header-first {
+  display: flex;
+  gap: 12px;
+}
+
+.header-item {
+  font-family: 'Lato', sans-serif;
+  color: #000E56;
+  font-weight: 600;
+  font-size: 14px;
+  
+}
+
+.header-item:hover {
+  color: #FFC90A;
+}
+
+.header-second {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-button {
+  width: 69px;
+  height: 23.49px;
+  left: 1142px;
+  top: 24.43px;
+  background: #000E56;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  color: #FFFF;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+}
+
+.header-button a{
+  color:#FFF;
+}
+
+.header-button:hover {
+  cursor: pointer;
+  background-color: #FFC90A;
+}
+
+/*==============================================*/
 .profile-area{
   display: flex;
   align-items: center
@@ -51,6 +123,11 @@
   height: 3rem;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.profile-photo{
+  width: 75px;
+  margin-right: 20px;
 }
 
 /*=============================== Mini Telas e Tables 600px ============================*/
