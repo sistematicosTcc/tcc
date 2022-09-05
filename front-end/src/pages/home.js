@@ -62,8 +62,10 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua conta</h2>
-              <h3>Realize o processo de criação de conta dentro</h3>
-              <h3>da nossa plataforma e possua acesso completo.</h3>
+              <h3>Realize o processo de criação de conta dentro <br/> 
+                da nossa plataforma e possua acesso completo.
+              </h3>
+              
             </div>
           </section>
           <section class="icone-example">
@@ -72,9 +74,9 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua carteira digital</h2>
-              <h3>Após possuir sua conta, dentro da plataforma
-                <p>irá criar uma carteira digital fictícia que irá </p>
-                <p>armazenar todas os seus criptoativos </p>
+              <h3>Após possuir sua conta, dentro da plataforma <br/>
+                  irá criar uma carteira digital fictícia que irá <br/>
+                  armazenar todas os seus criptoativos.
               </h3>
             </div>
           </section>
@@ -84,10 +86,10 @@ import React from "react";
           </div>
             <div class="detail-description">
               <h2>Inicie o Trading</h2>
-              <h3>Agora você já está pronto para simular toda 
-                <p>a experiência de compra e venda! Aproveite</p>
-                <p>toda essa experiência com a segurança que</p>
-                <p>só a CrypTop pode oferecer.</p>
+              <h3>Agora você já está pronto para simular toda <br/>
+                a experiência de compra e venda! Aproveite <br/>
+                toda essa experiência com a segurança que <br/>
+                só a CrypTop pode oferecer.
               </h3>
             </div>
           </section>
@@ -155,7 +157,7 @@ import React from "react";
             </div>
             <section class="growth">
               <img src={Calendary} alt="calendario"/>
-              <div class="growth-lower-text">
+              <div class="growth-lower-text p">
                 <p>Número de investidores cresce 1.266% no Brasil em</p>
                 <p>2021 e o mercado cresceu mais de 200% nos últimos anos.</p>
               </div>
@@ -209,15 +211,13 @@ import React from "react";
         <div class="separadorSecurity">
           <section class="security-position" >
           <div class="divisionSec">
-            <div class="security-line">
-              <img src={Line1} alt="line1" />
-            </div>
+
             <div class="security-yellow">
               <h3>Sua segurança na nova economia</h3>
             </div>
             <div class="security-blue">
               <h1>
-                <p>Soluções de segurança para o seu investimento.</p>
+                Soluções de segurança para o seu investimento.
               </h1>
               <h3>
                 <p>

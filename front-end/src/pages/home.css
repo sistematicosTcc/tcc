@@ -43,7 +43,7 @@ html{
 }
 
 .yellow-word {
-  color: #FFFF00;
+  color: #c99e07;
   font-size: 50px;
 }
 
@@ -117,13 +117,21 @@ html{
 
 .icone-example {
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 28px 0;
+  align-content: start;
 }
 
 .detail-image {
   display: inline-block;
   vertical-align: top;
   padding-right: 40px;
+}
+
+.detail-image img{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 40px;
+  width: 106%;
 }
 
 .detail-description{
@@ -187,7 +195,7 @@ html{
   padding: 10px;
   width: 300px;
   height: 510px;
-  background: #F0F0F0;
+  background: #e4dada;
   margin: 20px;
   transition: 0.5s;
   text-align: center;
@@ -234,6 +242,7 @@ html{
   padding-top: 30px;
   padding-bottom: 40px;
   padding-left: 120px;
+  padding-right: 120px;
 }
 
 .growth img {
@@ -247,7 +256,7 @@ html{
 
 .growth-main-text h1 {
   margin-left: 180px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   font-family: 'Lato', sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -255,14 +264,14 @@ html{
 }
 
 .growth-lower-text {
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 
 }
 
 .growth-lower-text p {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 25px;
   color: #000E56;
 }
 
@@ -288,8 +297,7 @@ html{
 
 .growth-card {
   padding: 5px;
-  background-color: #F0F0F0;
-  padding: 1.2rem;
+  background-color: #e4dada;
   display: flex;
   align-items: center;
   border-radius: 7px; 
@@ -318,7 +326,7 @@ html{
 
 
 .security-position {
-  padding-top: 90px;
+  padding-top: 0px;
   padding-right: 25px;
 }
 
@@ -331,7 +339,15 @@ html{
 .security-yellow {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 160px;
+  color: #FFC90A;
+  padding-bottom: 35px;
+}
+
+.security-yellow h3{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
   color: #FFC90A;
   padding-bottom: 35px;
 }
@@ -340,7 +356,7 @@ html{
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  font-size: 47px;
+  font-size: 55px;
   padding-bottom: 20px;
   color: #000E56;
 }
@@ -348,7 +364,7 @@ html{
 .security-blue h3 p {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 22px;
   color: #000E56;
 }
 
@@ -356,7 +372,7 @@ html{
   position: relative;
   right: 140px;
   bottom: 400px;
-  padding-top: 30px;
+  padding-top: 0px;
   padding-left: 675px;
 }
 
