@@ -46,10 +46,14 @@ export const Wallet = () => {
         </div>
       </aside>
       <div class="walletBorder">
-        <div class="walletColumn borderRight">Moeda</div>
-        <div class="walletColumn borderRight">Quantidade</div>
-        <div class="walletColumn borderRight">Valor Total</div>
-        <div class="walletColumn">Preco</div>
+        <h1></h1>
+        <input type="number" placeholder="digite sua quantia" />
+        <div>
+        <input type="text" placeholder="digite sua quantia" />
+        </div>
+        <div>
+        <button></button>
+        </div>
       </div>
     </div>
   </>
