@@ -65,7 +65,6 @@ import React from "react";
               <h3>Realize o processo de criação de conta dentro <br/> 
                 da nossa plataforma e possua acesso completo.
               </h3>
-              
             </div>
           </section>
           <section class="icone-example">
@@ -109,7 +108,7 @@ import React from "react";
         </section>
         <section class="card-main">
           <section class="card-tree">
-            <div class="card">
+            <div class="card1">
               <img src={WomanBook} alt="mulher_com_livro"/>
               <h1>Conheça a história dos criptoativos</h1>
               <div class="card-content">
@@ -122,7 +121,7 @@ import React from "react";
             </div>
           </section>
           <section class="card-tree">
-            <div class="card">
+            <div class="card1">
               <img src={Neftguax} alt="neftGuax"/>
               <h1>Rentabilidade em NFT</h1>
               <div class="card-content">
@@ -135,7 +134,7 @@ import React from "react";
             </div>
           </section>
           <section class="card-tree">
-            <div class="card">
+            <div class="card1">
               <img src={WomanTree} alt="mulher e arvore"/>
               <h1>Aprender para ganhar</h1>
               <div class="card-content">
@@ -165,7 +164,7 @@ import React from "react";
           </section>
           <section class="mae">
             <section class="growth-card-main">
-              <div class="growth-card">
+              <div class="growth-card1">
                 <div class="growth-card-img">
                   <img src={People} alt="Icone de pessoas" />
                 </div>
@@ -180,7 +179,7 @@ import React from "react";
               </div>
             </section>
             <section class="growth-card-main">
-              <div class="growth-card">
+              <div class="growth-card1">
                 <div class="growth-card-img">
                   <img src={Top} alt="Icone de Top" />
                 </div>
@@ -194,7 +193,7 @@ import React from "react";
               </div>
             </section>
             <section class="growth-card-main">
-              <div class="growth-card">
+              <div class="growth-card1">
                 <div class="growth-card-img">
                   <img src={Nft} alt="Icone de pessoas" />
                 </div>

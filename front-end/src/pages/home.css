@@ -172,6 +172,7 @@ html{
   display: flex;
   align-items: center;
   min-height: 60vh;
+
 }
 
 .card-tree {
@@ -182,60 +183,65 @@ html{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .card-tree > div {
   width: 1150px;
   height: 408px;
   border-radius: 7px;
+
 }
 
-.card-tree .card {
+.card-tree .card1 {
   position: relative;
   padding: 10px;
   width: 300px;
   height: 510px;
-  background: #e4dada;
   margin: 20px;
   transition: 0.5s;
   text-align: center;
   overflow: hidden;
-
+  background: #e2e1e1;
 }
 
-.card-tree .card img {
+.card-tree .card1 img {
   transition: 0.5s;
   text-align: center;
   width: 257px;
   height: 248px;
+  
+
 }
 
-.card-tree .card h1 {
+.card-tree .card1 h1 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 24px;
   color: #000E56;
+  
 }
 
-.card-tree .card .card-content {
+.card-tree .card1 .card-content {
   padding: 10px;
   text-align: center;
+  
 }
 
 
-.card-tree .card p {
+.card-tree .card1 p {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #000E56;
 }
 
-.card-tree .card:hover {
+.card-tree .card1:hover {
   background-color: #FFC90A;
   color: black;
   margin-top: -30px;
   box-shadow: 2px 15px 20px #000E56;
-  border-radius: 0px;
+  border-radius: 7px;
 }
 
 .growth {
@@ -247,6 +253,7 @@ html{
 
 .growth img {
   padding-bottom: 55px;
+  width: 70%;
 }
 
 
@@ -295,9 +302,9 @@ html{
   padding-top: 30px;
 }
 
-.growth-card {
+.growth-card1 {
   padding: 5px;
-  background-color: #e4dada;
+  background-color: #e2e1e1;
   display: flex;
   align-items: center;
   border-radius: 7px; 
@@ -306,6 +313,7 @@ html{
 
 .growth-card-img {
   padding-right: 25px;
+
 }
 
 .growth-card-tittle {

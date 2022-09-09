@@ -63,6 +63,8 @@ export function UserStorage({ children }) {
     }
   };
 
+
+
   const sendVerification = async () => {
     var user = authf.currentUser;
     sendEmailVerification(user).catch((error) => {
