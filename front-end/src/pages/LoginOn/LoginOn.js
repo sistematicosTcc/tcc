@@ -14,7 +14,6 @@ import Calendary from "../../images/calendary.png"
 import People from "../../images/people.png"
 import Top from "../../images/top.png"
 import Nft from "../../images/nft.png"
-import Line1 from "../../images/Line1.png"
 import WomanSecurity from "../../images/woman_security.png"
 import Instagram from "../../images/instagram.png"
 import Facebook from "../../images/facebook.png"
@@ -60,7 +59,8 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua conta</h2>
-              <h3><p>Realize o processo de criação de conta dentro</p> da nossa plataforma e possua acesso completo.</h3>
+              <h3>Realize o processo de criação de conta dentro<br/>
+              da nossa plataforma e possua acesso completo.</h3>
             </div>
           </section>
           <section class="icone-example">
@@ -69,22 +69,22 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua carteira digital</h2>
-              <h3>Após possuir sua conta, dentro da plataforma
-                <p>irá criar uma carteira digital fictícia que irá </p>
-                <p>armazenar todas os seus criptoativos </p>
+              <h3>Após possuir sua conta, dentro da plataforma<br/>
+                irá criar uma carteira digital fictícia que irá <br/>
+                armazenar todas os seus criptoativos 
               </h3>
             </div>
           </section>
           <section class="icone-example">
           <div class="detail-image">
-            <img src={Trading} alt="Icone de trading" />
+            <img src={Trading} id="tradingImg" alt="Icone de trading" />
           </div>
             <div class="detail-description">
               <h2>Inicie o Trading</h2>
-              <h3>Agora você já está pronto para simular toda 
-                <p>a experiência de compra e venda! Aproveite</p>
-                <p>toda essa experiência com a segurança que</p>
-                <p>só a CrypTop pode oferecer.</p>
+              <h3>Agora você já está pronto para simular toda <br/>
+                a experiência de compra e venda! Aproveite <br/>
+                toda essa experiência com a segurança que <br/>
+                só a CrypTop pode oferecer.
               </h3>
             </div>
           </section>
@@ -160,7 +160,7 @@ import React from "react";
           </section>
           <section class="mae">
             <section class="growth-card-main">
-              <div class="growth-card">
+              <div class="growth-card1">
                 <div class="growth-card-img">
                   <img src={People} alt="Icone de pessoas" />
                 </div>
@@ -175,7 +175,7 @@ import React from "react";
               </div>
             </section>
             <section class="growth-card-main">
-              <div class="growth-card">
+              <div class="growth-card1">
                 <div class="growth-card-img">
                   <img src={Top} alt="Icone de Top" />
                 </div>
@@ -189,7 +189,7 @@ import React from "react";
               </div>
             </section>
             <section class="growth-card-main">
-              <div class="growth-card">
+              <div class="growth-card1">
                 <div class="growth-card-img">
                   <img src={Nft} alt="Icone de pessoas" />
                 </div>
@@ -206,15 +206,13 @@ import React from "react";
         <div class="separadorSecurity">
           <section class="security-position" >
           <div class="divisionSec">
-            <div class="security-line">
-              <img src={Line1} alt="line1" />
-            </div>
+
             <div class="security-yellow">
               <h3>Sua segurança na nova economia</h3>
             </div>
             <div class="security-blue">
               <h1>
-                <p>Soluções de segurança para o seu investimento.</p>
+                Soluções de segurança para o seu investimento.
               </h1>
               <h3>
                 <p>
@@ -225,7 +223,7 @@ import React from "react";
               </h3>
             </div>
             <section class="button-security">
-              <Link to="/dashboard">
+              <Link to="/cad">
                 <button class="main-button">
                   Começar
                 </button>

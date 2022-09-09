@@ -27,17 +27,19 @@ export function UserStorage({ children }) {
   const register = async (e) => {
     e.preventDefault();
     try {
-      createUserWithEmailAndPassword(authf, registerEmail, registerPassword);
-      sendEmailVerification(authf.currentUser)
+      createUserWithEmailAndPassword(authf, registerEmail, registerPassword)
         .then(() => {
+          console.log(sendEmailVerification);
           alert("email enviado : " + registerEmail);
           navigate("/cad3");
         })
-        .catch((e) => {
-          console.log("erro em: " + e.message);
+        .catch((err) => {
+          alert("Email ou Senha Invalidos")
+          console.log("erro em catch 1: " + err.message);
         });
-    } catch (e) {
-      console.log("erro em: " + e.message);
+      sendEmailVerification(authf.currentUser);
+    } catch (err) {
+      console.log("erro em catch 2: " + err.message);
     }
   };
 
@@ -47,6 +49,7 @@ export function UserStorage({ children }) {
     try {
       signInWithEmailAndPassword(authf, loginEmail, loginPassword).then(
         (userCredential) => {
+          console.log("entrou");
           const user = userCredential.user;
           if (user.emailVerified) {
             setUserLogado(true);
@@ -54,30 +57,30 @@ export function UserStorage({ children }) {
             navigate("/dashboard");
           } else {
             alert("Verifique seu email para prosseguir");
-            return;
           }
         }
       );
-    } catch (err) {
-      console.log(err.message);
+    } catch (e) {
+      alert("Digite uma senha ou email valido")
+      console.log(e);
     }
   };
 
-
-
   const sendVerification = async () => {
     var user = authf.currentUser;
-    sendEmailVerification(user).catch((error) => {
-      alert("error = " + error);
-    });
+    try {
+      sendEmailVerification(user);
+    } catch (e) {
+      console.log("erro em sendVerification = "+e)
+      alert("Digite o Email Corretamente"); 
+    }
   };
 
   useEffect(() => {
     const userLoginOn = JSON.parse(window.localStorage.getItem("userlogado"));
-      if (userLoginOn) {
-        setUserLogado(true);
-        navigate("/dashboard")
-        console.log("aaaaaaaaaa "+userLogado)
+    if (userLoginOn) {
+      setUserLogado(true);
+      navigate("/dashboard");
     }
   }, []);
 

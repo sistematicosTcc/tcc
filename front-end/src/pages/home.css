@@ -117,8 +117,9 @@ html{
 
 .icone-example {
   display: flex;
+  align-items: center;
   margin: 0 auto 28px 0;
-  align-content: start;
+  align-content: flex-start;
 }
 
 .detail-image {
