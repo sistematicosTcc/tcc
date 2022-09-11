@@ -17,12 +17,12 @@
   margin: 0 100px 0 100px;
 }
 
-.bet {
+/* .bet {
   display: flex;
   align-items: center;
   padding: 18px;
   gap: 7px;
-}
+} */
 
 .header-first {
   display: flex;
@@ -79,6 +79,10 @@
 .profile{
   display: flex;
   align-items: center;
+}
+
+.profile h5{
+  font-size: 15px;
 }
 
 .container {
