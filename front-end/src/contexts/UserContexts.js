@@ -34,7 +34,7 @@ export function UserStorage({ children }) {
           navigate("/cad3");
         })
         .catch((err) => {
-          alert("Email/Senha Invalidos")
+          alert("Senha com carcteres insuficiente")
           console.log("erro em catch 1: " + err.message);
         });
       sendEmailVerification(authf.currentUser);

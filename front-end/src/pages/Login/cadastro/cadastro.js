@@ -32,6 +32,7 @@ export const Cadastro = () => {
 
             <input
               type="password"
+              minlength="number6"
               placeholder = "Digite sua Senha"
               onChange={(e) => {
                 setRegisterPassword(e.target.value);
@@ -40,6 +41,7 @@ export const Cadastro = () => {
 
             <input
               type="password"
+              minlength="number6"
               placeholder="Digite sua Senha novamente"
               id="passwordConfirm"
             /> <br/>    
