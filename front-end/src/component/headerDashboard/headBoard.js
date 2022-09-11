@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import Logo from "../../images/logo_crp.png"
 import UserLogo from "../../images/profile-simple.png"
 
-import React from "react";
+import React, {useContext} from "react";
+import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderDashboard(){
+
+  const {loginEmail} = useContext(UserContext)
+
   return(
     <nav>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
@@ -23,10 +27,10 @@ function HeaderDashboard(){
             <span className="material-icons-sharp">dark_mode</span>
           </div>
           <div className="profile">
-            <div className="profile-photo">
+            {/* <div className="profile-photo">
                 <img src={UserLogo} alt="perfil simples"/>
-            </div>
-            <h5>Usuario Name</h5>
+            </div> */}
+            <h5>{loginEmail}</h5>
             <span className="material-icons-sharp">expand_more</span>
           </div>
           <button id="menu-btn">

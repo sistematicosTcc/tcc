@@ -34,7 +34,7 @@ export function UserStorage({ children }) {
           navigate("/cad3");
         })
         .catch((err) => {
-          alert("Email ou Senha Invalidos")
+          alert("Email/Senha Invalidos")
           console.log("erro em catch 1: " + err.message);
         });
       sendEmailVerification(authf.currentUser);
@@ -51,20 +51,27 @@ export function UserStorage({ children }) {
         (userCredential) => {
           console.log("entrou");
           const user = userCredential.user;
+
           if (user.emailVerified) {
+            const nomeUsuario = userCredential.user.email
+            console.log(nomeUsuario)
             setUserLogado(true);
             window.localStorage.setItem("userlogado", JSON.stringify(true));
             navigate("/dashboard");
           } else {
-            alert("Verifique seu email para prosseguir");
+            alert("Verifique seu Email")
           }
         }
-      );
-    } catch (e) {
+        ).catch(() =>{
+        alert("Email/Senha incorretos");
+      })
+    } catch (err) {
       alert("Digite uma senha ou email valido")
-      console.log(e);
+      console.log("erro em catch login: "+ err);
     }
   };
+
+  
 
   const sendVerification = async () => {
     var user = authf.currentUser;
@@ -89,6 +96,7 @@ export function UserStorage({ children }) {
       value={{
         register,
         login,
+        loginEmail,
         sendVerification,
         setLoginEmail,
         setLoginPassword,

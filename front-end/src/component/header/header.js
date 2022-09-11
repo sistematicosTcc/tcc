@@ -17,16 +17,16 @@ function Header(){
             <li>
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
-                <li><Link to="/" className='options'>Exchange</Link></li>
-                <li><Link to="/" className='options'>Trust Wallet</Link></li>
+                <li><Link to="/login" className='options'>Exchange</Link></li>
+                <li><Link to="//login" className='options'>Trust Wallet</Link></li>
               </ul>
             </li>
           </ul>
           <div class="header-first">
-            <Link to="/" className='header-item'>Compre Crypto</Link>
-            <Link to="/" className='header-item'>Mercado</Link>
-            <Link to="/" className='header-item'>Trade</Link>
-            <Link to="/" className='header-item'>NFT</Link>
+            <Link to="/login" className='header-item'>Compre Crypto</Link>
+            <Link to="/login" className='header-item'>Mercado</Link>
+            <Link to="/login" className='header-item'>Trade</Link>
+            <Link to="/login" className='header-item'>NFT</Link>
           </div>
         </div>
         <div class="header-second">

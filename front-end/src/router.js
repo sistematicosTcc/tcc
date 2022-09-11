@@ -30,7 +30,14 @@ export function Routers() {
       <UserStorage>
         <Routes>
           <Route path="*" exact element={<Home />} />
-          <Route path="/homeLogin" element={<LoginOn />} />
+          <Route
+            path="/homeLogin"
+            element={
+              <PrivateRouter>
+                <LoginOn />
+              </PrivateRouter>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/cad" element={<Cadastro />} />
           <Route path="/cad2" element={<Cadastro3 />} />

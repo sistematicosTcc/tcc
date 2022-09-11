@@ -30,10 +30,12 @@ import React from "react";
         <section class="main-content">
           <div class="main-written">
             <h1 class="main-written-buy">
-              <p class="black-word">Compre, negocie</p> <p class="black-word">e aprenda a ter o</p>
-              <p class="yellow-word">controle financeiro </p>na<b class="blue-word"> Cryptop</b>
+              <p class="black-word">Compre, negocie e aprenda a ter o</p> 
+              <p class="yellow-word">controle financeiro </p>
+              <span class="black-word">na</span> 
+              <b class="blue-word"> Cryptop</b>
             </h1>
-              <Link to="/dashboard">
+              <Link to="/cad">
                 <button class="main-button">
                     Começar
                 </button>
@@ -59,8 +61,9 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua conta</h2>
-              <h3>Realize o processo de criação de conta dentro<br/>
-              da nossa plataforma e possua acesso completo.</h3>
+              <h3>Realize o processo de criação de conta dentro <br/> 
+                da nossa plataforma e possua acesso completo.
+              </h3>
             </div>
           </section>
           <section class="icone-example">
@@ -69,15 +72,15 @@ import React from "react";
             </div>
             <div class="detail-description">
               <h2>Crie sua carteira digital</h2>
-              <h3>Após possuir sua conta, dentro da plataforma<br/>
-                irá criar uma carteira digital fictícia que irá <br/>
-                armazenar todas os seus criptoativos 
+              <h3>Após possuir sua conta, dentro da plataforma <br/>
+                  irá criar uma carteira digital fictícia que irá <br/>
+                  armazenar todas os seus criptoativos.
               </h3>
             </div>
           </section>
           <section class="icone-example">
           <div class="detail-image">
-            <img src={Trading} id="tradingImg" alt="Icone de trading" />
+            <img src={Trading} alt="Icone de trading" />
           </div>
             <div class="detail-description">
               <h2>Inicie o Trading</h2>
@@ -104,7 +107,7 @@ import React from "react";
         </section>
         <section class="card-main">
           <section class="card-tree">
-            <div class="card">
+            <div class="card1">
               <img src={WomanBook} alt="mulher_com_livro"/>
               <h1>Conheça a história dos criptoativos</h1>
               <div class="card-content">
@@ -117,7 +120,7 @@ import React from "react";
             </div>
           </section>
           <section class="card-tree">
-            <div class="card">
+            <div class="card1">
               <img src={Neftguax} alt="neftGuax"/>
               <h1>Rentabilidade em NFT</h1>
               <div class="card-content">
@@ -130,7 +133,7 @@ import React from "react";
             </div>
           </section>
           <section class="card-tree">
-            <div class="card">
+            <div class="card1">
               <img src={WomanTree} alt="mulher e arvore"/>
               <h1>Aprender para ganhar</h1>
               <div class="card-content">
@@ -152,7 +155,7 @@ import React from "react";
             </div>
             <section class="growth">
               <img src={Calendary} alt="calendario"/>
-              <div class="growth-lower-text">
+              <div class="growth-lower-text p">
                 <p>Número de investidores cresce 1.266% no Brasil em</p>
                 <p>2021 e o mercado cresceu mais de 200% nos últimos anos.</p>
               </div>
