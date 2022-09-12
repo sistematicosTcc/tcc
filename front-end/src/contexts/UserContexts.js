@@ -35,7 +35,7 @@ export function UserStorage({ children }) {
           navigate("/cad3");
         })
         .catch((err) => {
-          alert("Senha com caracteres insuficiente/ email inválido")
+          alert("Credenciais inválidas.")
           console.log("erro em catch 1: " + err.message);
         });
       
