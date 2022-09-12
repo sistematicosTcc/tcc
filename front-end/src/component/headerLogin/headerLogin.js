@@ -56,7 +56,6 @@ function HeaderLogin() {
                 <img src={UserLogo} alt="perfil simples"/>
             </div> */}
             <h5>{loginEmail}</h5>
-            <h5>{loginEmail}</h5>
           </div>
           <button id="menu-btn">
             <span className="material-icons-sharp">menu</span>
