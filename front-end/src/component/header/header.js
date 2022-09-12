@@ -18,7 +18,7 @@ function Header(){
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
                 <li><Link to="/login" className='options'>Exchange</Link></li>
-                <li><Link to="//login" className='options'>Trust Wallet</Link></li>
+                <li><Link to="/login" className='options'>Trust Wallet</Link></li>
               </ul>
             </li>
           </ul>

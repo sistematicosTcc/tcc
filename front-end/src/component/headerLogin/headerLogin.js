@@ -35,10 +35,10 @@ function HeaderLogin() {
             </li>
           </ul>
           <div class="header-first">
-            <Link to="/dasboard" className="header-item">
+            <Link to="/dashboard" className="header-item">
               Compre Crypto
             </Link>
-            <Link to="/dasboard" className="header-item">
+            <Link to="/dashboard" className="header-item">
               Mercado
             </Link>
             <Link to="/teste" className="header-item">
