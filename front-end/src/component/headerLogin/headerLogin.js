@@ -2,7 +2,7 @@ import "./headerLogin.css";
 import { Link } from "react-router-dom";
 import OptDown from "../../images/opt_down.png";
 import Logo from "../../images/logo_crp.png";
-import UserLogo from "../../images/profile-simple.png";
+// import UserLogo from "../../images/profile-simple.png";
 
 import React, { useContext } from "react";
 import { UserContext } from "../../contexts/UserContexts";
@@ -12,6 +12,7 @@ function HeaderLogin() {
 
   return (
     <>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
       <header class="head">
         <div class="bet">
           <Link to="/homeLogin">
@@ -55,7 +56,11 @@ function HeaderLogin() {
                 <img src={UserLogo} alt="perfil simples"/>
             </div> */}
             <h5>{loginEmail}</h5>
+            <h5>{loginEmail}</h5>
           </div>
+          <button id="menu-btn">
+            <span className="material-icons-sharp">menu</span>
+          </button>
         </div>
       </header>
     </>

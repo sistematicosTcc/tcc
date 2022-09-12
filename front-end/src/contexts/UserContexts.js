@@ -29,6 +29,7 @@ export function UserStorage({ children }) {
     try {
       createUserWithEmailAndPassword(authf, registerEmail, registerPassword)
         .then(() => {
+          sendEmailVerification(authf.currentUser);
           console.log(sendEmailVerification);
           alert("email enviado : " + registerEmail);
           navigate("/cad3");
@@ -37,7 +38,7 @@ export function UserStorage({ children }) {
           alert("Senha com caracteres insuficiente/ email inválido")
           console.log("erro em catch 1: " + err.message);
         });
-      sendEmailVerification(authf.currentUser);
+      
     } catch (err) {
       console.log("erro em catch 2: " + err.message);
     }
