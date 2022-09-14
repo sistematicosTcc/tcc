@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export const Login = () => {
 
-  const { setLoginEmail, setLoginPassword, login} = useContext(UserContext)
+  const { setLoginEmail, setLoginPassword, login, reset} = useContext(UserContext)
 
   return (
     <>
@@ -35,11 +35,10 @@ export const Login = () => {
                     setLoginPassword(e.target.value);
                   }}
                 />
-                <Link to="/senha">
-                  <button id="tokenSenha">
+                  <button id="tokenSenha" onClick={reset}>
                     Esqueceu sua senha?
                   </button>
-                </Link>
+                
               </div>
               <div class="buttonDivision">
                 <button class="Continue-button Link-Margin" onClick={login}>

@@ -2,7 +2,9 @@ import { createContext, useState } from "react";
 
 import {
   createUserWithEmailAndPassword,
+  debugErrorMap,
   sendEmailVerification,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -10,8 +12,10 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { authf } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import e from "cors";
 
 export const UserContext = createContext();
+
 
 export function UserStorage({ children }) {
   const navigate = useNavigate();
@@ -38,7 +42,7 @@ export function UserStorage({ children }) {
           alert("Credenciais inválidas.")
           console.log("erro em catch 1: " + err.message);
         });
-      
+
     } catch (err) {
       console.log("erro em catch 2: " + err.message);
     }
@@ -63,26 +67,40 @@ export function UserStorage({ children }) {
             alert("Verifique seu Email")
           }
         }
-        ).catch(() =>{
+      ).catch(() => {
         alert("Email/Senha incorretos");
       })
     } catch (err) {
       alert("Digite uma senha ou email valido")
-      console.log("erro em catch login: "+ err);
+      console.log("erro em catch login: " + err);
     }
   };
 
-  
+
 
   const sendVerification = async () => {
     var user = authf.currentUser;
     try {
       sendEmailVerification(user);
     } catch (e) {
-      console.log("erro em sendVerification = "+e)
-      alert("Digite o Email Corretamente"); 
+      console.log("erro em sendVerification = " + e)
+      alert("Digite o Email Corretamente");
     }
   };
+
+  const reset = async (e) => {
+    e.preventDefault();
+    try {
+      sendPasswordResetEmail(authf, loginEmail).then(() => {
+        alert("Email enviado")
+      }).catch((err) => {
+        alert("Email não cadastrado")
+        console.log(err)
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  }
 
   useEffect(() => {
     const userLoginOn = JSON.parse(window.localStorage.getItem("userlogado"));
@@ -104,6 +122,7 @@ export function UserStorage({ children }) {
         setRegisterEmail,
         setRegisterPassword,
         userLogado,
+        reset,
       }}
     >
       {children}
