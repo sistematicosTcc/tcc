@@ -94,15 +94,6 @@ export function UserStorage({ children }) {
     }
   };
 
-  const confereSenha = async () => {
-    const senha = document.getElementById("senha")
-    var senhaValor = senha.value
-    const senhaConfirma = document.getElementById("passwordConfirm")
-    var confirmaValor = senhaConfirma.value
-    if (confirmaValor !== senhaValor){
-      alert('as senhas nao conferem')
-    }
-  }
 
   const reset = async (e) => {
     e.preventDefault();
@@ -139,7 +130,6 @@ export function UserStorage({ children }) {
         setRegisterPassword,
         userLogado,
         reset,
-        confereSenha,
       }}
     >
       {children}
