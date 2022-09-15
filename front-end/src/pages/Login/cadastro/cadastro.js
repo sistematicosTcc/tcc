@@ -8,11 +8,13 @@ export const Cadastro = () => {
     setRegisterEmail, 
     setRegisterPassword,  
     register,  
-    sendVerification} = useContext(UserContext)
+    sendVerification,
+    confereSenha} = useContext(UserContext)
 
     const handleClick = (e) => {
       register(e);
       sendVerification(e);
+      confereSenha(e);
     };
 
   return (
@@ -32,6 +34,7 @@ export const Cadastro = () => {
 
             <input
               type="password"
+              id="senha"
               minlength="number6"
               placeholder = "Digite sua Senha"
               onChange={(e) => {
