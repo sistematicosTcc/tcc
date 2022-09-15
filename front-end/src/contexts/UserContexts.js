@@ -36,7 +36,6 @@ export function UserStorage({ children }) {
           sendEmailVerification(authf.currentUser);
           console.log(sendEmailVerification);
           alert("email enviado : " + registerEmail);
-          navigate("/cad3");
         })
         .catch((err) => {
           alert("Credenciais inválidas.")
@@ -88,6 +87,16 @@ export function UserStorage({ children }) {
     }
   };
 
+  const confereSenha = async () => {
+    const senha = document.getElementById("senha")
+    var senhaValor = senha.value
+    const senhaConfirma = document.getElementById("passwordConfirm")
+    var confirmaValor = senhaConfirma.value
+    if (confirmaValor !== senhaValor){
+      alert('as senhas nao conferem')
+    }
+  }
+
   const reset = async (e) => {
     e.preventDefault();
     try {
@@ -123,6 +132,7 @@ export function UserStorage({ children }) {
         setRegisterPassword,
         userLogado,
         reset,
+        confereSenha,
       }}
     >
       {children}
