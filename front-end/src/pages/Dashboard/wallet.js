@@ -2,6 +2,7 @@ import './style.css'
 
 import React from "react";
 import { Link } from 'react-router-dom';
+import { WalletList } from '../../component/wallet/walletList'
 
 import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
 
@@ -45,16 +46,7 @@ export const Wallet = () => {
           </Link>
         </div>
       </aside>
-      <div class="walletBorder">
-        <h1></h1>
-        <input type="number" placeholder="digite sua quantia" />
-        <div>
-        <input type="text" placeholder="digite sua quantia" />
-        </div>
-        <div>
-        <button></button>
-        </div>
-      </div>
+      <WalletList />
     </div>
   </>
   );
