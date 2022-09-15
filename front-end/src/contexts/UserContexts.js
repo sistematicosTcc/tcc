@@ -31,6 +31,13 @@ export function UserStorage({ children }) {
   const register = async (e) => {
     e.preventDefault();
     try {
+      const senha = document.getElementById("senha")
+      var senhaValor = senha.value
+      const senhaConfirma = document.getElementById("passwordConfirm")
+      var confirmaValor = senhaConfirma.value
+      if (confirmaValor !== senhaValor){
+        alert('as senhas nao conferem')
+      } else
       createUserWithEmailAndPassword(authf, registerEmail, registerPassword)
         .then(() => {
           sendEmailVerification(authf.currentUser);
