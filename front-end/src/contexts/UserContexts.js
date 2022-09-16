@@ -2,7 +2,6 @@ import { createContext, useState } from "react";
 
 import {
   createUserWithEmailAndPassword,
-  debugErrorMap,
   sendEmailVerification,
   sendPasswordResetEmail,
 } from "firebase/auth";
@@ -12,10 +11,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { authf } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import e from "cors";
 
 export const UserContext = createContext();
-
 
 export function UserStorage({ children }) {
   const navigate = useNavigate();

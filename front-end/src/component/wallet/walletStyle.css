@@ -10,15 +10,28 @@
   border-radius: 10px 10px 0 0;
   margin: 100px 0px 0px 0px;
 }
-.walletColumn{
-  
-}
+
 
 .borderRight {
   border-right: 1px solid black;
 }
 
+.listaMoedas{
+  display:flex;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
 
+.walletMoedas-separadores{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 20px;
+  padding: 10px;
+}
 /*============== Bota de Adicionar na Walllet =============*/
 #button-choose {
   width: 100px;
@@ -30,7 +43,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid black;
 
   width: 25%;
   height: 20px;
