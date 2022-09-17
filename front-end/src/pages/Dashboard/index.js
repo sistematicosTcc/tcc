@@ -23,7 +23,7 @@ export const Dashboard = () => {
               <span className="material-icons-sharp">dashboard</span>
               <h4>Dashboard</h4>
             </Link>
-            <Link to="/teste">
+            <Link to="/exchange">
               <span className="material-icons-sharp">currency_exchange</span>
               <h4>Exchange</h4>
             </Link>
