@@ -16,7 +16,7 @@ import { Login } from "./pages/Login/login";
 import { Home } from "./pages/home.js";
 
 import { Dashboard } from "./pages/Dashboard/index.js";
-import { Teste } from "./pages/Dashboard/teste.js";
+import { Exchange } from "./pages/Dashboard/exchange.js";
 import { Wallet } from "./pages/Dashboard/wallet.js";
 import { Transacoes } from "./pages/Dashboard/transacoes.js";
 import { Analise } from "./pages/Dashboard/analise.js";
@@ -53,13 +53,14 @@ export function Routers() {
             }
           />
           <Route
-            path="/teste"
+            path="/exchange"
             element={
               <PrivateRouter>
-                <Teste />
+                <Exchange />
               </PrivateRouter>
             }
           />
+
 
           <Route
             path="/wallet"

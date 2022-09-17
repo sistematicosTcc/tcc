@@ -198,10 +198,10 @@ export const WalletList = () => {
               <option value="Moeda1">{Coins[0].nome}</option>
               <option value="Moeda2">{Coins[1].nome}</option>
               <option value="Moeda3">{Coins[2].nome}</option>
-              <option value="Moeda3">{Coins[3].nome}</option>
-              <option value="Moeda3">{Coins[4].nome}</option>
-              <option value="Moeda3">{Coins[5].nome}</option>
-              <option value="Moeda3">{Coins[6].nome}</option>
+              <option value="Moeda4">{Coins[3].nome}</option>
+              <option value="Moeda5">{Coins[4].nome}</option>
+              <option value="Moeda6">{Coins[5].nome}</option>
+              <option value="Moeda7">{Coins[6].nome}</option>
             </select>
             <button onClick={CriarLista}>OK</button>
           </div>
