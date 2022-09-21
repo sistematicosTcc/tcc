@@ -51,36 +51,12 @@ export const Compra = () => {
 
   function valorCompra() {
     var val = document.querySelector('#pagar').value;
-    var valorMoeda = Coins[0].preco;
+    var moeda = document.querySelector('#selecionaMoedas').value;
 
-    if (valorMoeda === 103000) {
-      var valorTotal = val / valorMoeda;
-    }
+    var valorTotal = val / moeda;
 
-    if (valorMoeda === 8200) {
-      var valorTotal = val / valorMoeda;
-    }
-
-    if (valorMoeda === 103270) {
-      var valorTotal = val / valorMoeda;
-    }
-
-    if (valorMoeda === 103270) {
-      var valorTotal = val / valorMoeda;
-    }
-
-    if (valorMoeda === 0.24) {
-      var valorTotal = val / valorMoeda;
-    }
-
-    if (valorMoeda === 1.75) {
-      var valorTotal = val / valorMoeda;
-    }
-
-    if (valorMoeda === 0.32) {
-      var valorTotal = val / valorMoeda;
-    }
-    console.log(valorTotal);
+    var resultado = document.getElementById("receber");
+    resultado.value = valorTotal.toFixed(6);
   }
 
   return (
@@ -96,19 +72,19 @@ export const Compra = () => {
 
           />
           <select id="selecionaMoedas" name="selecionarMoedas">
-            <option value="Moeda1">{Coins[0].nome}</option>
-            <option value="Moeda2">{Coins[1].nome}</option>
-            <option value="Moeda3">{Coins[2].nome}</option>
-            <option value="Moeda4">{Coins[3].nome}</option>
-            <option value="Moeda5">{Coins[4].nome}</option>
-            <option value="Moeda6">{Coins[5].nome}</option>
-            <option value="Moeda7">{Coins[6].nome}</option>
+            <option value={Coins[0].preco}>{Coins[0].nome}</option>
+            <option value={Coins[1].preco}>{Coins[1].nome}</option>
+            <option value={Coins[2].preco}>{Coins[2].nome}</option>
+            <option value={Coins[3].preco}>{Coins[3].nome}</option>
+            <option value={Coins[4].preco}>{Coins[4].nome}</option>
+            <option value={Coins[5].preco}>{Coins[5].nome}</option>
+            <option value={Coins[6].preco}>{Coins[6].nome}</option>
           </select>
           <button class="button-coin" onClick={valorCompra}>TESTE</button>
         </div>
         <h3>Vou receber=</h3>
         <div>
-          <input type="number" id="receber"></input>
+          <input type="number" id="receber" ></input>
         </div>
 
         <h3>Preço da referência</h3>
