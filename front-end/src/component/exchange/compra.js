@@ -49,15 +49,33 @@ export const Compra = () => {
   var selecionar = document.getElementById("selecionaMoedas");
   // var opcaoTexto = select.options[select.selectedIndex].text;
 
-  function valorCompra() {
-    var val = document.querySelector('#pagar').value;
-    var moeda = document.querySelector('#selecionaMoedas').value;
+  // function valorCompra() {
+    //variaveis com os inputs
+    const inputReal = document.querySelector('#real');
+    const inputCoin = document.querySelector('#coin');
 
-    var valorTotal = val / moeda;
+    //variaveis realizando calculo de real para cripto
+    var moeda = document.querySelector('#selecionaMoedas');
+    var valorReal = inputReal / moeda;
 
-    var resultado = document.getElementById("receber");
-    resultado.value = valorTotal.toFixed(6);
-  }
+    inputReal.addEventListener('input', () => {
+      if(!inputReal.value) {
+        inputCoin.value = '';
+        return;
+      };
+      var convertedValue = inputReal.value * valorReal;
+      inputCoin.value = (convertedValue).toFixed(6);
+    })
+
+    inputCoin.addEventListener('input', () => {
+      if(!inputCoin.value) {
+        inputReal.value = '';
+        return;
+      };
+      const convertedValue = inputCoin.value * moeda;
+      inputReal.value = (convertedValue).toFixed(6);
+    })
+  // }
 
   return (
     <>
@@ -68,9 +86,15 @@ export const Compra = () => {
         <h3>Eu quero pagar</h3>
         <div>
           <input
-            type="number" placeholder="Coloque um valor" id="pagar"
+            type="number" placeholder="Coloque um valor" id="real" 
 
           />
+
+          {/* <button class="button-coin" onClick={valorCompra}>TESTE</button> */}
+        </div>
+        <h3>Vou receber=</h3>
+        <div>
+          <input type="number" id="coin" ></input>
           <select id="selecionaMoedas" name="selecionarMoedas">
             <option value={Coins[0].preco}>{Coins[0].nome}</option>
             <option value={Coins[1].preco}>{Coins[1].nome}</option>
@@ -80,14 +104,7 @@ export const Compra = () => {
             <option value={Coins[5].preco}>{Coins[5].nome}</option>
             <option value={Coins[6].preco}>{Coins[6].nome}</option>
           </select>
-          <button class="button-coin" onClick={valorCompra}>TESTE</button>
         </div>
-        <h3>Vou receber=</h3>
-        <div>
-          <input type="number" id="receber" ></input>
-        </div>
-
-        <h3>Preço da referência</h3>
         <div class="button-concluded">
           <button>Compre com Taxa 0</button>
         </div>

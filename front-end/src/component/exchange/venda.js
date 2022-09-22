@@ -3,7 +3,7 @@ import HeaderDashboard from "../headerDashboard/headBoard"
 export const Venda = () => {
     return (
         <>
-                <div class="background">
+                {/* <div class="background">
                     <div>
                         <button class="button-selection">Comprar</button>
                     </div>
@@ -28,8 +28,7 @@ export const Venda = () => {
                     <div class="button-concluded">
                         <button>Compre com Taxa 0</button>
                     </div>
-
-                </div>
+                </div> */}
         </>
     )
 }
