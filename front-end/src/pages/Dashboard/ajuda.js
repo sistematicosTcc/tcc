@@ -3,6 +3,7 @@ import './style.css'
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import { AjudaInfo } from '../../component/ajuda/ajudaInfo';
 import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
 
 export const Ajuda = () => {
@@ -45,6 +46,9 @@ export const Ajuda = () => {
           </Link>
         </div>
       </aside>
+      <div>
+      <AjudaInfo />
+      </div>
     </div>
   </>
   );
