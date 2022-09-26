@@ -9,7 +9,8 @@ export const AjudaInfo = () => {
                         <h1>Como comprar CryptoMoeda?</h1>
                         <div class="card-content">
                             <p>
-                                
+                                No menu do lado esquerdo, vai ter um botao chamado Exchange,
+                                clicar nele e você vai ter acesso a compra de criptomoedas.
                             </p>
                         </div>
                     </div>
