@@ -1,5 +1,3 @@
-import HeaderDashboard from "../headerDashboard/headBoard"
-
 export const Compra = () => {
     const Coins = [
         {

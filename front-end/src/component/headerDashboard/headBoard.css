@@ -83,3 +83,26 @@
       display: none;
   }
 }
+
+/*==========================MENU==========================================*/
+.menu-modal{
+  margin: 10% auto auto 30%;
+  position: absolute;
+  display: none;
+}
+
+.menu-content{
+  display: flex;
+  background-color: white;
+  width: 330px;
+  height: 330px;
+  border-radius: 10px;
+  
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-button{
+  margin: 10px;
+  background-color: aqua;
+}

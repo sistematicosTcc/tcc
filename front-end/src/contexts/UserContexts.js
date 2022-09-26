@@ -79,7 +79,14 @@ export function UserStorage({ children }) {
     }
   };
 
-
+  const logout = () =>{
+    try {
+      setUserLogado(null)
+      window.localStorage.setItem("userlogado", JSON.stringify(false));
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const sendVerification = async () => {
     var user = authf.currentUser;
@@ -118,6 +125,7 @@ export function UserStorage({ children }) {
     <UserContext.Provider
       value={{
         register,
+        logout,
         login,
         loginEmail,
         sendVerification,

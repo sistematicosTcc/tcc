@@ -233,10 +233,6 @@ nav .profile-area .profile-photo {
     overflow: hidden;
 }
 
-nav .profile-area button {
-    display: none;
-}
-
 
 .mainContent {
     background-color: var(--color-light);

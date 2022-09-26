@@ -8,7 +8,7 @@ import React, { useContext } from "react";
 import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderLogin() {
-  const { loginEmail } = useContext(UserContext);
+  const { loginEmail,logout } = useContext(UserContext);
 
   return (
     <>
@@ -57,10 +57,16 @@ function HeaderLogin() {
             </div> */}
             <h5>{loginEmail}</h5>
           </div>
-          <button id="menu-btn">
-            <span className="material-icons-sharp">menu</span>
-          </button>
+          <button onClick={logout}> SAIR </button>
         </div>
+        <button id="button-menu" >
+          MENU
+        </button>
+        {/* 
+        <button id="menu-btn">
+            <span className="material-icons-sharp">menu</span>
+        </button>
+         */}
       </header>
     </>
   );
