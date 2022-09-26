@@ -9,12 +9,15 @@ function HeaderDashboard(){
 
   const {loginEmail,logout} = useContext(UserContext)
 
-  const closeMenu = () => {
-    document.querySelector(".menu-modal").style.display = "none";
-  };
-
   const openMenu = () => {
-    document.querySelector(".menu-modal").style.display = "flex";
+    const MenuStatus = document.querySelector(".menu-modal");
+
+    if (MenuStatus.style.display === "flex"){
+      document.querySelector(".menu-modal").style.display = "none";
+    } else {
+      document.querySelector(".menu-modal").style.display = "flex";
+    }
+
   };
   return(
     <nav>
@@ -28,10 +31,10 @@ function HeaderDashboard(){
             <input type="search" placeholder="Search" />
         </div>
         <div className="profile-area">
-          <div className="theme-btn">
+          {/* <div className="theme-btn">
             <span className="material-icons-sharp active">light_mode</span>
             <span className="material-icons-sharp">dark_mode</span>
-          </div>
+          </div> */}
           <div className="profile">
             {/* <div className="profile-photo">
                 <img src={UserLogo} alt="perfil simples"/>
@@ -39,20 +42,26 @@ function HeaderDashboard(){
             <h5>{loginEmail}</h5>
             {/* <span className="material-icons-sharp">expand_more</span> */}
           </div>
-          <button onClick={logout}> SAIR </button>
           {/* <button id="menu-btn">
             <span className="material-icons-sharp">menu</span>
           </button> */}
-        <butto id="menu-button" onClick={openMenu}>
+        <button id="menu-button" onClick={openMenu}>
           MENU
-        </butto>
+        </button>
         <div class="menu-modal">
           <div class="menu-content">
-            <div id="close-btn" onClick={closeMenu}>
-              +
-            </div>
-              <div class="modal-selecionar-carteira">
-                <button >Configuracoes</button>
+              <div>
+              <div class="menu-config">
+
+                    Trocar Nome
+                </div>
+                <div class="menu-config">
+
+                    Modo Noturno
+                </div>
+                <div class="menu-config" onClick={logout}>
+                    Sair
+                </div>
               </div>
             </div>
           </div>

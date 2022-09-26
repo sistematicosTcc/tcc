@@ -86,23 +86,44 @@
 
 /*==========================MENU==========================================*/
 .menu-modal{
-  margin: 10% auto auto 30%;
+  margin: 170px 0px 0px 120px;
   position: absolute;
   display: none;
+  z-index: 1;
 }
 
 .menu-content{
   display: flex;
-  background-color: white;
-  width: 330px;
-  height: 330px;
+  background: white;
+  width: 130px;
+  height: 130px;
   border-radius: 10px;
   
   flex-direction: column;
   justify-content: center;
 }
 
-.menu-button{
+#menu-button{
+  cursor: pointer;
   margin: 10px;
   background-color: aqua;
+}
+
+#close-btn-menu{
+  position: absolute;
+  margin: -90% 0 0 90%;
+  cursor: pointer;
+  font-size: 40px;
+  transform: rotate(45deg);
+}
+
+.menu-config{
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.menu-config:hover{
+ background-color: #f0eff5;
 }

@@ -47,33 +47,50 @@ export const Compra = () => {
   var selecionar = document.getElementById("selecionaMoedas");
   // var opcaoTexto = select.options[select.selectedIndex].text;
 
-  // function valorCompra() {
+  function valorCompra() {
+
     //variaveis com os inputs
     const inputReal = document.querySelector('#real');
     const inputCoin = document.querySelector('#coin');
 
+    const inputRealValue = document.querySelector('#real').value;
+    const inputCoinValue = document.querySelector('#coin').value;
+
+    
     //variaveis realizando calculo de real para cripto
-    var moeda = document.querySelector('#selecionaMoedas');
-    var valorReal = inputReal / moeda;
+    const select = document.getElementById("selecionarMoedas");
+    const moeda = select.options[select.selectedIndex].value;
+
+    console.log(select)
+
+    console.log("moeda = "+moeda)
+
+    console.log("inputCoin = "+inputCoin)
+    console.log("inputCoinValor = "+inputCoinValue)
+    console.log("inputReal = "+inputReal)
+    console.log("inputRealValor = "+inputRealValue)
+
+    var valorReal = inputReal.value / moeda;
+
 
     inputReal.addEventListener('input', () => {
-      if(!inputReal.value) {
+      
+      if(!inputRealValue) {
+        console.log(inputCoin.value)
         inputCoin.value = '';
-        return;
       };
       var convertedValue = inputReal.value * valorReal;
       inputCoin.value = (convertedValue).toFixed(6);
-    })
+    });
 
     inputCoin.addEventListener('input', () => {
-      if(!inputCoin.value) {
+      if(!inputCoinValue) {
         inputReal.value = '';
-        return;
       };
       const convertedValue = inputCoin.value * moeda;
       inputReal.value = (convertedValue).toFixed(6);
     })
-  // }
+  }
 
   return (
     <>
@@ -88,12 +105,12 @@ export const Compra = () => {
 
           />
 
-          {/* <button class="button-coin" onClick={valorCompra}>TESTE</button> */}
+          <button class="button-coin" onClick={valorCompra}>TESTE</button>
         </div>
         <h3>Vou receber=</h3>
         <div>
           <input type="number" id="coin" ></input>
-          <select id="selecionaMoedas" name="selecionarMoedas">
+          <select id="selecionarMoedas" name="selecionarMoedas">
             <option value={Coins[0].preco}>{Coins[0].nome}</option>
             <option value={Coins[1].preco}>{Coins[1].nome}</option>
             <option value={Coins[2].preco}>{Coins[2].nome}</option>

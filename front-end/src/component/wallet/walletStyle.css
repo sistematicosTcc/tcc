@@ -1,8 +1,3 @@
-.walletBorder {
-  
-  
-}
-
 .listAcima{
   display: flex;
   border: 2px solid black;
@@ -34,6 +29,7 @@
 }
 /*============== Bota de Adicionar na Walllet =============*/
 #button-choose {
+  margin: 700px 0 0 -841px; 
   width: 100px;
   height: 100px;
   background-color: aquamarine;

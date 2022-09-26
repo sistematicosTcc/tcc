@@ -478,13 +478,13 @@ export const WalletList = () => {
           <div class="modal-selecionar-carteira">
             <p>Escolha uma moeda para adicionar no sua carteira</p>
             <select id="selecionarMoeda" name="selecionarMoeda">
-              <option value="Moeda1">{Coins[0].nome}</option>
-              <option value="Moeda2">{Coins[1].nome}</option>
-              <option value="Moeda3">{Coins[2].nome}</option>
-              <option value="Moeda4">{Coins[3].nome}</option>
-              <option value="Moeda5">{Coins[4].nome}</option>
-              <option value="Moeda6">{Coins[5].nome}</option>
-              <option value="Moeda7">{Coins[6].nome}</option>
+            <option value={Coins[0].preco}>{Coins[0].nome}</option>
+            <option value={Coins[1].preco}>{Coins[1].nome}</option>
+            <option value={Coins[2].preco}>{Coins[2].nome}</option>
+            <option value={Coins[3].preco}>{Coins[3].nome}</option>
+            <option value={Coins[4].preco}>{Coins[4].nome}</option>
+            <option value={Coins[5].preco}>{Coins[5].nome}</option>
+            <option value={Coins[6].preco}>{Coins[6].nome}</option>
             </select>
             <button onClick={CriarLista}>OK</button>
           </div>
