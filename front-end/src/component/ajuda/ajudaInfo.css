@@ -1,0 +1,41 @@
+ 
+  .card-text {
+    margin-left: 180px;
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000E56
+  }
+  
+  .card-main {
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+  
+  }
+  
+  .card-tree {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+  
+  }
+  
+  .card-tree > div {
+    width: 1150px;
+    height: 408px;
+    border-radius: 7px;
+  
+  }
+  
+  .card-tree .card1 {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+  }

@@ -1,97 +1,115 @@
 export const Compra = () => {
-    const Coins = [
-        {
-          id: 0,
-          nome: "BitCoin",
-          // img:'imagem da moeda',
-          value: "103000",
-        },
-        {
-          id: 1,
-          nome: "Ethereum",
-          // img:'imagem da moeda',
-          value: "8200",
-        },
-        {
-          id: 2,
-          nome: "USD Coin",
-          // img:'imagem da moeda',
-          value: "103270",
-        },
-        {
-          id: 3,
-          nome: "BNB",
-          // img:'imagem da moeda',
-          value: "103270",
-        },
-        {
-          id: 4,
-          nome: "Polygon",
-          // img:'imagem da moeda',
-          value: "0,24",
-        },
-        {
-          id: 5,
-          nome: "XRP",
-          // img:'imagem da moeda',
-          value: "	1.75",
-        },
-        {
-          id: 6,
-          nome: "Dogecoin",
-          // img:'imagem da moeda',
-          value: "0.32",
-        },
-      ];
+  const Coins = [
+    {
+      id: 0,
+      nome: "BitCoin",
+      // img:'imagem da moeda',
+      preco: 103000,
+    },
+    {
+      id: 1,
+      nome: "Ethereum",
+      // img:'imagem da moeda',
+      preco: 8200,
+    },
+    {
+      id: 2,
+      nome: "USD Coin",
+      // img:'imagem da moeda',
+      preco: 103270,
+    },
+    {
+      id: 3,
+      nome: "BNB",
+      // img:'imagem da moeda',
+      preco: 103270,
+    },
+    {
+      id: 4,
+      nome: "Polygon",
+      // img:'imagem da moeda',
+      preco: 0.24,
+    },
+    {
+      id: 5,
+      nome: "XRP",
+      // img:'imagem da moeda',
+      preco: 1.75,
+    },
+    {
+      id: 6,
+      nome: "Dogecoin",
+      // img:'imagem da moeda',
+      preco: 0.32,
+    },
+  ];
 
-      const select = document.getElementById("selecionarMoeda");
-      const opcaoTexto = select.options[select.selectedIndex].text;
+  var selecionar = document.getElementById("selecionaMoedas");
+  // var opcaoTexto = select.options[select.selectedIndex].text;
 
-    function teste (){
-        if(opcaoTexto === "bitcoin"){
-            //pesquisar no google como pegar o valor de um input e colocar numa variavel
-        }
-    }
+  // function valorCompra() {
+    //variaveis com os inputs
+    const inputReal = document.querySelector('#real');
+    const inputCoin = document.querySelector('#coin');
 
-    return (
-        <>
-            <div class="background">
-                <div>
-                    <button class="button-selection">Comprar</button>
-                </div>
-                <h3>Eu quero pagar</h3>
-                <div>
-                    <input
-                        type="number" placeholder="Coloque um valor" id="pagar"
+    //variaveis realizando calculo de real para cripto
+    var moeda = document.querySelector('#selecionaMoedas');
+    var valorReal = inputReal / moeda;
 
-                    />
-                    <select id="selecionarMoeda" name="selecionarMoeda">
-                        <option value="Moeda1">{Coins[0].nome}</option>
-                        <option value="Moeda2">{Coins[1].nome}</option>
-                        <option value="Moeda3">{Coins[2].nome}</option>
-                        <option value="Moeda4">{Coins[3].nome}</option>
-                        <option value="Moeda5">{Coins[4].nome}</option>
-                        <option value="Moeda6">{Coins[5].nome}</option>
-                        <option value="Moeda7">{Coins[6].nome}</option>
-                    </select>
-                    {/* <button class="button-coin" onClick={op}>TESTE</button> */}
-                </div>
-                <h3>Vou receber=</h3>
-                <div>
-                    <input
-                        type="number" id="receber"
+    inputReal.addEventListener('input', () => {
+      if(!inputReal.value) {
+        inputCoin.value = '';
+        return;
+      };
+      var convertedValue = inputReal.value * valorReal;
+      inputCoin.value = (convertedValue).toFixed(6);
+    })
 
-                    />
-                    <button class="button-coin"></button>
-                </div>
+    inputCoin.addEventListener('input', () => {
+      if(!inputCoin.value) {
+        inputReal.value = '';
+        return;
+      };
+      const convertedValue = inputCoin.value * moeda;
+      inputReal.value = (convertedValue).toFixed(6);
+    })
+  // }
 
-                <h3>Preço da referência</h3>
-                <div class="button-concluded">
-                    <button>Compre com Taxa 0</button>
-                </div>
+  return (
+    <>
+      <div class="background">
+        <div>
+          <button class="button-selection">Comprar</button>
+        </div>
+        <h3>Eu quero pagar</h3>
+        <div>
+          <input
+            type="number" placeholder="Coloque um valor" id="real" 
 
-            </div>
+          />
 
-        </>
-    )
+          {/* <button class="button-coin" onClick={valorCompra}>TESTE</button> */}
+        </div>
+        <h3>Vou receber=</h3>
+        <div>
+          <input type="number" id="coin" ></input>
+          <select id="selecionaMoedas" name="selecionarMoedas">
+            <option value={Coins[0].preco}>{Coins[0].nome}</option>
+            <option value={Coins[1].preco}>{Coins[1].nome}</option>
+            <option value={Coins[2].preco}>{Coins[2].nome}</option>
+            <option value={Coins[3].preco}>{Coins[3].nome}</option>
+            <option value={Coins[4].preco}>{Coins[4].nome}</option>
+            <option value={Coins[5].preco}>{Coins[5].nome}</option>
+            <option value={Coins[6].preco}>{Coins[6].nome}</option>
+          </select>
+        </div>
+        <div class="button-concluded">
+          <button>Compre com Taxa 0</button>
+        </div>
+
+      </div>
+
+    </>
+  )
+
 }

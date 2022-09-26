@@ -26,7 +26,7 @@ export const Exchange = () => {
             <span className="material-icons-sharp">dashboard</span>
             <h4>Dashboard</h4>
           </Link>
-          <Link to="/teste" className='active'>
+          <Link to="/exchange" className='active'>
             <span className="material-icons-sharp">currency_exchange</span>
             <h4>Exchange</h4>
           </Link>
