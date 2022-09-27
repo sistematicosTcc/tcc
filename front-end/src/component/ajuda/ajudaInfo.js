@@ -15,13 +15,12 @@ export const AjudaInfo = () => {
                         </div>
                     </div>
 
-                    <div class="card1">
-                        <h1>Rentabilidade em NFT</h1>
-                        <div class="card-content">
+                    <div class="card">
+                        <h1>Como vender CryptoMoeda?</h1>
+                        <div>
                             <p>
-                                Como funciona a parte financeira
-                                do NFT? Uma arte pode valer
-                                dinheiro e ter outras funções?
+                                No menu do lado esquerdo, vai ter um botao chamado Exchange,
+                                clicar nele e você vai ter acesso a venda de suas criptomoedas.
                             </p>
                         </div>
                     </div>
