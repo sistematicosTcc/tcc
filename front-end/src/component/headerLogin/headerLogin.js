@@ -8,7 +8,19 @@ import React, { useContext } from "react";
 import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderLogin() {
-  const { loginEmail, logout } = useContext(UserContext);
+
+  const { loginEmail,logout,carteira } = useContext(UserContext);
+
+  const openMenu = () => {
+    const MenuStatus = document.querySelector(".menu-modal-home");
+
+    if (MenuStatus.style.display === "flex"){
+      document.querySelector(".menu-modal-home").style.display = "none";
+    } else {
+      document.querySelector(".menu-modal-home").style.display = "flex";
+    }
+  };
+
 
   return (
     <>
@@ -49,18 +61,33 @@ function HeaderLogin() {
                 <img src={UserLogo} alt="perfil simples"/>
             </div> */}
             <h5>{loginEmail}</h5>
+            <h5>R$ {carteira.valorAtual}</h5>
           </div>
-          <button onClick={logout}> SAIR </button>
         </div>
-        <button id="button-menu" >
+        <button id="menu-button-home" onClick={openMenu}>
           MENU
         </button>
         {/* 
         <button id="menu-btn">
-            <span className="material-icons-sharp">menu</span>
+        <span className="material-icons-sharp">menu</span>
         </button>
-         */}
+      */}
       </header>
+      <div class="menu-modal-home">
+        <div class="menu-content-home">
+          <div>
+            <div class="menu-config-home">
+                  Trocar Nome
+            </div>
+            <div class="menu-config-home">
+                  Modo Noturno
+            </div>
+            <div class="menu-config-home" onClick={logout}>
+                  Sair
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

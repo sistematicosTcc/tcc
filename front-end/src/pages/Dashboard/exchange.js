@@ -1,17 +1,39 @@
 import './style.css'
 
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
-import { Helmet } from 'react-helmet';
 
-import Iframe from "react-iframe"
 import { Compra } from '../../component/exchange/compra';
 import { Venda } from '../../component/exchange/venda';
 
 
 export const Exchange = () => {
+
+  const [compraSetting, setcompraSetting] = useState(true);
+  const [vendaSetting, setvendaSetting] = useState(false);
+
+
+  const mostrarVenda = () => {
+
+    document.querySelector(".venda").style.backgroundColor = "#304213"
+    document.querySelector(".compra").style.backgroundColor = "#179f1a"
+
+    setvendaSetting(current => !current);
+    setcompraSetting(false)
+
+  };
+  const mostrarCompra = () => {
+
+    document.querySelector(".venda").style.backgroundColor = "#179f1a"
+    document.querySelector(".compra").style.backgroundColor = "#304213"
+    setcompraSetting(current => !current);
+    setvendaSetting(false)
+
+  };
+  
+
   return (
   <>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet"></link>
@@ -42,17 +64,25 @@ export const Exchange = () => {
             <span className="material-icons-sharp">help_center</span>
             <h4>Ajuda</h4>
           </Link>
-          <Link to="/configuracoes">
-            <span className="material-icons-sharp">settings</span>
-            <h4>Configurações</h4>
-          </Link>
         </div>
       </aside>
-      <div>
-      <Compra />
-      <Venda />
+      <div className='center-page'>
+        <div className='division-buttons'>
+          <div>
+            <button class="button-selection compra" onClick={mostrarCompra}>Comprar</button>
+          </div>
+          <div>
+            <button class="button-selection venda" onClick={mostrarVenda}>Vender</button>
+          </div>
+        </div>
+        <div>
+          {compraSetting && <Compra />}
+        </div>
+        <div>
+          {vendaSetting && <Venda />}
+        </div>
       </div>
-      </div>
+    </div>
   </>
   );
 }

@@ -20,7 +20,6 @@ import { Exchange } from "./pages/Dashboard/exchange.js";
 import { Wallet } from "./pages/Dashboard/wallet.js";
 import { Transacoes } from "./pages/Dashboard/transacoes.js";
 import { Ajuda } from "./pages/Dashboard/ajuda.js";
-import { Configuracoes } from "./pages/Dashboard/configuracoes.js";
 import { LoginOn } from "./pages/LoginOn/LoginOn";
 
 import { AjudaText } from "./pages/page-text/ajudaText";
@@ -99,14 +98,6 @@ export function Routers() {
             element={
               <PrivateRouter>
                 <Ajuda />
-              </PrivateRouter>
-            }
-          />
-          <Route
-            path="/configuracoes"
-            element={
-              <PrivateRouter>
-                <Configuracoes />
               </PrivateRouter>
             }
           />

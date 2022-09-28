@@ -547,3 +547,26 @@ nav .profile-area .profile-photo {
     border-right: 1px solid black;
 }
 
+/* ==============================Exchange ============================== */
+.division-buttons{
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+}
+.button-selection{
+    width: 140px;
+    height: 70px;
+    background-color: #179f1a;
+    border-radius: 6px;
+    margin: 10px;
+
+    cursor: pointer;
+
+}
+.center-page{
+    margin: 0 auto;
+}
+
+.compra {
+    background-color: #304213;
+}

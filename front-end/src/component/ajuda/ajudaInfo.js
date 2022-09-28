@@ -4,7 +4,7 @@ export const AjudaInfo = () => {
     return (
         <>
             <div>
-                <section class="card-tree">
+                <section class="card-tree-info">
                     <div class="card1">
                         <h1>Como comprar CryptoMoeda?</h1>
                         <div class="card-content">
@@ -28,7 +28,7 @@ export const AjudaInfo = () => {
             </div>
 
             <div>
-                <section class="card-tree">
+                <section class="card-tree-info">
                     <div class="card1">
                         <h1>Rentabilidade em NFT</h1>
                         <div class="card-content">

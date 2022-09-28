@@ -164,3 +164,40 @@
       display: none;
   }
 }
+
+/* =====================MENU================= */
+#menu-button-home{
+  background-color: var(--color-light);
+  cursor: pointer;
+  margin: 10px;
+}
+
+.menu-modal-home{
+  position: absolute;
+  left: 90%;
+  display: none;
+  z-index: 1;
+}
+
+.menu-content-home{
+  display: flex;
+  background: var(--color-light);
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-config-home{
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: var(--color-light);
+}
+
+.menu-config-home:hover{
+  background-color: #f0eff5;
+  color: #FFC90A;
+ }

@@ -39,10 +39,6 @@ export const Dashboard = () => {
               <span className="material-icons-sharp">help_center</span>
               <h4>Ajuda</h4>
             </Link>
-            <Link to="/configuracoes">
-              <span className="material-icons-sharp">settings</span>
-              <h4>Configurações</h4>
-            </Link>
           </div>
         </aside>
         <section class="middle">

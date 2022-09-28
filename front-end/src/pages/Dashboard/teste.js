@@ -23,7 +23,7 @@ export const Teste = () => {
             <span className="material-icons-sharp">dashboard</span>
             <h4>Dashboard</h4>
           </Link>
-          <Link to="/teste" className='active'>
+          <Link to="/exchange" className='active'>
             <span className="material-icons-sharp">currency_exchange</span>
             <h4>Exchange</h4>
           </Link>
@@ -38,10 +38,6 @@ export const Teste = () => {
           <Link to="/ajuda" >
             <span className="material-icons-sharp">help_center</span>
             <h4>Ajuda</h4>
-          </Link>
-          <Link to="/configuracoes">
-            <span className="material-icons-sharp">settings</span>
-            <h4>Configurações</h4>
           </Link>
         </div>
       </aside>
