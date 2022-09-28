@@ -24,7 +24,15 @@ export function UserStorage({ children }) {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  // --------------------------CADASTRO E LOGIN-----------------------------
+
+  const carteira={
+      id: "IdDaCarteiraAtual",
+      valorInicial:1000,
+      valorAtual: 100
+    }
+  
+
+// --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {
     e.preventDefault();
     try {
@@ -112,6 +120,8 @@ export function UserStorage({ children }) {
       console.log(e)
     }
   }
+ 
+
 
   useEffect(() => {
     const userLoginOn = JSON.parse(window.localStorage.getItem("userlogado"));
@@ -135,6 +145,7 @@ export function UserStorage({ children }) {
         setRegisterPassword,
         userLogado,
         reset,
+        carteira
       }}
     >
       {children}

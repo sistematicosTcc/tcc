@@ -462,7 +462,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores">
             <ul class="walletColumn">
-              <li>ativo</li>
+              <li>Ativado</li>
             </ul>
           </div>
         </div>

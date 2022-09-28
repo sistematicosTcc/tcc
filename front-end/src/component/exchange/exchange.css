@@ -3,28 +3,63 @@ input[type=number]{
     border-width: 0px;
     margin-top: 10px;
     padding: 7px 12px;
-    height: 43px;
+    height: 40px;
     width: 380px;
     font-size: 24px;
+
+    background-color: var(--color-light);
     font-weight:normal;
+  }
+  
+  #coin{
+    width: 305px;
+  }
+
+  #selecionarMoedas{
+    height: 40px;
+    width: 75px;
+
+    border-radius: 6px;
+    
+    margin-left: 10px;
+
+    padding: 0px 5px;
+    background-color: var(--color-light);
   }
 
   .background{
+    display: flex;
+    background-color: white;
+    border-radius: 6px;
 
+    width: 800px;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  h3{
-    
+  .background span{
+    font-size: 20px;
   }
 
-  .button-selection{
-
+  .background h3{
+    font-size: 20px;
   }
-
   .button-coin{
+    width: 70px;
+    height: 50px;
+    margin: 10px;
 
+    color: white;
+    background-color: green;
+    border-radius: 6px;
   }
 
-  .button-concluded{
-    
+  .button-concluded button{
+    width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    color: white;
+    background-color: #000E56;
   }

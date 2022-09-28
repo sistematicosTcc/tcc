@@ -19,9 +19,7 @@ import { Dashboard } from "./pages/Dashboard/index.js";
 import { Exchange } from "./pages/Dashboard/exchange.js";
 import { Wallet } from "./pages/Dashboard/wallet.js";
 import { Transacoes } from "./pages/Dashboard/transacoes.js";
-import { Analise } from "./pages/Dashboard/analise.js";
 import { Ajuda } from "./pages/Dashboard/ajuda.js";
-import { Configuracoes } from "./pages/Dashboard/configuracoes.js";
 import { LoginOn } from "./pages/LoginOn/LoginOn";
 
 export function Routers() {
@@ -79,26 +77,10 @@ export function Routers() {
             }
           />
           <Route
-            path="/analise"
-            element={
-              <PrivateRouter>
-                <Analise />
-              </PrivateRouter>
-            }
-          />
-          <Route
             path="/ajuda"
             element={
               <PrivateRouter>
                 <Ajuda />
-              </PrivateRouter>
-            }
-          />
-          <Route
-            path="/configuracoes"
-            element={
-              <PrivateRouter>
-                <Configuracoes />
               </PrivateRouter>
             }
           />

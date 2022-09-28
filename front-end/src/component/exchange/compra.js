@@ -1,3 +1,5 @@
+import './exchange.css'
+
 export const Compra = () => {
   const Coins = [
     {
@@ -44,9 +46,6 @@ export const Compra = () => {
     },
   ];
 
-  var selecionar = document.getElementById("selecionaMoedas");
-  // var opcaoTexto = select.options[select.selectedIndex].text;
-
   function valorCompra() {
 
     //variaveis com os inputs
@@ -72,10 +71,11 @@ export const Compra = () => {
 
     var valorReal = inputReal.value / moeda;
 
+    console.log("valorReal = "+valorReal)
 
     inputReal.addEventListener('input', () => {
       
-      if(!inputRealValue) {
+      if(!inputReal.value) {
         console.log(inputCoin.value)
         inputCoin.value = '';
       };
@@ -84,7 +84,7 @@ export const Compra = () => {
     });
 
     inputCoin.addEventListener('input', () => {
-      if(!inputCoinValue) {
+      if(!inputCoin.value) {
         inputReal.value = '';
       };
       const convertedValue = inputCoin.value * moeda;
@@ -95,20 +95,20 @@ export const Compra = () => {
   return (
     <>
       <div class="background">
-        <div>
-          <button class="button-selection">Comprar</button>
-        </div>
+        <h3>Comprar Criptomoedas</h3><br/>
         <h3>Eu quero pagar</h3>
         <div>
+        <span>R$ </span>
           <input
             type="number" placeholder="Coloque um valor" id="real" 
 
           />
 
-          <button class="button-coin" onClick={valorCompra}>TESTE</button>
         </div>
+          <button class="button-coin" onClick={valorCompra}> Selecionar Moeda </button>
         <h3>Vou receber=</h3>
         <div>
+          <span>Token </span>
           <input type="number" id="coin" ></input>
           <select id="selecionarMoedas" name="selecionarMoedas">
             <option value={Coins[0].preco}>{Coins[0].nome}</option>

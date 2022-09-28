@@ -86,7 +86,8 @@
 
 /*==========================MENU==========================================*/
 .menu-modal{
-  margin: 170px 0px 0px 120px;
+  left: 92%;
+  top: 110%;
   position: absolute;
   display: none;
   z-index: 1;
@@ -104,9 +105,13 @@
 }
 
 #menu-button{
+  background-color: white;
   cursor: pointer;
   margin: 10px;
-  background-color: aqua;
+}
+
+#menu-button:hover{
+  color: #FFC90A;
 }
 
 #close-btn-menu{
@@ -126,4 +131,5 @@
 
 .menu-config:hover{
  background-color: #f0eff5;
+ color: #FFC90A;
 }

@@ -19,7 +19,7 @@ export const Transacoes = () => {
             <span className="material-icons-sharp">dashboard</span>
             <h4>Dashboard</h4>
           </Link>
-          <Link to="/teste">
+          <Link to="/exchange">
             <span className="material-icons-sharp">currency_exchange</span>
             <h4>Exchange</h4>
           </Link>
@@ -31,17 +31,9 @@ export const Transacoes = () => {
             <span className="material-icons-sharp">credit_card</span>
             <h4>Transações</h4>
           </Link>
-          <Link to="/analise">
-            <span className="material-icons-sharp">insights</span>
-            <h4>Análises</h4>
-          </Link>
           <Link to="/ajuda">
             <span className="material-icons-sharp">help_center</span>
             <h4>Ajuda</h4>
-          </Link>
-          <Link to="/configuracoes">
-            <span className="material-icons-sharp">settings</span>
-            <h4>Configurações</h4>
           </Link>
         </div>
       </aside>
