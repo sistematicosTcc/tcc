@@ -8,11 +8,11 @@ import React, { useContext } from "react";
 import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderLogin() {
-  const { loginEmail,logout } = useContext(UserContext);
+  const { loginEmail, logout } = useContext(UserContext);
 
   return (
     <>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
       <header class="head">
         <div class="bet">
           <Link to="/homeLogin">
@@ -22,16 +22,12 @@ function HeaderLogin() {
             <li>
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
-                <li>
-                  <Link to="/teste" className="options">
-                    Exchange
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/wallet" className="options">
-                    Trust Wallet
-                  </Link>
-                </li>
+                <li><Link to="/teste" className="options">Exchange</Link></li>
+                <li><Link to="/wallet" className="options">CripTop Wallet</Link></li>
+                <li><Link to="/login" className='options'>Sobre Nós</Link></li>
+                <li><Link to="/login" className='options'>Ajuda</Link></li>
+                <li><Link to="/login" className='options'>Educação</Link></li>
+                <li><Link to="/login" className='options'>Transparência</Link></li>
               </ul>
             </li>
           </ul>
@@ -41,9 +37,6 @@ function HeaderLogin() {
             </Link>
             <Link to="/dashboard" className="header-item">
               Mercado
-            </Link>
-            <Link to="/teste" className="header-item">
-              Trade
             </Link>
             <Link to="/" className="header-item">
               NFT

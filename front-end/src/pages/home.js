@@ -107,7 +107,8 @@ import React from "react";
         </section>
         <section class="card-main">
           <section class="card-tree">
-            <div class="card1">
+          <Link to="/historia">
+          <div class="card1">
               <img src={WomanBook} alt="mulher_com_livro"/>
               <h1>Conheça a história dos criptoativos</h1>
               <div class="card-content">
@@ -118,9 +119,11 @@ import React from "react";
                 </p>
               </div>
             </div>
+          </Link>
           </section>
           <section class="card-tree">
-            <div class="card1">
+          <Link to="/nft">
+          <div class="card1">
               <img src={Neftguax} alt="neftGuax"/>
               <h1>Rentabilidade em NFT</h1>
               <div class="card-content">
@@ -131,9 +134,12 @@ import React from "react";
                 </p>
               </div>
             </div>
+          </Link>
+
           </section>
           <section class="card-tree">
-            <div class="card1">
+          <Link to="/aprender">
+          <div class="card1">
               <img src={WomanTree} alt="mulher e arvore"/>
               <h1>Aprender para ganhar</h1>
               <div class="card-content">
@@ -146,6 +152,7 @@ import React from "react";
                 </p>
               </div>
             </div>
+          </Link>
           </section>
         </section>
         <div class="pai-mae">
@@ -244,43 +251,39 @@ import React from "react";
               <div class="support">
                 <ul>
                   <li> <b> Sobre nós </b></li>
-                  <li>Quem somos</li>
-                  <li>Estudo</li>
-                  <li>Carreira</li>
+                  <li><Link to="/sobre" className='options'>Quem somos</Link></li>
                 </ul>
               </div>
             </div>
             <div class="support">
               <ul>
                 <li> <b> Ajuda </b></li>
-                <li>Começar a investir</li>
-                <li>Criar carteira de crypto</li>
-                <li>Ativar/desativar 2FA</li>
-                <li>Depósitos em crypto</li>
-                <li>Depósitos em reais</li>
-                <li>Saques em reais</li>
-                <li>Saques em cryptos</li>
+                <li><Link to="/ajudaText" className='options'>Começar a investir</Link></li>
+                <li><Link to="/ajudaText" className='options'>Criar carteira de crypto</Link></li>
               </ul>
             </div>
             <div class="support">
               <ul>
                 <li> <b> Educação </b></li>
-                <li>O que é Bitcoin?</li>
-                <li>O que é Blockchain?</li>
-                <li>O que é Etherum?</li>
-                <li>O que é itecoin?</li>
-                <li>Diversos outros</li>
+                <li><Link to="/educacao" className='options'>O que é Bitcoin?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é Blockchain?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é Etherum?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é itecoin?</Link></li>                
+                <li><Link to="/educacao" className='options'>Diversos outros</Link></li>
+
               </ul>
             </div>
             <div class="support">
               <ul>
                 <li> <b> Transparência </b></li>
-                <li>Taxas e limites</li>
-                <li>Termos de Uso</li>
-                <li>Políticas de privacidade</li>
+                <li><Link to="/transparencia" className='options'>Termos de Uso</Link></li>                
+                <li><Link to="/transparencia" className='options'>Políticas de privacidade</Link></li>
               </ul>
             </div>
           </div>
+          {/* <Link to="https://www.instagram.com/CrypTop_22/"></Link>
+          <Link to="https://www.facebook.com/profile.php?id=100086384828388"></Link>
+          <Link to="https://twitter.com/cryp_top2022"></Link> */}
           <div class="redes">
             <img src={Instagram} alt="logoinsta" />
             <img src={Facebook} alt="logoface" />

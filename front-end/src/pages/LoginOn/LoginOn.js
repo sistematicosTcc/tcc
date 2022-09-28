@@ -245,8 +245,6 @@ import React from "react";
                 <ul>
                   <li> <b> Sobre nós </b></li>
                   <li>Quem somos</li>
-                  <li>Estudo</li>
-                  <li>Carreira</li>
                 </ul>
               </div>
             </div>
@@ -255,11 +253,6 @@ import React from "react";
                 <li> <b> Ajuda </b></li>
                 <li>Começar a investir</li>
                 <li>Criar carteira de crypto</li>
-                <li>Ativar/desativar 2FA</li>
-                <li>Depósitos em crypto</li>
-                <li>Depósitos em reais</li>
-                <li>Saques em reais</li>
-                <li>Saques em cryptos</li>
               </ul>
             </div>
             <div class="support">
@@ -275,7 +268,6 @@ import React from "react";
             <div class="support">
               <ul>
                 <li> <b> Transparência </b></li>
-                <li>Taxas e limites</li>
                 <li>Termos de Uso</li>
                 <li>Políticas de privacidade</li>
               </ul>

@@ -32,10 +32,6 @@ export const Wallet = () => {
             <span className="material-icons-sharp">credit_card</span>
             <h4>Transações</h4>
           </Link>
-          <Link to="/analise">
-            <span className="material-icons-sharp">insights</span>
-            <h4>Análises</h4>
-          </Link>
           <Link to="/ajuda" >
             <span className="material-icons-sharp">help_center</span>
             <h4>Ajuda</h4>

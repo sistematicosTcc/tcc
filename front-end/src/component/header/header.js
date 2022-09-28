@@ -18,15 +18,18 @@ function Header(){
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
                 <li><Link to="/login" className='options'>Exchange</Link></li>
-                <li><Link to="/login" className='options'>Trust Wallet</Link></li>
+                <li><Link to="/login" className='options'>CripTop Wallet</Link></li>
+                <li><Link to="/login" className='options'>Sobre Nós</Link></li>
+                <li><Link to="/login" className='options'>Ajuda</Link></li>
+                <li><Link to="/login" className='options'>Educação</Link></li>
+                <li><Link to="/login" className='options'>Transparência</Link></li>
               </ul>
             </li>
           </ul>
           <div class="header-first">
             <Link to="/login" className='header-item'>Compre Crypto</Link>
-            <Link to="/login" className='header-item'>Mercado</Link>
-            <Link to="/login" className='header-item'>Trade</Link>
-            <Link to="/login" className='header-item'>NFT</Link>
+            <Link to="/aprender" className='header-item'>Mercado</Link>
+            <Link to="/nft" className='header-item'>NFT</Link>
           </div>
         </div>
         <div class="header-second">
