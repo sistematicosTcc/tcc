@@ -1,0 +1,10 @@
+.text-titulo{
+    text-align: center;
+    color: #c99e07;
+}
+
+.text-comun{
+    text-align: justify;
+    color: #000E56;
+    margin: 25px 100px 75px 100px;
+}

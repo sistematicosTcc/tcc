@@ -19,10 +19,10 @@ function Header(){
               <ul>
                 <li><Link to="/login" className='options'>Exchange</Link></li>
                 <li><Link to="/login" className='options'>CripTop Wallet</Link></li>
-                <li><Link to="/login" className='options'>Sobre Nós</Link></li>
-                <li><Link to="/login" className='options'>Ajuda</Link></li>
-                <li><Link to="/login" className='options'>Educação</Link></li>
-                <li><Link to="/login" className='options'>Transparência</Link></li>
+                <li><Link to="/sobre" className='options'>Sobre Nós</Link></li>
+                <li><Link to="/ajudaText" className='options'>Ajuda</Link></li>
+                <li><Link to="/educacao" className='options'>Educação</Link></li>
+                <li><Link to="/transparencia" className='options'>Transparência</Link></li>
               </ul>
             </li>
           </ul>
