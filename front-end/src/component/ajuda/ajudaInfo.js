@@ -3,10 +3,10 @@ import "./ajudaInfo.css";
 export const AjudaInfo = () => {
     return (
         <>
-            <div>
+            
                 <section class="card-tree-info">
-                    <div class="card1">
-                        <h1>Como comprar CryptoMoeda?</h1>
+                    <div class="card-info">
+                        <h1 class="h1-info">Como comprar CryptoMoeda?</h1>
                         <div class="card-content">
                             <p>
                                 No menu do lado esquerdo, vai ter um botao chamado Exchange,
@@ -15,8 +15,8 @@ export const AjudaInfo = () => {
                         </div>
                     </div>
 
-                    <div class="card">
-                        <h1>Como vender CryptoMoeda?</h1>
+                    <div class="card-info">
+                        <h1 class="h1-info">Como vender CryptoMoeda?</h1>
                         <div>
                             <p>
                                 No menu do lado esquerdo, vai ter um botao chamado Exchange,
@@ -25,12 +25,12 @@ export const AjudaInfo = () => {
                         </div>
                     </div>
                 </section>
-            </div>
+            
 
-            <div>
+        
                 <section class="card-tree-info">
-                    <div class="card1">
-                        <h1>Rentabilidade em NFT</h1>
+                    <div class="card-info">
+                        <h1 class="h1-info">Rentabilidade em NFT</h1>
                         <div class="card-content">
                             <p>
                                 Como funciona a parte financeira
@@ -39,9 +39,8 @@ export const AjudaInfo = () => {
                             </p>
                         </div>
                     </div>
-
-                    <div class="card1">
-                        <h1>Rentabilidade em NFT</h1>
+                    <div class="card-info">
+                        <h1 class="h1-info">Rentabilidade em NFT</h1>
                         <div class="card-content">
                             <p>
                                 Como funciona a parte financeira
@@ -51,7 +50,7 @@ export const AjudaInfo = () => {
                         </div>
                     </div>
                 </section>
-            </div>
+      
 
         </>
     )

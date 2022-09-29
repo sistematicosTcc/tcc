@@ -244,32 +244,32 @@ import React from "react";
               <div class="support">
                 <ul>
                   <li> <b> Sobre nós </b></li>
-                  <li>Quem somos</li>
+                  <li><Link to="/sobre" className='options'>Quem somos</Link></li>
                 </ul>
               </div>
             </div>
             <div class="support">
               <ul>
                 <li> <b> Ajuda </b></li>
-                <li>Começar a investir</li>
-                <li>Criar carteira de crypto</li>
+                <li><Link to="/ajudaText" className='options'>Começar a investir</Link></li>
+                <li><Link to="/ajudaText" className='options'>Criar carteira de crypto</Link></li>
               </ul>
             </div>
             <div class="support">
               <ul>
-                <li> <b> Educação </b></li>
-                <li>O que é Bitcoin?</li>
-                <li>O que é Blockchain?</li>
-                <li>O que é Etherum?</li>
-                <li>O que é itecoin?</li>
-                <li>Diversos outros</li>
+              <li> <b> Educação </b></li>
+                <li><Link to="/educacao" className='options'>O que é Bitcoin?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é Blockchain?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é Etherum?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é itecoin?</Link></li>                
+                <li><Link to="/educacao" className='options'>Diversos outros</Link></li>
               </ul>
             </div>
             <div class="support">
               <ul>
                 <li> <b> Transparência </b></li>
-                <li>Termos de Uso</li>
-                <li>Políticas de privacidade</li>
+                <li><Link to="/transparencia" className='options'>Termos de Uso</Link></li>                
+                <li><Link to="/transparencia" className='options'>Políticas de privacidade</Link></li>
               </ul>
             </div>
           </div>

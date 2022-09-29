@@ -1,5 +1,5 @@
  
-  .card-text {
+  .card-text-info {
     margin-left: 180px;
     font-family: 'Lato', sans-serif;
     font-size: 32px;
@@ -7,7 +7,7 @@
     color: #000E56
   }
   
-  .card-main {
+  .card-main-info {
     display: flex;
     align-items: center;
     min-height: 60vh;
@@ -16,26 +16,63 @@
   
   .card-tree-info {
     border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    padding: 30px;
-    margin: 20px;
-    width: 400px;
+    padding: 0px;
+    width: 1050px;
     transition: all 0.3s ease-out;
-  
+    display: flex;
+    justify-content: space-evenly;
   }
   
-  .card-tree > div {
+  .card-tree-info > div {
     width: 1150px;
     height: 408px;
     border-radius: 7px;
   
   }
   
-  .card-tree .card {
+  .card-tree-info .card {
     border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     padding: 30px;
     margin: 20px;
     width: 400px;
     transition: all 0.3s ease-out;
+  }
+
+  .card-tree-info .card-info {
+    position: relative;
+    padding: 10px;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    overflow: hidden;
+    background: #e2e1e1;
+  }
+
+  .card-tree-info .card-info .card-content {
+    padding: 10px;
+    text-align: center;
+    
+  }
+
+  .h1-info{
+    color: #000E56;
+    font-weight: bold;
+    margin-top:28px;
+    font-size: 30px;
+  }
+
+  .card-tree-info .card-info:hover {
+    background-color: #FFC90A;
+    color: black;
+    margin-top: -30px;
+    box-shadow: 2px 15px 20px #000E56;
+    border-radius: 7px;
+  }
+
+  p{
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
   }
