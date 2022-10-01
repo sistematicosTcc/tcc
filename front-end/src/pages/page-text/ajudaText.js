@@ -1,4 +1,5 @@
 import Header from "../../component/header/header";
+// import CarteiraCripto from "../images/carteira_cripto.png";
 
 
 export function AjudaText() {
@@ -22,6 +23,7 @@ export function AjudaText() {
                 mensal de acordo o valor investido, ou adentrar em algum projeto alocando
                 suas cripto e esperando seu rendimento.
             </p>
+            {/* <img src={Comecar-investir} alt="comecarInvestir" /> */}
 
             <h1 class="text-titulo">Criar carteira de cripto</h1>
 
@@ -32,6 +34,8 @@ export function AjudaText() {
                 TrustWallet, entre outras, cada uma delas são únicas e possuem uma
                 segurança bem rígida.
             </p>
+
+            {/* <img src={CarteiraCripto} alt="comecarInvestir" /> */}
         </>
     )
 }
