@@ -67,7 +67,11 @@ export function Educacao() {
             </p>
 
             <h1 class="text-titulo">O que é Litecoin?</h1>
-            <p class="text-comun"></p>
+            <p class="text-comun">
+                Litecoin (LTC) é uma criptomoeda, descentralizada e compartilha do mesmo código do Bitcoin, isso significa que muitas das atualizações do
+                Bitcoin podem ser feitas também para o Litecoin. Ela tem algumas diferenças, uma delas é que ela é mais rápida que o Bitcoin, por isso que é muitas vezes chamada de
+                prata das criptomoedas, referindo-se à bitcoin como ouro.
+                </p>
 
             <h1 class="text-titulo">Diversos outros</h1>
             <p class="text-comun"></p>

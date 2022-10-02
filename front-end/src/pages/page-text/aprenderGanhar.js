@@ -1,4 +1,7 @@
 import Header from "../../component/header/header";
+import Suply from "../../images/suply.png";
+import Marketcap from "../../images/marketcap.png";
+import Volumetria from "../../images/volumetria.png";
 
 
 export function AprenderGanhar() {
@@ -33,6 +36,7 @@ export function AprenderGanhar() {
                 entanto, a capitalização de mercado da empresa é de US$ 43,191 bilhões (TORO INVESTIMENTOS,
                 2022).
             </p>
+            <img class="marketcap-image" src={Marketcap} alt="marketcapCripto" />
 
             <h1 class="text-titulo">Volumetria</h1>
 
@@ -73,6 +77,7 @@ export function AprenderGanhar() {
                 O OBV é um indicador contínuo que soma o volume de dias com variações positivas e subtrai o
                 volume de dias com variações negativas.
             </p>
+            <img class="volumetria-image" src={Volumetria} alt="volumetriaCripto" />
 
             <h1 class="text-titulo">Suply</h1>
 
@@ -93,6 +98,7 @@ export function AprenderGanhar() {
                 pode ser valioso para os investimentos.
                 
             </p>
+            <img class="suply-image" src={Suply} alt="suplyCripto" />
         </>
     )
 }
