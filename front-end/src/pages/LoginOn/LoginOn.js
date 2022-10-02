@@ -260,8 +260,8 @@ import React from "react";
               <li> <b> Educação </b></li>
                 <li><Link to="/educacao" className='options'>O que é Bitcoin?</Link></li>
                 <li><Link to="/educacao" className='options'>O que é Blockchain?</Link></li>
-                <li><Link to="/educacao" className='options'>O que é Etherum?</Link></li>
-                <li><Link to="/educacao" className='options'>O que é itecoin?</Link></li>                
+                <li><Link to="/educacao" className='options'>O que é Ethereum?</Link></li>
+                <li><Link to="/educacao" className='options'>O que é Litecoin?</Link></li>                
                 <li><Link to="/educacao" className='options'>Diversos outros</Link></li>
               </ul>
             </div>

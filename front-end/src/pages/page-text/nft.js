@@ -1,4 +1,5 @@
 import Header from "../../component/header/header";
+import NftText from "../../images/nft_text.png";
 
 
 export function Nft() {
@@ -22,6 +23,8 @@ export function Nft() {
                 entanto, eles armazenam informações diferentes, permitindo que eles funcionem de forma diferente
                 de um token como o ETH.
             </p>
+
+            <img class="nft-image" src={NftText} alt="NFTCripto" />
         </>
     )
 }

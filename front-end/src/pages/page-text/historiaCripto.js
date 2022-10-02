@@ -1,4 +1,6 @@
+import './pageText.css';
 import Header from "../../component/header/header";
+import Historia from "../../images/historia_cripto.png";
 
 
 export function HistoriaCripto() {
@@ -18,6 +20,8 @@ export function HistoriaCripto() {
                 Cada país tem seu próprio conjunto de leis sobre criptomoedas. A criptomoeda agora é aceita como um método legal de pagamento no Japão. Na Colômbia, o uso de criptomoedas é considerado ilegal. No Brasil, as criptomoedas são classificadas como mercadorias – como um veículo ou uma casa – e não como moeda. Como resultado, há uma sobretaxa em cima do valor informado no Imposto de Renda anual declaração de Pessoa Física (IRPF). 
 
             </p>
+
+            <img class="historia-image" src={Historia} alt="historiaCripto" />
         </>
     )
 }

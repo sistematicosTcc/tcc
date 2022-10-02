@@ -1,5 +1,7 @@
+import './pageText.css'
 import Header from "../../component/header/header";
-// import CarteiraCripto from "../images/carteira_cripto.png";
+import CarteiraCripto from "../../images/carteira_cripto.png";
+import ComecarInvestir from "../../images/comecar_investir.png";
 
 
 export function AjudaText() {
@@ -23,7 +25,8 @@ export function AjudaText() {
                 mensal de acordo o valor investido, ou adentrar em algum projeto alocando
                 suas cripto e esperando seu rendimento.
             </p>
-            {/* <img src={Comecar-investir} alt="comecarInvestir" /> */}
+            
+            <img class="investir-image" src={ComecarInvestir} alt="comecarInvestir" />
 
             <h1 class="text-titulo">Criar carteira de cripto</h1>
 
@@ -35,7 +38,7 @@ export function AjudaText() {
                 segurança bem rígida.
             </p>
 
-            {/* <img src={CarteiraCripto} alt="comecarInvestir" /> */}
+            <img class="cripto-image" src={CarteiraCripto} alt="comecarInvestir" />
         </>
     )
 }

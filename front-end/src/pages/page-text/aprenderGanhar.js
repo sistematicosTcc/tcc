@@ -88,7 +88,7 @@ export function AprenderGanhar() {
                 possui um limite de emissão - muito menos uma previsibilidade do aumento de oferta - tende a ser
                 22
                 inflacionária. Ou seja, pode perder seu valor com o passar do tempo e, nesse caso, as pessoas são
-                incentivadas a poupar menos e a gastar mais (Pinheiro, 2021). A Criptomoeda Etherium, é umas das
+                incentivadas a poupar menos e a gastar mais (Pinheiro, 2021). A Criptomoeda Ethereum, é umas das
                 moedas com produção ilimitada mais valorizada no mercado, assim mostrando que supply ilimitado
                 pode ser valioso para os investimentos.
                 

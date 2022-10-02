@@ -6,6 +6,41 @@
 .text-comun{
     text-align: justify;
     color: #000E56;
-    margin: 25px 100px 75px 100px;
+    margin: 25px 100px 10px 100px;
+    padding-bottom: 10mm;
+}
+
+.investir-image{
+    max-width:30%;
+    max-height:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cripto-image{
+    max-width:30%;
+    max-height:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10mm;
+}
+
+.historia-image{
+    max-width:20%;
+    max-height:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10mm;
+}
+
+.nft-image{
+    max-width:30%;
+    max-height:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 10mm;
 }
