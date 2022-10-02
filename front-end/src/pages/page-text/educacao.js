@@ -1,4 +1,8 @@
 import Header from "../../component/header/header";
+import Ethereum from "../../images/ethereum_image.png";
+import Litecoin from "../../images/liteCoin.png";
+import Bitcoin from "../../images/bitcoin.png";
+import BlockChain from "../../images/blockchain.png";
 
 
 export function Educacao() {
@@ -29,6 +33,8 @@ export function Educacao() {
                 extraído. Este número dá-lhe uma ideia do tamanho do desafio que espera todos que querem mina
                 Bitcoin</p>
 
+                <img class="bitcoin-image" src={Bitcoin} alt="bitcoinCripto" />
+
             <h1 class="text-titulo">O que é Blockchain?</h1>
             <p class="text-comun">
                 Alguns especialistas consideram o blockchain como o avanço tecnológico mais significativo desde o
@@ -54,6 +60,8 @@ export function Educacao() {
                 permitindo que elas gerem um lucro, devido à eficiência operacional que a tecnologia traz para a
                 confirmação e autenticação das transações.
             </p>
+                    
+            <img class="blockChain-image" src={BlockChain} alt="blockChainCripto" />
 
             <h1 class="text-titulo">O que é Ethereum?</h1>
             <p class="text-comun">
@@ -66,6 +74,8 @@ export function Educacao() {
                 "tradicionais" das criptomoedas.
             </p>
 
+            <img class="ethereum-image" src={Ethereum} alt="ethereumCripto" />
+
             <h1 class="text-titulo">O que é Litecoin?</h1>
             <p class="text-comun">
                 Litecoin (LTC) é uma criptomoeda, descentralizada e compartilha do mesmo código do Bitcoin, isso significa que muitas das atualizações do
@@ -73,9 +83,7 @@ export function Educacao() {
                 prata das criptomoedas, referindo-se à bitcoin como ouro.
                 </p>
 
-            <h1 class="text-titulo">Diversos outros</h1>
-            <p class="text-comun"></p>
-
+                <img class="litecoin-image" src={Litecoin} alt="litecoinCripto" />
 
         </>
     )
