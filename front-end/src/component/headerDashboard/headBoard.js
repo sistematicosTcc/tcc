@@ -7,7 +7,7 @@ import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderDashboard(){
 
-  const {loginEmail,logout,carteira} = useContext(UserContext)
+  const {loginEmail,logout,carteira,ganhe1000Gratis} = useContext(UserContext)
 
   const openMenu = () => {
     const menuStatus = document.querySelector(".menu-modal");
@@ -20,9 +20,9 @@ function HeaderDashboard(){
   };
 
   function testes(){
-    console.log(carteira)
-    console.log(carteira.valorAtual)
+
   }
+
   return(
     <nav>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
@@ -41,6 +41,8 @@ function HeaderDashboard(){
             </div> */}
             <h5>{loginEmail}</h5>
             <h5>R$ {carteira.valorAtual}</h5>
+            <h5>Tokens: {carteira.moeda}</h5>
+            <h4 onClick={ganhe1000Gratis}>GANHE R$1000</h4>
             <button onClick={testes}>teste</button>
             {/* <span className="material-icons-sharp">expand_more</span> */}
           </div>

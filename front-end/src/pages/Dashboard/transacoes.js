@@ -6,37 +6,12 @@ import { Link } from 'react-router-dom';
 import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
 import Historico from '../../component/historico/historico';
 import { useState } from 'react';
-import { useEffect } from 'react';
+
 
 export const Transacoes = () => {
 
   const data = localStorage.getItem("transactions");
   const [transactionsList, setTransactionsList] = useState(data? JSON.parse(data):[])
-
-  const [income, setIncome] = useState(0)
-  const [expense, setexpense] = useState(0)
-  const [total, setTotal] = useState(0)
-
-  useEffect(()=>{
-    const amountExpense = transactionsList
-    .filter((item) =>item.expense)
-    .map((transaction) => Number(transaction.amount));
-
-    const amountIncome = transactionsList
-    .filter((item) => !item.expense)
-    .map((transaction) => Number(transaction.amount));
-
-    const expense = amountExpense.reduce((acc,cur)=> acc + cur, 0).toFixed(4);
-    const income = amountIncome.reduce((acc,cur)=> acc + cur, 0).toFixed(4);
-
-    const total = Math.abs(income - expense).toFixed(4);
-
-    setIncome(`R$ ${income}`)
-    setexpense(`R$ ${expense}`)
-
-    setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`)
-
-  },[transactionsList])
 
   const handleAdd = (transaction) =>{
     const newArrayTransactions = [...transactionsList, transaction]
@@ -46,7 +21,6 @@ export const Transacoes = () => {
     localStorage.setItem("transactions", JSON.stringify(newArrayTransactions))
 
   }
-
   return (
   <>
     <HeaderDashboard />
@@ -78,7 +52,7 @@ export const Transacoes = () => {
           </Link>
         </div>
       </aside>
-      <Historico income={income} expense={expense} total={total} handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList}/>
+      <Historico handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList}/>
       <div class="transacoesBorder">
         <div class="transacoesColumn borderRight">Moeda</div>
         <div class="transacoesColumn borderRight">Quantidade</div>

@@ -11,6 +11,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { authf } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { stringify } from "@firebase/util";
 
 export const UserContext = createContext();
 
@@ -23,15 +24,44 @@ export function UserStorage({ children }) {
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [carteiraAgora, setcarteiraAgora] = useState(0);
+  const [moedaAgora, setMoedaAgora] = useState(0);
 
 
   const carteira={
-      id: "IdDaCarteiraAtual",
-      valorInicial:1000,
-      valorAtual: 100
-    }
+      valorAtual: carteiraAgora,
+      moeda:moedaAgora
+  }
   
+// --------------------------Carteira-----------------------------
+    const ganhe1000Gratis =()=>{
+      var maisMil = carteira.valorAtual
+      console.log(maisMil)
+      var milao = maisMil + 1000.00
+      setcarteiraAgora(milao)
+    }
 
+    const comprarTaxaZero=()=>{
+      var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"))
+
+      var valorAgora = carteira.valorAtual
+      var valorEmReal = valorEspera.valorReal
+      var valor1 = (valorAgora - valorEmReal)
+      
+      var CoinAgora = carteira.moeda
+      
+      var valorEmToken = parseInt(valorEspera.valorToken)
+      console.log(valor2)
+      var valor2 = parseInt(valorEmToken + CoinAgora)
+      // var valor2 = (valorEmTokenInvisivel)
+
+      setcarteiraAgora(valor1)
+      setMoedaAgora(valor2)
+    }
+
+    const VendaTaxaZero =()=>{
+      
+    }
 // --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {
     e.preventDefault();
@@ -145,7 +175,9 @@ export function UserStorage({ children }) {
         setRegisterPassword,
         userLogado,
         reset,
-        carteira
+        carteira,
+        comprarTaxaZero,
+        ganhe1000Gratis
       }}
     >
       {children}

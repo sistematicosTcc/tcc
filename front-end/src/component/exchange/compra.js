@@ -1,6 +1,11 @@
+import { useContext} from 'react';
+import { UserContext } from '../../contexts/UserContexts';
 import './exchange.css'
 
 export const Compra = () => {
+  
+  const {comprarTaxaZero} = useContext(UserContext)
+
   const Coins = [
     {
       id: 0,
@@ -52,8 +57,8 @@ export const Compra = () => {
     const inputReal = document.querySelector('#real');
     const inputCoin = document.querySelector('#coin');
 
-    const inputRealValue = document.querySelector('#real').value;
-    const inputCoinValue = document.querySelector('#coin').value;
+    const valorReal = document.querySelector('#real').value;
+    const valorToken = document.querySelector('#coin').value;
 
     
     //variaveis realizando calculo de real para cripto
@@ -65,13 +70,19 @@ export const Compra = () => {
     console.log("moeda = "+moeda)
 
     console.log("inputCoin = "+inputCoin)
-    console.log("inputCoinValor = "+inputCoinValue)
+    console.log("inputCoinValor (TOKEN) = "+valorToken)
     console.log("inputReal = "+inputReal)
-    console.log("inputRealValor = "+inputRealValue)
+    console.log("inputRealValor (BRL) = "+valorReal)
 
-    var valorReal = inputReal.value / moeda;
+    var valueReal = inputReal.value / moeda;
 
-    console.log("valorReal = "+valorReal)
+    console.log("valueReal = "+valueReal)
+
+    var novaCarteira = {valorToken,valorReal}
+    
+    localStorage.setItem("Carteiras", JSON.stringify(novaCarteira));
+
+    console.log(novaCarteira)
 
     inputReal.addEventListener('input', () => {
       
@@ -79,7 +90,7 @@ export const Compra = () => {
         console.log(inputCoin.value)
         inputCoin.value = '';
       };
-      var convertedValue = inputReal.value * valorReal;
+      var convertedValue = inputReal.value * valueReal;
       inputCoin.value = (convertedValue).toFixed(6);
     });
 
@@ -121,7 +132,7 @@ export const Compra = () => {
           </select>
         </div>
         <div class="button-concluded">
-          <button>Compre com Taxa 0</button>
+          <button onClick={comprarTaxaZero} id="addFundos">Compre com Taxa 0</button>
         </div>
 
       </div>
