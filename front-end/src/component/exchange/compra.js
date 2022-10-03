@@ -4,52 +4,7 @@ import './exchange.css'
 
 export const Compra = () => {
   
-  const {comprarTaxaZero} = useContext(UserContext)
-
-  const Coins = [
-    {
-      id: 0,
-      nome: "BitCoin",
-      // img:'imagem da moeda',
-      preco: 103000,
-    },
-    {
-      id: 1,
-      nome: "Ethereum",
-      // img:'imagem da moeda',
-      preco: 8200,
-    },
-    {
-      id: 2,
-      nome: "USD Coin",
-      // img:'imagem da moeda',
-      preco: 103270,
-    },
-    {
-      id: 3,
-      nome: "BNB",
-      // img:'imagem da moeda',
-      preco: 103270,
-    },
-    {
-      id: 4,
-      nome: "Polygon",
-      // img:'imagem da moeda',
-      preco: 0.24,
-    },
-    {
-      id: 5,
-      nome: "XRP",
-      // img:'imagem da moeda',
-      preco: 1.75,
-    },
-    {
-      id: 6,
-      nome: "Dogecoin",
-      // img:'imagem da moeda',
-      preco: 0.32,
-    },
-  ];
+  const {comprarTaxaZero,Coins} = useContext(UserContext)
 
   function valorCompra() {
 

@@ -11,7 +11,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { authf } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { stringify } from "@firebase/util";
 
 export const UserContext = createContext();
 
@@ -27,63 +26,162 @@ export function UserStorage({ children }) {
   const [carteiraAgora, setcarteiraAgora] = useState(0);
   const [moedaAgora, setMoedaAgora] = useState(0);
 
+  // --------------------------Moedas const-----------------------------
+  const [tokenBitCoin, setTokenBitCoin] = useState(0);
+  const [tokenEthereum, setTokenEthereum] = useState(0);
+  const [tokenUSDCoin, setTokenUSDCoin] = useState(0);
+  const [tokenBNB, setTokenBNB] = useState(0);
+  const [tokenPolygon, setTokenPolygon] = useState(0);
+  const [tokenXRP, setTokenXRP] = useState(0);
+  const [tokenDogeCoin, setTokenDogeCoin] = useState(0);
 
-  const carteira={
-      valorAtual: carteiraAgora,
-      moeda:moedaAgora
-  }
-  
-// --------------------------Carteira-----------------------------
-    const ganhe1000Gratis =()=>{
-      var maisMil = carteira.valorAtual
-      console.log(maisMil)
-      var milao = maisMil + 1000.00
-      setcarteiraAgora(milao)
+  const carteira = {
+    valorAtual: carteiraAgora,
+    moeda: moedaAgora,
+  };
+
+  const Coins = [
+    {
+      id: 0,
+      nome: "BitCoin",
+      token: parseInt(tokenBitCoin),
+      preco: 103000,
+    },
+    {
+      id: 1,
+      nome: "Ethereum",
+      token: parseInt(tokenEthereum),
+      preco: 8200,
+    },
+    {
+      id: 2,
+      nome: "USD Coin",
+      token: parseInt(tokenUSDCoin),
+      preco: 103270,
+    },
+    {
+      id: 3,
+      nome: "BNB",
+      token: parseInt(tokenBNB),
+      preco: 103270,
+    },
+    {
+      id: 4,
+      nome: "Polygon",
+      token: parseInt(tokenPolygon),
+      preco: 0.24,
+    },
+    {
+      id: 5,
+      nome: "XRP",
+      token: parseInt(tokenXRP),
+      preco: 1.75,
+    },
+    {
+      id: 6,
+      nome: "Dogecoin",
+      token: parseInt(tokenDogeCoin),
+      preco: 0.32,
+    },
+  ];
+
+  // --------------------------Carteira-----------------------------
+  const ganhe1000Gratis = () => {
+    var maisMil = carteira.valorAtual;
+    console.log(maisMil);
+    var milao = maisMil + 1000.0;
+    setcarteiraAgora(milao);
+  };
+
+  const comprarTaxaZero = () => {
+    var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
+
+    var valorAgora = carteira.valorAtual;
+    console.log(valorAgora)
+
+    var valorEmReal = valorEspera.valorReal;
+    const valor1 = valorAgora - valorEmReal;
+
+    var CoinAgora = carteira.moeda;
+
+    var valorEmToken = parseInt(valorEspera.valorToken);
+    var valor2 = parseInt(valorEmToken + CoinAgora);
+    console.log(valor2);
+    // var valor2 = (valorEmTokenInvisivel)
+
+    setcarteiraAgora(valor1);
+    setMoedaAgora(valor2);
+
+    const select = document.getElementById("selecionarMoedas");
+    const opcaoTexto = select.options[select.selectedIndex].text;
+
+     if (opcaoTexto === "BitCoin") {
+      var valorToken = Coins[0].token;
+      var bitInvi = valorToken + valorEmToken;
+
+      setTokenBitCoin(bitInvi);
+
+      console.log(tokenBitCoin)
+
+    } else if (opcaoTexto === "Ethereum") {
+      var valorToken1 = Coins[1].token;
+      var etherInvi = valorToken1 + valorEmToken;
+
+      setTokenEthereum(etherInvi);
+
+      console.log(tokenEthereum)
+    } else if (opcaoTexto === "USD Coin") {
+
+    } else if (opcaoTexto === "BNB") {
+
+    } else if (opcaoTexto === "Polygon") {
+
+    } else if (opcaoTexto === "XRP") {
+
+    } else if (opcaoTexto === "Dogecoin") {
+
+    } else {
+      console.log("Nao add nada");
     }
+  };
 
-    const comprarTaxaZero=()=>{
-      var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"))
+  const VendaTaxaZero = () => {
+    var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
 
-      var valorAgora = carteira.valorAtual
-      var valorEmReal = valorEspera.valorReal
-      var valor1 = (valorAgora - valorEmReal)
-      
-      var CoinAgora = carteira.moeda
-      
-      var valorEmToken = parseInt(valorEspera.valorToken)
-      console.log(valor2)
-      var valor2 = parseInt(valorEmToken + CoinAgora)
-      // var valor2 = (valorEmTokenInvisivel)
+    var valorAgora = carteira.valorAtual;
+    var valorEmReal = valorEspera.valorReal;
+    var valor1 = valorAgora + valorEmReal;
 
-      setcarteiraAgora(valor1)
-      setMoedaAgora(valor2)
-    }
+    var CoinAgora = carteira.moeda;
 
-    const VendaTaxaZero =()=>{
-      
-    }
-// --------------------------CADASTRO E LOGIN-----------------------------
+    var valorEmToken = parseInt(valorEspera.valorToken);
+    var valor2 = parseInt(valorEmToken + CoinAgora);
+    console.log(valor2);
+
+    setcarteiraAgora(valor1);
+    setMoedaAgora(valor2);
+  };
+  // --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {
     e.preventDefault();
     try {
-      const senha = document.getElementById("senha")
-      var senhaValor = senha.value
-      const senhaConfirma = document.getElementById("passwordConfirm")
-      var confirmaValor = senhaConfirma.value
-      if (confirmaValor !== senhaValor){
-        alert('as senhas nao conferem')
+      const senha = document.getElementById("senha");
+      var senhaValor = senha.value;
+      const senhaConfirma = document.getElementById("passwordConfirm");
+      var confirmaValor = senhaConfirma.value;
+      if (confirmaValor !== senhaValor) {
+        alert("as senhas nao conferem");
       } else
-      createUserWithEmailAndPassword(authf, registerEmail, registerPassword)
-        .then(() => {
-          sendEmailVerification(authf.currentUser);
-          console.log(sendEmailVerification);
-          alert("email enviado : " + registerEmail);
-        })
-        .catch((err) => {
-          alert("Credenciais inválidas.")
-          console.log("erro em catch 1: " + err.message);
-        });
-
+        createUserWithEmailAndPassword(authf, registerEmail, registerPassword)
+          .then(() => {
+            sendEmailVerification(authf.currentUser);
+            console.log(sendEmailVerification);
+            alert("email enviado : " + registerEmail);
+          })
+          .catch((err) => {
+            alert("Credenciais inválidas.");
+            console.log("erro em catch 1: " + err.message);
+          });
     } catch (err) {
       console.log("erro em catch 2: " + err.message);
     }
@@ -93,65 +191,64 @@ export function UserStorage({ children }) {
     e.preventDefault();
 
     try {
-      signInWithEmailAndPassword(authf, loginEmail, loginPassword).then(
-        (userCredential) => {
+      signInWithEmailAndPassword(authf, loginEmail, loginPassword)
+        .then((userCredential) => {
           console.log("entrou");
           const user = userCredential.user;
 
           if (user.emailVerified) {
-            const nomeUsuario = userCredential.user.email
-            console.log(nomeUsuario)
+            const nomeUsuario = userCredential.user.email;
+            console.log(nomeUsuario);
             setUserLogado(true);
             window.localStorage.setItem("userlogado", JSON.stringify(true));
             navigate("/dashboard");
           } else {
-            alert("Verifique seu Email")
+            alert("Verifique seu Email");
           }
-        }
-      ).catch(() => {
-        alert("Email/Senha incorretos");
-      })
+        })
+        .catch(() => {
+          alert("Email/Senha incorretos");
+        });
     } catch (err) {
-      alert("Digite uma senha ou email valido")
+      alert("Digite uma senha ou email valido");
       console.log("erro em catch login: " + err);
     }
   };
 
-  const logout = () =>{
+  const logout = () => {
     try {
-      setUserLogado(null)
+      setUserLogado(null);
       window.localStorage.setItem("userlogado", JSON.stringify(false));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   const sendVerification = async () => {
     var user = authf.currentUser;
     try {
       sendEmailVerification(user);
     } catch (e) {
-      console.log("erro em sendVerification = " + e)
+      console.log("erro em sendVerification = " + e);
       alert("Digite o Email Corretamente");
     }
   };
 
-
   const reset = async (e) => {
     e.preventDefault();
     try {
-      sendPasswordResetEmail(authf, loginEmail).then(() => {
-        alert("Email enviado")
-      }).catch((err) => {
-        alert("Email não cadastrado")
-        console.log(err)
-      })
+      sendPasswordResetEmail(authf, loginEmail)
+        .then(() => {
+          alert("Email enviado");
+        })
+        .catch((err) => {
+          alert("Email não cadastrado");
+          console.log(err);
+        });
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
-  }
- 
-
+  };
 
   useEffect(() => {
     const userLoginOn = JSON.parse(window.localStorage.getItem("userlogado"));
@@ -177,7 +274,8 @@ export function UserStorage({ children }) {
         reset,
         carteira,
         comprarTaxaZero,
-        ganhe1000Gratis
+        ganhe1000Gratis,
+        Coins,
       }}
     >
       {children}

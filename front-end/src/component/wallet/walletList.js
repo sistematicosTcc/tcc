@@ -1,50 +1,9 @@
 import "./walletStyle.css";
+import { useContext} from 'react';
+import { UserContext } from '../../contexts/UserContexts';
 
 export const WalletList = () => {
-  const Coins = [
-    {
-      id: 0,
-      nome: "BitCoin",
-      // img:'imagem da moeda',
-      value: "103000",
-    },
-    {
-      id: 1,
-      nome: "Ethereum",
-      // img:'imagem da moeda',
-      value: "8200",
-    },
-    {
-      id: 2,
-      nome: "USD Coin",
-      // img:'imagem da moeda',
-      value: "103270",
-    },
-    {
-      id: 3,
-      nome: "BNB",
-      // img:'imagem da moeda',
-      value: "103270",
-    },
-    {
-      id: 4,
-      nome: "Polygon",
-      // img:'imagem da moeda',
-      value: "0,24",
-    },
-    {
-      id: 5,
-      nome: "XRP",
-      // img:'imagem da moeda',
-      value: "	1.75",
-    },
-    {
-      id: 6,
-      nome: "Dogecoin",
-      // img:'imagem da moeda',
-      value: "0.32",
-    },
-  ];
+  const {Coins} = useContext(UserContext)
 
   const addToList = () => {
     document.querySelector(".bg-modal").style.display = "flex";
@@ -59,59 +18,7 @@ export const WalletList = () => {
     const select = document.getElementById("selecionarMoeda");
     const opcaoTexto = select.options[select.selectedIndex].text;
 
-    if(opcaoTexto === 'BitCoin'){
-      const divMoedas = document.querySelector(".walletBorder");
-      const divList = document.createElement("div");
-
-      const divSeparadores = document.createElement("div");
-
-      const ul = document.createElement("ul");
-      const li = document.createElement("li");
-
-      const li2 = document.createElement("li");
-      const divSeparadores2 = document.createElement("div");
-      const ul2 = document.createElement("ul");
-
-      const li3 = document.createElement("li");
-      const divSeparadores3 = document.createElement("div");
-      const ul3 = document.createElement("ul");
-
-      const li4 = document.createElement("li");
-      const divSeparadores4 = document.createElement("div");
-      const ul4 = document.createElement("ul");
-
-
-      divMoedas.appendChild(divList);
-
-      divList.className = 'listaMoedas'
-      divList.appendChild(divSeparadores);
-      divList.appendChild(divSeparadores2);
-      divList.appendChild(divSeparadores3);
-      divList.appendChild(divSeparadores4);
-
-      divSeparadores.classList = 'walletMoedas-separadores borderRight'
-      divSeparadores2.classList = 'walletMoedas-separadores borderRight'
-      divSeparadores3.classList = 'walletMoedas-separadores borderRight'
-      divSeparadores4.classList = 'walletMoedas-separadores borderRight'
-
-      divSeparadores.appendChild(ul);
-      divSeparadores2.appendChild(ul2);
-      divSeparadores3.appendChild(ul3);
-      divSeparadores4.appendChild(ul4);
-
-      ul.className = 'walletColumn'
-      
-      ul.appendChild(li);
-      ul2.appendChild(li2);
-      ul3.appendChild(li3);
-      ul4.appendChild(li4);
-
-      li.innerHTML = 'bitcoin'
-      li2.innerHTML = '0'
-      li3.innerHTML = 'Hoje'
-      li4.innerHTML = 'Ativado'
-      }else
-    if(opcaoTexto === 'Ethereum'){
+      if(opcaoTexto === 'Ethereum'){
         const divMoedas = document.querySelector(".walletBorder");
         const divList = document.createElement("div");
   
@@ -159,7 +66,7 @@ export const WalletList = () => {
         ul4.appendChild(li4);
   
         li.innerHTML = 'Ethereum'
-        li2.innerHTML = '0'
+        li2.innerHTML = `${Coins[1].token}`
         li3.innerHTML = 'Hoje'
         li4.innerHTML = 'Ativado'
       }else
@@ -211,7 +118,7 @@ export const WalletList = () => {
       ul4.appendChild(li4);
 
       li.innerHTML = 'USD Coin'
-      li2.innerHTML = '0'
+      li2.innerHTML = `${Coins[2].token}`
       li3.innerHTML = 'Hoje'
       li4.innerHTML = 'Ativado'
       }else
@@ -263,7 +170,7 @@ export const WalletList = () => {
       ul4.appendChild(li4);
 
       li.innerHTML = 'BNB'
-      li2.innerHTML = '0'
+      li2.innerHTML = `${Coins[3].token}`
       li3.innerHTML = 'Hoje'
       li4.innerHTML = 'Ativado'
       }else
@@ -315,7 +222,7 @@ export const WalletList = () => {
         ul4.appendChild(li4);
   
         li.innerHTML = 'Polygon'
-        li2.innerHTML = '0'
+        li2.innerHTML = `${Coins[4].token}`
         li3.innerHTML = 'Hoje'
         li4.innerHTML = 'Ativado'
       }else
@@ -367,7 +274,7 @@ export const WalletList = () => {
       ul4.appendChild(li4);
 
       li.innerHTML = 'XRP'
-      li2.innerHTML = '0'
+      li2.innerHTML = `${Coins[5].token}`
       li3.innerHTML = 'Hoje'
       li4.innerHTML = 'Ativado'
       }else
@@ -419,7 +326,7 @@ export const WalletList = () => {
       ul4.appendChild(li4);
 
       li.innerHTML = 'Dogecoin'
-      li2.innerHTML = '0'
+      li2.innerHTML = `${Coins[6].token}`
       li3.innerHTML = 'Hoje'
       li4.innerHTML = 'Ativado'
     }
@@ -452,7 +359,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>0</li>
+              <li>{Coins[0].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -478,7 +385,6 @@ export const WalletList = () => {
           <div class="modal-selecionar-carteira">
             <p>Escolha uma moeda para adicionar no sua carteira</p>
             <select id="selecionarMoeda" name="selecionarMoeda">
-            <option value={Coins[0].preco}>{Coins[0].nome}</option>
             <option value={Coins[1].preco}>{Coins[1].nome}</option>
             <option value={Coins[2].preco}>{Coins[2].nome}</option>
             <option value={Coins[3].preco}>{Coins[3].nome}</option>
