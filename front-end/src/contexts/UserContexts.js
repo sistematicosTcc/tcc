@@ -44,43 +44,43 @@ export function UserStorage({ children }) {
     {
       id: 0,
       nome: "BitCoin",
-      token: parseInt(tokenBitCoin),
+      token: parseFloat(tokenBitCoin),
       preco: 103000,
     },
     {
       id: 1,
       nome: "Ethereum",
-      token: parseInt(tokenEthereum),
+      token: parseFloat(tokenEthereum),
       preco: 8200,
     },
     {
       id: 2,
       nome: "USD Coin",
-      token: parseInt(tokenUSDCoin),
+      token: parseFloat(tokenUSDCoin),
       preco: 103270,
     },
     {
       id: 3,
       nome: "BNB",
-      token: parseInt(tokenBNB),
+      token: parseFloat(tokenBNB),
       preco: 103270,
     },
     {
       id: 4,
       nome: "Polygon",
-      token: parseInt(tokenPolygon),
+      token: parseFloat(tokenPolygon),
       preco: 0.24,
     },
     {
       id: 5,
       nome: "XRP",
-      token: parseInt(tokenXRP),
+      token: parseFloat(tokenXRP),
       preco: 1.75,
     },
     {
       id: 6,
       nome: "Dogecoin",
-      token: parseInt(tokenDogeCoin),
+      token: parseFloat(tokenDogeCoin),
       preco: 0.32,
     },
   ];
@@ -104,10 +104,9 @@ export function UserStorage({ children }) {
 
     var CoinAgora = carteira.moeda;
 
-    var valorEmToken = parseInt(valorEspera.valorToken);
-    var valor2 = parseInt(valorEmToken + CoinAgora);
+    var valorEmToken = parseFloat(valorEspera.valorToken);
+    var valor2 = parseFloat(valorEmToken + CoinAgora);
     console.log(valor2);
-    // var valor2 = (valorEmTokenInvisivel)
 
     setcarteiraAgora(valor1);
     setMoedaAgora(valor2);
@@ -121,46 +120,108 @@ export function UserStorage({ children }) {
 
       setTokenBitCoin(bitInvi);
 
-      console.log(tokenBitCoin)
-
     } else if (opcaoTexto === "Ethereum") {
       var valorToken1 = Coins[1].token;
       var etherInvi = valorToken1 + valorEmToken;
 
       setTokenEthereum(etherInvi);
 
-      console.log(tokenEthereum)
     } else if (opcaoTexto === "USD Coin") {
+      var valorToken2 = Coins[2].token;
+      var usdInvi = valorToken2 + valorEmToken;
+
+      setTokenUSDCoin(usdInvi);
 
     } else if (opcaoTexto === "BNB") {
+      var valorToken3 = Coins[3].token;
+      var bnbInvi = valorToken3 + valorEmToken;
+
+      setTokenBNB(bnbInvi);
 
     } else if (opcaoTexto === "Polygon") {
+      var valorToken4 = Coins[4].token;
+      var polyInvi = valorToken4 + valorEmToken;
+
+      setTokenPolygon(polyInvi);
 
     } else if (opcaoTexto === "XRP") {
+      var valorToken5 = Coins[5].token;
+      var xrpInvi = valorToken5 + valorEmToken;
+
+      setTokenXRP(xrpInvi);
 
     } else if (opcaoTexto === "Dogecoin") {
+      var valorToken6 = Coins[6].token;
+      var dogeInvi = valorToken6 + valorEmToken;
 
-    } else {
-      console.log("Nao add nada");
+      setTokenDogeCoin(dogeInvi);
     }
-  };
+  }
 
-  const VendaTaxaZero = () => {
-    var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
+  const VenderTaxaZero = () => {
+  var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
 
-    var valorAgora = carteira.valorAtual;
-    var valorEmReal = valorEspera.valorReal;
-    var valor1 = valorAgora + valorEmReal;
+  console.log(valorEspera)
+  var valorAgora = carteira.valorAtual;
 
-    var CoinAgora = carteira.moeda;
+  var valorEmReal = valorEspera.valorReal;
+  const valor1 = Number(valorAgora) + Number(valorEmReal);
 
-    var valorEmToken = parseInt(valorEspera.valorToken);
-    var valor2 = parseInt(valorEmToken + CoinAgora);
-    console.log(valor2);
+  var CoinAgora = carteira.moeda;
 
-    setcarteiraAgora(valor1);
-    setMoedaAgora(valor2);
-  };
+  var valorEmToken = parseFloat(valorEspera.valorToken);
+  var valor2 = parseFloat(CoinAgora - valorEmToken);
+  console.log(valor2);
+
+  setcarteiraAgora(valor1);
+  setMoedaAgora(valor2);
+
+  const select = document.getElementById("selecionarMoedas");
+  const opcaoTexto = select.options[select.selectedIndex].text;
+
+   if (opcaoTexto === "BitCoin") {
+    var valorToken = Coins[0].token;
+    var bitInvi = valorToken - valorEmToken;
+
+    setTokenBitCoin(bitInvi);
+
+  } else if (opcaoTexto === "Ethereum") {
+    var valorToken1 = Coins[1].token;
+    var etherInvi = valorToken1 - valorEmToken;
+
+    setTokenEthereum(etherInvi);
+
+  } else if (opcaoTexto === "USD Coin") {
+    var valorToken2 = Coins[2].token;
+    var usdInvi = valorToken2 - valorEmToken;
+
+    setTokenUSDCoin(usdInvi);
+
+  } else if (opcaoTexto === "BNB") {
+    var valorToken3 = Coins[3].token;
+    var bnbInvi = valorToken3 - valorEmToken;
+
+    setTokenBNB(bnbInvi);
+
+  } else if (opcaoTexto === "Polygon") {
+    var valorToken4 = Coins[4].token;
+    var polyInvi = valorToken4 - valorEmToken;
+
+    setTokenPolygon(polyInvi);
+
+  } else if (opcaoTexto === "XRP") {
+    var valorToken5 = Coins[5].token;
+    var xrpInvi = valorToken5 - valorEmToken;
+
+    setTokenXRP(xrpInvi);
+
+  } else if (opcaoTexto === "Dogecoin") {
+    var valorToken6 = Coins[6].token;
+    var dogeInvi = valorToken6 - valorEmToken;
+
+    setTokenDogeCoin(dogeInvi);
+  }
+}
   // --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {
     e.preventDefault();
@@ -273,8 +334,9 @@ export function UserStorage({ children }) {
         userLogado,
         reset,
         carteira,
-        comprarTaxaZero,
         ganhe1000Gratis,
+        comprarTaxaZero,
+        VenderTaxaZero,        
         Coins,
       }}
     >

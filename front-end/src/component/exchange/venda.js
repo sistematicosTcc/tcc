@@ -1,59 +1,19 @@
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContexts';
 import './exchange.css'
 
 export const Venda = () => {
-  const Coins = [
-    {
-      id: 0,
-      nome: "BitCoin",
-      // img:'imagem da moeda',
-      preco: 103000,
-    },
-    {
-      id: 1,
-      nome: "Ethereum",
-      // img:'imagem da moeda',
-      preco: 8200,
-    },
-    {
-      id: 2,
-      nome: "USD Coin",
-      // img:'imagem da moeda',
-      preco: 103270,
-    },
-    {
-      id: 3,
-      nome: "BNB",
-      // img:'imagem da moeda',
-      preco: 103270,
-    },
-    {
-      id: 4,
-      nome: "Polygon",
-      // img:'imagem da moeda',
-      preco: 0.24,
-    },
-    {
-      id: 5,
-      nome: "XRP",
-      // img:'imagem da moeda',
-      preco: 1.75,
-    },
-    {
-      id: 6,
-      nome: "Dogecoin",
-      // img:'imagem da moeda',
-      preco: 0.32,
-    },
-  ];
+  
+  const {VenderTaxaZero,Coins} = useContext(UserContext)
 
-  function valorCompra() {
+  function valorVenda() {
 
     //variaveis com os inputs
     const inputReal = document.querySelector('#real');
     const inputCoin = document.querySelector('#coin');
 
-    const inputRealValue = document.querySelector('#real').value;
-    const inputCoinValue = document.querySelector('#coin').value;
+    const valorReal = document.querySelector('#real').value;
+    const valorToken = document.querySelector('#coin').value;
 
     
     //variaveis realizando calculo de real para cripto
@@ -65,13 +25,19 @@ export const Venda = () => {
     console.log("moeda = "+moeda)
 
     console.log("inputCoin = "+inputCoin)
-    console.log("inputCoinValor = "+inputCoinValue)
+    console.log("inputCoinValor (TOKEN) = "+valorToken)
     console.log("inputReal = "+inputReal)
-    console.log("inputRealValor = "+inputRealValue)
+    console.log("inputRealValor (BRL) = "+valorReal)
 
-    var valorReal = inputReal.value / moeda;
+    var valueReal = inputReal.value / moeda;
 
-    console.log("valorReal = "+valorReal)
+    console.log("valueReal = "+valueReal)
+
+    var novaCarteira = {valorToken,valorReal}
+    
+    localStorage.setItem("Carteiras", JSON.stringify(novaCarteira));
+
+    console.log(novaCarteira)
 
     inputReal.addEventListener('input', () => {
       
@@ -79,7 +45,7 @@ export const Venda = () => {
         console.log(inputCoin.value)
         inputCoin.value = '';
       };
-      var convertedValue = inputReal.value * valorReal;
+      var convertedValue = inputReal.value * valueReal;
       inputCoin.value = (convertedValue).toFixed(6);
     });
 
@@ -96,16 +62,7 @@ export const Venda = () => {
     <>
       <div class="background">
         <h3>Vender Criptomoedas</h3><br/>
-        <h3>Eu quero pagar</h3>
-        <div>
-            <span>R$ </span>
-          <input
-            type="number" placeholder="Coloque um valor" id="real" 
-
-          />
-        </div>
-          <button class="button-coin" onClick={valorCompra}> Selecionar Moeda </button>
-        <h3>Vou receber=</h3>
+        <h3>Vou Vender = </h3> <br/>
         <div>
           <span>Token </span>
           <input type="number" id="coin" ></input>
@@ -119,8 +76,16 @@ export const Venda = () => {
             <option value={Coins[6].preco}>{Coins[6].nome}</option>
           </select>
         </div>
+        <button class="button-coin" onClick={valorVenda}> Selecionar Moeda </button>
+        <h3>Vou Receber = </h3>
+        <div>
+        <span>R$ </span>
+          <input type="number" placeholder="Coloque um valor" id="real" />
+        </div>
+          
+        
         <div class="button-concluded">
-          <button>Compre com Taxa 0</button>
+          <button onClick={VenderTaxaZero} id="addFundos">Venda com Taxa 0</button>
         </div>
 
       </div>

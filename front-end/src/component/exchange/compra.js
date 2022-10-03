@@ -9,8 +9,8 @@ export const Compra = () => {
   function valorCompra() {
 
     //variaveis com os inputs
-    const inputReal = document.querySelector('#real');
-    const inputCoin = document.querySelector('#coin');
+    const inputReal = document.querySelector('#real');//primeiro
+    const inputCoin = document.querySelector('#coin');//segundo
 
     const valorReal = document.querySelector('#real').value;
     const valorToken = document.querySelector('#coin').value;
@@ -20,29 +20,17 @@ export const Compra = () => {
     const select = document.getElementById("selecionarMoedas");
     const moeda = select.options[select.selectedIndex].value;
 
-    console.log(select)
+    var valueReal = valorReal / moeda;
 
-    console.log("moeda = "+moeda)
-
-    console.log("inputCoin = "+inputCoin)
-    console.log("inputCoinValor (TOKEN) = "+valorToken)
-    console.log("inputReal = "+inputReal)
-    console.log("inputRealValor (BRL) = "+valorReal)
-
-    var valueReal = inputReal.value / moeda;
-
-    console.log("valueReal = "+valueReal)
 
     var novaCarteira = {valorToken,valorReal}
     
     localStorage.setItem("Carteiras", JSON.stringify(novaCarteira));
 
-    console.log(novaCarteira)
 
     inputReal.addEventListener('input', () => {
       
       if(!inputReal.value) {
-        console.log(inputCoin.value)
         inputCoin.value = '';
       };
       var convertedValue = inputReal.value * valueReal;

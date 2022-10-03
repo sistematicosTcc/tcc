@@ -4,23 +4,9 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
-import Historico from '../../component/historico/historico';
-import { useState } from 'react';
-
 
 export const Transacoes = () => {
 
-  const data = localStorage.getItem("transactions");
-  const [transactionsList, setTransactionsList] = useState(data? JSON.parse(data):[])
-
-  const handleAdd = (transaction) =>{
-    const newArrayTransactions = [...transactionsList, transaction]
-
-    setTransactionsList(newArrayTransactions);
-
-    localStorage.setItem("transactions", JSON.stringify(newArrayTransactions))
-
-  }
   return (
   <>
     <HeaderDashboard />
@@ -52,7 +38,6 @@ export const Transacoes = () => {
           </Link>
         </div>
       </aside>
-      <Historico handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList}/>
       <div class="transacoesBorder">
         <div class="transacoesColumn borderRight">Moeda</div>
         <div class="transacoesColumn borderRight">Quantidade</div>
