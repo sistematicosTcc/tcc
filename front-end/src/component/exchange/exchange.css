@@ -15,10 +15,15 @@ input[type=number]{
     width: 305px;
   }
   #addFundos{
+    margin-top: 25px;
     cursor: pointer;
   }
-
+  #addFundos:hover{
+    color: #FFC90A;
+  }
+  
   #addFundos:disabled{
+    cursor: not-allowed;
     color: red;
   }
 
@@ -49,18 +54,10 @@ input[type=number]{
   .background span{
     font-size: 20px;
   }
-
+  
   .background h3{
+    margin: 5px 10px;
     font-size: 20px;
-  }
-  .button-coin{
-    width: 70px;
-    height: 50px;
-    margin: 10px;
-
-    color: white;
-    background-color: green;
-    border-radius: 6px;
   }
 
   .button-concluded button{
@@ -68,5 +65,5 @@ input[type=number]{
     height: 50px;
     border-radius: 6px;
     color: white;
-    background-color: #000E56;
+    background-color: #020486;
   }

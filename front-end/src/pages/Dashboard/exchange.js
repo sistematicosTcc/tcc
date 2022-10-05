@@ -17,8 +17,8 @@ export const Exchange = () => {
 
   const mostrarVenda = () => {
 
-    document.querySelector(".venda").style.backgroundColor = "#304213"
-    document.querySelector(".compra").style.backgroundColor = "#179f1a"
+    document.querySelector(".venda").style.backgroundColor = "#56555e"
+    document.querySelector(".compra").style.backgroundColor = "#86846c"
 
     setvendaSetting(current => !current);
     setcompraSetting(false)
@@ -26,8 +26,8 @@ export const Exchange = () => {
   };
   const mostrarCompra = () => {
 
-    document.querySelector(".venda").style.backgroundColor = "#179f1a"
-    document.querySelector(".compra").style.backgroundColor = "#304213"
+    document.querySelector(".venda").style.backgroundColor = "#86846c"
+    document.querySelector(".compra").style.backgroundColor = "#56555e"
     setcompraSetting(current => !current);
     setvendaSetting(false)
 
