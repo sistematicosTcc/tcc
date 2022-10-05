@@ -18,6 +18,10 @@ input[type=number]{
     cursor: pointer;
   }
 
+  #addFundos:disabled{
+    color: red;
+  }
+
   #selecionarMoedas{
     height: 40px;
     width: 75px;

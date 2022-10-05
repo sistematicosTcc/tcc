@@ -23,8 +23,7 @@ export function UserStorage({ children }) {
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [carteiraAgora, setcarteiraAgora] = useState(0);
-  const [moedaAgora, setMoedaAgora] = useState(0);
+  const [real, setReal] = useState(0);
 
   // --------------------------Moedas const-----------------------------
   const [tokenBitCoin, setTokenBitCoin] = useState(0);
@@ -34,11 +33,6 @@ export function UserStorage({ children }) {
   const [tokenPolygon, setTokenPolygon] = useState(0);
   const [tokenXRP, setTokenXRP] = useState(0);
   const [tokenDogeCoin, setTokenDogeCoin] = useState(0);
-
-  const carteira = {
-    valorAtual: carteiraAgora,
-    moeda: moedaAgora,
-  };
 
   const Coins = [
     {
@@ -87,141 +81,103 @@ export function UserStorage({ children }) {
 
   // --------------------------Carteira-----------------------------
   const ganhe1000Gratis = () => {
-    var maisMil = carteira.valorAtual;
-    console.log(maisMil);
-    var milao = maisMil + 1000.0;
-    setcarteiraAgora(milao);
+    setReal(real + 1000);
   };
 
-  const comprarTaxaZero = () => {
-    var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
+  const comprarTaxaZero = (
+    valorEmReal,
+    valorEmToken,
+    nomeToken,
+  ) => {
 
-    var valorAgora = carteira.valorAtual;
-    console.log(valorAgora)
+    const carteiraRealAtualizada = real - valorEmReal;
+    if(carteiraRealAtualizada < 0){
+      alert("Saldo Insuficiente")
+      return;
+    }
+    setReal(carteiraRealAtualizada);
 
-    var valorEmReal = valorEspera.valorReal;
-    const valor1 = valorAgora - valorEmReal;
-
-    var CoinAgora = carteira.moeda;
-
-    var valorEmToken = parseFloat(valorEspera.valorToken);
-    var valor2 = parseFloat(valorEmToken + CoinAgora);
-    console.log(valor2);
-
-    setcarteiraAgora(valor1);
-    setMoedaAgora(valor2);
-
-    const select = document.getElementById("selecionarMoedas");
-    const opcaoTexto = select.options[select.selectedIndex].text;
-
-     if (opcaoTexto === "BitCoin") {
-      var valorToken = Coins[0].token;
-      var bitInvi = valorToken + valorEmToken;
-
-      setTokenBitCoin(bitInvi);
-
-    } else if (opcaoTexto === "Ethereum") {
-      var valorToken1 = Coins[1].token;
-      var etherInvi = valorToken1 + valorEmToken;
-
-      setTokenEthereum(etherInvi);
-
-    } else if (opcaoTexto === "USD Coin") {
-      var valorToken2 = Coins[2].token;
-      var usdInvi = valorToken2 + valorEmToken;
-
-      setTokenUSDCoin(usdInvi);
-
-    } else if (opcaoTexto === "BNB") {
-      var valorToken3 = Coins[3].token;
-      var bnbInvi = valorToken3 + valorEmToken;
-
-      setTokenBNB(bnbInvi);
-
-    } else if (opcaoTexto === "Polygon") {
-      var valorToken4 = Coins[4].token;
-      var polyInvi = valorToken4 + valorEmToken;
-
-      setTokenPolygon(polyInvi);
-
-    } else if (opcaoTexto === "XRP") {
-      var valorToken5 = Coins[5].token;
-      var xrpInvi = valorToken5 + valorEmToken;
-
-      setTokenXRP(xrpInvi);
-
-    } else if (opcaoTexto === "Dogecoin") {
-      var valorToken6 = Coins[6].token;
-      var dogeInvi = valorToken6 + valorEmToken;
-
-      setTokenDogeCoin(dogeInvi);
+    if (nomeToken === "BitCoin") {
+      setTokenBitCoin(tokenBitCoin + valorEmToken);
+    } else if (nomeToken === "Ethereum") {
+      setTokenEthereum(tokenEthereum + valorEmToken);
+    } else if (nomeToken === "USD Coin") {
+      setTokenUSDCoin(tokenUSDCoin + valorEmToken);
+    } else if (nomeToken === "BNB") {
+      setTokenBNB(tokenBNB + valorEmToken);
+    } else if (nomeToken === "Polygon") {
+      setTokenPolygon(tokenPolygon + valorEmToken);
+    } else if (nomeToken === "XRP") {
+      setTokenXRP(tokenXRP + valorEmToken);
+    } else if (nomeToken === "Dogecoin") {
+      setTokenDogeCoin(tokenDogeCoin + valorEmToken);
     }
   }
 
   const VenderTaxaZero = () => {
-  var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
+    // var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
 
-  console.log(valorEspera)
-  var valorAgora = carteira.valorAtual;
+    // console.log(valorEspera)
+    // var valorAgora = carteiraAgora
 
-  var valorEmReal = valorEspera.valorReal;
-  const valor1 = Number(valorAgora) + Number(valorEmReal);
+    // var valorEmReal = valorEspera.valorReal;
+    // const valor1 = Number(valorAgora) + Number(valorEmReal);
 
-  var CoinAgora = carteira.moeda;
+    // var CoinAgora = carteira.moeda;
 
-  var valorEmToken = parseFloat(valorEspera.valorToken);
-  var valor2 = parseFloat(CoinAgora - valorEmToken);
-  console.log(valor2);
+    // var valorEmToken = parseFloat(valorEspera.valorToken);
+    // var valor2 = parseFloat(CoinAgora - valorEmToken);
+    // console.log(valor2);
 
-  setcarteiraAgora(valor1);
-  setMoedaAgora(valor2);
+    // // setcarteiraAgora(valor1);
+    // // setMoedaAgora(valor2);
 
-  const select = document.getElementById("selecionarMoedas");
-  const opcaoTexto = select.options[select.selectedIndex].text;
+    // const select = document.getElementById("selecionarMoedas");
+    // const opcaoTexto = select.options[select.selectedIndex].text;
 
-   if (opcaoTexto === "BitCoin") {
-    var valorToken = Coins[0].token;
-    var bitInvi = valorToken - valorEmToken;
+    // if (opcaoTexto === "BitCoin") {
+    //   var valorToken = Coins[0].token;
+    //   var bitInvi = valorToken - valorEmToken;
 
-    setTokenBitCoin(bitInvi);
+    //   setTokenBitCoin(bitInvi);
 
-  } else if (opcaoTexto === "Ethereum") {
-    var valorToken1 = Coins[1].token;
-    var etherInvi = valorToken1 - valorEmToken;
+    // } else if (opcaoTexto === "Ethereum") {
+    //   var valorToken1 = Coins[1].token;
+    //   var etherInvi = valorToken1 - valorEmToken;
 
-    setTokenEthereum(etherInvi);
+    //   setTokenEthereum(etherInvi);
 
-  } else if (opcaoTexto === "USD Coin") {
-    var valorToken2 = Coins[2].token;
-    var usdInvi = valorToken2 - valorEmToken;
+    // } else if (opcaoTexto === "USD Coin") {
+    //   var valorToken2 = Coins[2].token;
+    //   var usdInvi = valorToken2 - valorEmToken;
 
-    setTokenUSDCoin(usdInvi);
+    //   setTokenUSDCoin(usdInvi);
 
-  } else if (opcaoTexto === "BNB") {
-    var valorToken3 = Coins[3].token;
-    var bnbInvi = valorToken3 - valorEmToken;
+    // } else if (opcaoTexto === "BNB") {
+    //   var valorToken3 = Coins[3].token;
+    //   var bnbInvi = valorToken3 - valorEmToken;
 
-    setTokenBNB(bnbInvi);
+    //   setTokenBNB(bnbInvi);
 
-  } else if (opcaoTexto === "Polygon") {
-    var valorToken4 = Coins[4].token;
-    var polyInvi = valorToken4 - valorEmToken;
+    // } else if (opcaoTexto === "Polygon") {
+    //   var valorToken4 = Coins[4].token;
+    //   var polyInvi = valorToken4 - valorEmToken;
 
-    setTokenPolygon(polyInvi);
+    //   setTokenPolygon(polyInvi);
 
-  } else if (opcaoTexto === "XRP") {
-    var valorToken5 = Coins[5].token;
-    var xrpInvi = valorToken5 - valorEmToken;
+    // } else if (opcaoTexto === "XRP") {
+    //   var valorToken5 = Coins[5].token;
+    //   var xrpInvi = valorToken5 - valorEmToken;
 
-    setTokenXRP(xrpInvi);
+    //   setTokenXRP(xrpInvi);
 
-  } else if (opcaoTexto === "Dogecoin") {
-    var valorToken6 = Coins[6].token;
-    var dogeInvi = valorToken6 - valorEmToken;
+    // } else if (opcaoTexto === "Dogecoin") {
+    //   var valorToken6 = Coins[6].token;
+    //   var dogeInvi = valorToken6 - valorEmToken;
 
-    setTokenDogeCoin(dogeInvi);
+    //   setTokenDogeCoin(dogeInvi);
+    // }
   }
-}
   // --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {
     e.preventDefault();
@@ -333,11 +289,11 @@ export function UserStorage({ children }) {
         setRegisterPassword,
         userLogado,
         reset,
-        carteira,
         ganhe1000Gratis,
         comprarTaxaZero,
-        VenderTaxaZero,        
+        VenderTaxaZero,
         Coins,
+        real,
       }}
     >
       {children}

@@ -7,7 +7,7 @@ import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderDashboard(){
 
-  const {loginEmail,logout,carteira,ganhe1000Gratis} = useContext(UserContext)
+  const {loginEmail,logout,real,ganhe1000Gratis} = useContext(UserContext)
 
   const openMenu = () => {
     const menuStatus = document.querySelector(".menu-modal");
@@ -18,10 +18,6 @@ function HeaderDashboard(){
       document.querySelector(".menu-modal").style.display = "flex";
     }
   };
-
-  function testes(){
-
-  }
 
   return(
     <nav>
@@ -40,10 +36,7 @@ function HeaderDashboard(){
                 <img src={UserLogo} alt="perfil simples"/>
             </div> */}
             <h5>{loginEmail}</h5>
-            <h5>R$ {carteira.valorAtual}</h5>
-            <h5>Tokens: {carteira.moeda}</h5>
-            <h4 onClick={ganhe1000Gratis}>GANHE R$1000</h4>
-            <button onClick={testes}>teste</button>
+            <h5>R$ {real}</h5>
             {/* <span className="material-icons-sharp">expand_more</span> */}
           </div>
           {/* <button id="menu-btn">
@@ -55,6 +48,9 @@ function HeaderDashboard(){
           <div class="menu-modal">
             <div class="menu-content">
               <div>
+                <div class="menu-config">
+                <h4 onClick={ganhe1000Gratis}>GANHE R$1000</h4>
+                </div>
                 <div class="menu-config">
                     Trocar Nome
                 </div>
