@@ -9,7 +9,7 @@
     --color-gray-ligth: #86846c;
     --color-gray-dark: #56555e;
     --color-dark: #27282f;
-    --color-primary: rgb(2, 4, 134);
+    --color-primary: #020486;
     --color-success: rgb(34, 202, 75);
     --color-danger: rgb(255, 67, 54);
     --color-warning: rgb(234, 181, 7);
@@ -556,7 +556,7 @@ nav .profile-area .profile-photo {
 .button-selection{
     width: 140px;
     height: 70px;
-    background-color: #179f1a;
+    background-color: #86846c;
     border-radius: 6px;
     margin: 10px;
 
@@ -568,5 +568,8 @@ nav .profile-area .profile-photo {
 }
 
 .compra {
-    background-color: #304213;
+    background-color: #56555e;
+}
+.inputCss{
+    margin-right: 60px;
 }
