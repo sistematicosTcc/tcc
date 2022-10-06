@@ -91,7 +91,7 @@ export function UserStorage({ children }) {
   ) => {
 
     const carteiraRealAtualizada = real - valorEmReal;
-    if(carteiraRealAtualizada < 0){
+    if (carteiraRealAtualizada < 0) {
       alert("Saldo Insuficiente")
       return;
     }
@@ -114,69 +114,73 @@ export function UserStorage({ children }) {
     }
   }
 
-  const VenderTaxaZero = () => {
-    // var valorEspera = JSON.parse(window.localStorage.getItem("Carteiras"));
+  const VenderTaxaZero = (
+    valorEmToken,
+    valorEmReal,
+    nomeToken,
+  ) => {
+    const carteiraRealAtualizada = real + valorEmReal;
 
-    // console.log(valorEspera)
-    // var valorAgora = carteiraAgora
 
-    // var valorEmReal = valorEspera.valorReal;
-    // const valor1 = Number(valorAgora) + Number(valorEmReal);
+    if (nomeToken === "BitCoin") {
+      if (tokenBitCoin - valorEmToken < 0) {
+        alert("Bitcoin insuficiente")
+        return;
+      } else {
+        setTokenBitCoin(tokenBitCoin - valorEmToken);
+      }
 
-    // var CoinAgora = carteira.moeda;
+    } else if (nomeToken === "Ethereum") {
+      if (tokenEthereum - valorEmToken < 0) {
+        alert("Ethereum insuficiente")
+        return;
+      } else {
+        setTokenEthereum(tokenEthereum - valorEmToken);
+      }
 
-    // var valorEmToken = parseFloat(valorEspera.valorToken);
-    // var valor2 = parseFloat(CoinAgora - valorEmToken);
-    // console.log(valor2);
+    } else if (nomeToken === "USD Coin") {
+      if (tokenUSDCoin - valorEmToken < 0) {
+        alert("USD Coin insuficiente")
+        return;
+      } else {
+        setTokenUSDCoin(tokenUSDCoin - valorEmToken);
+      }
 
-    // // setcarteiraAgora(valor1);
-    // // setMoedaAgora(valor2);
+    } else if (nomeToken === "BNB") {
+      if (tokenBNB - valorEmToken < 0) {
+        alert("BNB insuficiente")
+        return;
+      } else {
+        setTokenBNB(tokenBNB - valorEmToken);
+      }
 
-    // const select = document.getElementById("selecionarMoedas");
-    // const opcaoTexto = select.options[select.selectedIndex].text;
+    } else if (nomeToken === "Polygon") {
+      if (tokenPolygon - valorEmToken < 0) {
+        alert("Polygon insuficiente")
+        return;
+      } else {
+        setTokenPolygon(tokenPolygon - valorEmToken);
+      }
 
-    // if (opcaoTexto === "BitCoin") {
-    //   var valorToken = Coins[0].token;
-    //   var bitInvi = valorToken - valorEmToken;
+    } else if (nomeToken === "XRP") {
+      if (tokenXRP - valorEmToken < 0) {
+        alert("XRP insuficiente")
+        return;
+      } else {
+        setTokenXRP(tokenXRP - valorEmToken);
+      }
 
-    //   setTokenBitCoin(bitInvi);
+    } else if (nomeToken === "Dogecoin") {
+      if (tokenDogeCoin - valorEmToken < 0) {
+        alert("Dogecoin insuficiente")
+        return;
+      } else {
+        setTokenDogeCoin(tokenDogeCoin - valorEmToken);
+      }
+    }
 
-    // } else if (opcaoTexto === "Ethereum") {
-    //   var valorToken1 = Coins[1].token;
-    //   var etherInvi = valorToken1 - valorEmToken;
+    setReal(carteiraRealAtualizada);
 
-    //   setTokenEthereum(etherInvi);
-
-    // } else if (opcaoTexto === "USD Coin") {
-    //   var valorToken2 = Coins[2].token;
-    //   var usdInvi = valorToken2 - valorEmToken;
-
-    //   setTokenUSDCoin(usdInvi);
-
-    // } else if (opcaoTexto === "BNB") {
-    //   var valorToken3 = Coins[3].token;
-    //   var bnbInvi = valorToken3 - valorEmToken;
-
-    //   setTokenBNB(bnbInvi);
-
-    // } else if (opcaoTexto === "Polygon") {
-    //   var valorToken4 = Coins[4].token;
-    //   var polyInvi = valorToken4 - valorEmToken;
-
-    //   setTokenPolygon(polyInvi);
-
-    // } else if (opcaoTexto === "XRP") {
-    //   var valorToken5 = Coins[5].token;
-    //   var xrpInvi = valorToken5 - valorEmToken;
-
-    //   setTokenXRP(xrpInvi);
-
-    // } else if (opcaoTexto === "Dogecoin") {
-    //   var valorToken6 = Coins[6].token;
-    //   var dogeInvi = valorToken6 - valorEmToken;
-
-    //   setTokenDogeCoin(dogeInvi);
-    // }
   }
   // --------------------------CADASTRO E LOGIN-----------------------------
   const register = async (e) => {

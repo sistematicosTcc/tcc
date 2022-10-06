@@ -57,21 +57,12 @@ function HeaderLogin() {
         </div>
         <div class="header-second">
           <div className="profile">
-            {/* <div className="profile-photo">
-                <img src={UserLogo} alt="perfil simples"/>
-            </div> */}
             <h5>{loginEmail}</h5>
-            <h5>R$ {carteira.valorAtual}</h5>
           </div>
         </div>
         <button id="menu-button-home" onClick={openMenu}>
           MENU
         </button>
-        {/* 
-        <button id="menu-btn">
-        <span className="material-icons-sharp">menu</span>
-        </button>
-      */}
       </header>
       <div class="menu-modal-home">
         <div class="menu-content-home">

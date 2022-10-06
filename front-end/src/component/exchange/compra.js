@@ -41,8 +41,10 @@ export const Compra = () => {
   return (
     <>
       <div class="background">
+        <div>
         <h3>Comprar Criptomoedas</h3><br />
         <h3>Eu quero pagar</h3>
+        </div>
         <div>
           <span>R$ </span>
           <input
