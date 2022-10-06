@@ -27,6 +27,12 @@ input[type=number]{
     color: red;
   }
 
+  .input-compra{
+    display: block;
+   width: 10%;
+   float:left;
+  }
+
   #selecionarMoedas{
     height: 40px;
     width: 75px;

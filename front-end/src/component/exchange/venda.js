@@ -1,62 +1,41 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../../contexts/UserContexts';
 import './exchange.css'
 
 export const Venda = () => {
   
   const {VenderTaxaZero,Coins} = useContext(UserContext)
-
-  function valorVenda() {
-
-    //variaveis com os inputs
-    const inputReal = document.querySelector('#real');
-    const inputCoin = document.querySelector('#coin');
-
-    const valorReal = document.querySelector('#real').value;
-    const valorToken = document.querySelector('#coin').value;
-
-    
-    //variaveis realizando calculo de real para cripto
-    const select = document.getElementById("selecionarMoedas");
-    const moeda = select.options[select.selectedIndex].value;
-
-    console.log(select)
-
-    console.log("moeda = "+moeda)
-
-    console.log("inputCoin = "+inputCoin)
-    console.log("inputCoinValor (TOKEN) = "+valorToken)
-    console.log("inputReal = "+inputReal)
-    console.log("inputRealValor (BRL) = "+valorReal)
-
-    var valueReal = inputReal.value / moeda;
-
-    console.log("valueReal = "+valueReal)
-
-    var novaCarteira = {valorToken,valorReal}
-    
-    localStorage.setItem("Carteiras", JSON.stringify(novaCarteira));
-
-    console.log(novaCarteira)
-
-    inputReal.addEventListener('input', () => {
-      
-      if(!inputReal.value) {
-        console.log(inputCoin.value)
-        inputCoin.value = '';
-      };
-      var convertedValue = inputReal.value * valueReal;
-      inputCoin.value = (convertedValue).toFixed(6);
-    });
-
-    inputCoin.addEventListener('input', () => {
-      if(!inputCoin.value) {
-        inputReal.value = '';
-      };
-      const convertedValue = inputCoin.value * moeda;
-      inputReal.value = (convertedValue).toFixed(6);
+  const [inputs, setInputs] = useState({
+    real: "",
+    coin: "",
+    selecionarMoedas: 0,
+  })
+  const onChangeReal = (event) => {
+    const valorReal = event.target.value;
+    setInputs({
+      ...inputs,
+      real: valorReal,
+      coin: valorReal / Coins[inputs.selecionarMoedas].preco,
     })
   }
+  const onChangeCoin = (event) => {
+    const valorCoin = event.target.value;
+    setInputs({
+      ...inputs,
+      real: valorCoin * Coins[inputs.selecionarMoedas].preco,
+      coin: valorCoin,
+    })
+  }
+  const onChangeSelect = (event) => {
+    const tokenSelecionada = event.target.value;
+    setInputs({
+      ...inputs,
+      selecionarMoedas: tokenSelecionada,
+      coin: inputs.real / Coins[tokenSelecionada].preco,
+    })
+  }
+
+
 
   return (
     <>
@@ -65,27 +44,48 @@ export const Venda = () => {
         <h3>Vou Vender = </h3> <br/>
         <div>
           <span>Token </span>
-          <input type="number" id="coin" ></input>
-          <select id="selecionarMoedas" name="selecionarMoedas">
-            <option value={Coins[0].preco}>{Coins[0].nome}</option>
-            <option value={Coins[1].preco}>{Coins[1].nome}</option>
-            <option value={Coins[2].preco}>{Coins[2].nome}</option>
-            <option value={Coins[3].preco}>{Coins[3].nome}</option>
-            <option value={Coins[4].preco}>{Coins[4].nome}</option>
-            <option value={Coins[5].preco}>{Coins[5].nome}</option>
-            <option value={Coins[6].preco}>{Coins[6].nome}</option>
+          <input
+            type="number"
+            name="coin"
+            value={inputs.coin}
+            onChange={onChangeCoin}
+          />
+          <select
+            id="selecionarMoedas"
+            name="selecionarMoedas"
+            value={inputs.selecionarMoedas}
+            onChange={onChangeSelect}
+          >
+            <option value={0}>{Coins[0].nome}</option>
+            <option value={1}>{Coins[1].nome}</option>
+            <option value={2}>{Coins[2].nome}</option>
+            <option value={3}>{Coins[3].nome}</option>
+            <option value={4}>{Coins[4].nome}</option>
+            <option value={5}>{Coins[5].nome}</option>
+            <option value={6}>{Coins[6].nome}</option>
           </select>
         </div>
-        <button class="button-coin" onClick={valorVenda}> Selecionar Moeda </button>
         <h3>Vou Receber = </h3>
         <div>
         <span>R$ </span>
-          <input type="number" placeholder="Coloque um valor" id="real" />
+        <input
+            type="number"
+            placeholder="Coloque um valor"
+            name="real"
+            value={inputs.real}
+            onChange={onChangeReal}
+          />
         </div>
           
         
         <div class="button-concluded">
-          <button onClick={VenderTaxaZero} id="addFundos">Venda com Taxa 0</button>
+          <button
+            onClick={() => VenderTaxaZero(Number(inputs.coin), inputs.real, Coins[inputs.selecionarMoedas].nome)}
+            id="addFundos"
+            // disabled={inputs.real <= 0}
+          >
+            Venda com Taxa 0
+          </button>
         </div>
 
       </div>
