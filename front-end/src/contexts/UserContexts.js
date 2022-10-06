@@ -97,7 +97,7 @@ export function UserStorage({ children }) {
     }
     setReal(carteiraRealAtualizada);
 
-    const historicoItem={
+    var historicoItem={
       nome:nomeToken,
       preco:valorEmReal,
       quantidade:valorEmToken,
@@ -105,26 +105,26 @@ export function UserStorage({ children }) {
     }
 
     if (nomeToken === "BitCoin") {
-      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenBitCoin(tokenBitCoin + valorEmToken);
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
     } else if (nomeToken === "Ethereum") {
-      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenEthereum(tokenEthereum + valorEmToken);
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
     } else if (nomeToken === "USD Coin") {
-      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenUSDCoin(tokenUSDCoin + valorEmToken);
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
     } else if (nomeToken === "BNB") {
-      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenBNB(tokenBNB + valorEmToken);
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
     } else if (nomeToken === "Polygon") {
-      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenPolygon(tokenPolygon + valorEmToken);
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
     } else if (nomeToken === "XRP") {
-      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenXRP(tokenXRP + valorEmToken);
-    } else if (nomeToken === "Dogecoin") {
       window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
+    } else if (nomeToken === "Dogecoin") {
       setTokenDogeCoin(tokenDogeCoin + valorEmToken);
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
     }
   }
 
@@ -136,12 +136,20 @@ export function UserStorage({ children }) {
     const carteiraRealAtualizada = real + valorEmReal;
 
 
+    var historicoItem={
+      nome:nomeToken,
+      preco:valorEmReal,
+      quantidade:valorEmToken,
+      data: "hoje"
+    }
+
     if (nomeToken === "BitCoin") {
       if (tokenBitCoin - valorEmToken < 0) {
         alert("Bitcoin insuficiente")
         return;
       } else {
         setTokenBitCoin(tokenBitCoin - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
 
     } else if (nomeToken === "Ethereum") {
@@ -150,6 +158,7 @@ export function UserStorage({ children }) {
         return;
       } else {
         setTokenEthereum(tokenEthereum - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
 
     } else if (nomeToken === "USD Coin") {
@@ -158,6 +167,7 @@ export function UserStorage({ children }) {
         return;
       } else {
         setTokenUSDCoin(tokenUSDCoin - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
 
     } else if (nomeToken === "BNB") {
@@ -166,6 +176,7 @@ export function UserStorage({ children }) {
         return;
       } else {
         setTokenBNB(tokenBNB - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
 
     } else if (nomeToken === "Polygon") {
@@ -174,6 +185,7 @@ export function UserStorage({ children }) {
         return;
       } else {
         setTokenPolygon(tokenPolygon - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
 
     } else if (nomeToken === "XRP") {
@@ -182,6 +194,7 @@ export function UserStorage({ children }) {
         return;
       } else {
         setTokenXRP(tokenXRP - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
 
     } else if (nomeToken === "Dogecoin") {
@@ -190,6 +203,7 @@ export function UserStorage({ children }) {
         return;
       } else {
         setTokenDogeCoin(tokenDogeCoin - valorEmToken);
+        window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       }
     }
 
