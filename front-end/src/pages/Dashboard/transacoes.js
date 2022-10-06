@@ -7,6 +7,13 @@ import HeaderDashboard from "../../component/headerDashboard/headBoard.js"
 
 export const Transacoes = () => {
 
+ 
+  const historicoItens =window.localStorage.getItem("Historico");
+
+
+  function teste(){
+    console.log(historicoItens)
+  }
   return (
   <>
     <HeaderDashboard />
@@ -38,6 +45,7 @@ export const Transacoes = () => {
           </Link>
         </div>
       </aside>
+      <button onClick={teste}>aaaaaaaaaaa</button>
       <div class="transacoesBorder">
         <div class="transacoesColumn borderRight">Moeda</div>
         <div class="transacoesColumn borderRight">Quantidade</div>

@@ -97,19 +97,33 @@ export function UserStorage({ children }) {
     }
     setReal(carteiraRealAtualizada);
 
+    const historicoItem={
+      nome:nomeToken,
+      preco:valorEmReal,
+      quantidade:valorEmToken,
+      data: "hoje"
+    }
+
     if (nomeToken === "BitCoin") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenBitCoin(tokenBitCoin + valorEmToken);
     } else if (nomeToken === "Ethereum") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenEthereum(tokenEthereum + valorEmToken);
     } else if (nomeToken === "USD Coin") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenUSDCoin(tokenUSDCoin + valorEmToken);
     } else if (nomeToken === "BNB") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenBNB(tokenBNB + valorEmToken);
     } else if (nomeToken === "Polygon") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenPolygon(tokenPolygon + valorEmToken);
     } else if (nomeToken === "XRP") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenXRP(tokenXRP + valorEmToken);
     } else if (nomeToken === "Dogecoin") {
+      window.localStorage.setItem("Historico", JSON.stringify(historicoItem));
       setTokenDogeCoin(tokenDogeCoin + valorEmToken);
     }
   }
