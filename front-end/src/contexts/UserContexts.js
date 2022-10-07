@@ -99,28 +99,47 @@ export function UserStorage({ children }) {
 
     if (nomeToken === "BitCoin") {
       setTokenBitCoin(tokenBitCoin + valorEmToken);
+      
     } else if (nomeToken === "Ethereum") {
       setTokenEthereum(tokenEthereum + valorEmToken);
+      
     } else if (nomeToken === "USD Coin") {
       setTokenUSDCoin(tokenUSDCoin + valorEmToken);
+      
     } else if (nomeToken === "BNB") {
       setTokenBNB(tokenBNB + valorEmToken);
+      
     } else if (nomeToken === "Polygon") {
       setTokenPolygon(tokenPolygon + valorEmToken);
+      
     } else if (nomeToken === "XRP") {
       setTokenXRP(tokenXRP + valorEmToken);
+      
     } else if (nomeToken === "Dogecoin") {
       setTokenDogeCoin(tokenDogeCoin + valorEmToken);
+      
     }
+
+    var localArrayTransacao = JSON.parse(localStorage.getItem("Historico"))||[]
+
+    localArrayTransacao.push({
+      nome: nomeToken,
+      preco:valorEmReal,
+      quantidade:valorEmToken,
+      data: new Date()
+    })
+
+    localStorage.setItem("Historico",JSON.stringify(localArrayTransacao))
+
+
   }
 
   const VenderTaxaZero = (
-    valorEmToken,
     valorEmReal,
+    valorEmToken,
     nomeToken,
   ) => {
     const carteiraRealAtualizada = real + valorEmReal;
-
 
     if (nomeToken === "BitCoin") {
       if (tokenBitCoin - valorEmToken < 0) {
@@ -180,6 +199,17 @@ export function UserStorage({ children }) {
     }
 
     setReal(carteiraRealAtualizada);
+
+    var localArrayTransacao = JSON.parse(localStorage.getItem("Historico"))||[]
+
+    localArrayTransacao.push({
+      nome: nomeToken,
+      preco:valorEmReal,
+      quantidade:valorEmToken,
+      data: new Date()
+    })
+
+    localStorage.setItem("Historico",JSON.stringify(localArrayTransacao))
 
   }
   // --------------------------CADASTRO E LOGIN-----------------------------

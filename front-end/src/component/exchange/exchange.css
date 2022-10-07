@@ -29,8 +29,8 @@ input[type=number]{
 
   .input-compra{
     display: block;
-   width: 10%;
-   float:left;
+    width: 10%;
+    float:left;
   }
 
   #selecionarMoedas{

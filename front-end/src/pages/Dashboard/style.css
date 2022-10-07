@@ -551,24 +551,23 @@ nav .profile-area .profile-photo {
 .division-buttons{
     display: flex;
     width: 800px;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .button-selection{
+    margin-bottom: -1px;
     width: 140px;
     height: 70px;
-    background-color: #86846c;
-    border-radius: 6px;
-    margin: 10px;
+    border-radius: 6px 6px 0px 0px; 
+    background-color: #FFF;
 
     cursor: pointer;
-
 }
 .center-page{
     margin: 0 auto;
 }
 
 .compra {
-    background-color: #56555e;
+    background-color: #b5b0ac;
 }
 .inputCss{
     margin-right: 60px;
