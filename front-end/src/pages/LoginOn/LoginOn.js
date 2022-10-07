@@ -273,11 +273,10 @@ export function LoginOn() {
           </div>
         </div>
         <div class="redes">
-          <li><Link to="/educacao" className='options'>O que é Bitcoin?</Link></li>
-          <li><Link to="/educacao" className='options'>O que é Blockchain?</Link></li>
-          <li><Link to="/educacao" className='options'>O que é Ethereum?</Link></li>
-          <li><Link to="/educacao" className='options'>O que é Litecoin?</Link></li>
-        </div>
+          <a href="https://www.instagram.com/CrypTop_22/" target="_blank"><img src={Instagram} alt="logoinsta" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100086384828388" target="_blank"><img src={Facebook} alt="logoface" /></a>
+          <a href="https://twitter.com/cryp_top2022" target="_blank"><img src={Twitter} alt="twitter" /></a>
+          </div>
       </div>
       <div class="footer2">
         <p> <b> Powered by Sistematicos - Unip 2022 - Tcc </b></p>
