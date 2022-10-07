@@ -107,45 +107,51 @@ export function LoginOn() {
       </section>
       <section class="card-main">
         <section class="card-tree">
+        <Link to="/historia">
           <div class="card1">
-            <img src={WomanBook} alt="mulher_com_livro" />
-            <h1>Conheça a história dos criptoativos</h1>
-            <div class="card-content">
-              <p>
-                Dentro da nossa plataforma, você
-                poderá conhecer muito mais sobre
-                o surgimento desses ativos digitais.
-              </p>
+              <img src={WomanBook} alt="mulher_com_livro"/>
+              <h1>Conheça a história dos criptoativos</h1>
+              <div class="card-content">
+                <p>
+                  Dentro da nossa plataforma, você
+                  poderá conhecer muito mais sobre
+                  o surgimento desses ativos digitais.
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </section>
         <section class="card-tree">
+        <Link to="/nft">
           <div class="card1">
-            <img src={Neftguax} alt="neftGuax" />
-            <h1>Rentabilidade em NFT</h1>
-            <div class="card-content">
-              <p>
-                Como funciona a parte financeira
-                do NFT? Uma arte pode valer
-                dinheiro e ter outras funções?
-              </p>
+              <img src={Neftguax} alt="neftGuax"/>
+              <h1>Rentabilidade em NFT</h1>
+              <div class="card-content">
+                <p>
+                  Como funciona a parte financeira
+                  do NFT? Uma arte pode valer
+                  dinheiro e ter outras funções?
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </section>
         <section class="card-tree">
+        <Link to="/aprender">
           <div class="card1">
-            <img src={WomanTree} alt="mulher e arvore" />
-            <h1>Aprender para ganhar</h1>
-            <div class="card-content">
-              <p>
-                Marketcap, Volumetria, Suply do
-                token, entre outras coisas podem
-                ditar muito a tendência do
-                mercado dos criptoativos, saber
-                do que se trata é essencial.
-              </p>
+              <img src={WomanTree} alt="mulher e arvore"/>
+              <h1>Aprender para ganhar</h1>
+              <div class="card-content">
+                <p>
+                  Marketcap, Volumetria, Suply do
+                  token, entre outras coisas podem
+                  ditar muito a tendência do
+                  mercado dos criptoativos, saber
+                  do que se trata é essencial.
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </section>
       </section>
       <div class="pai-mae">
@@ -273,11 +279,10 @@ export function LoginOn() {
           </div>
         </div>
         <div class="redes">
-          <li><Link to="/educacao" className='options'>O que é Bitcoin?</Link></li>
-          <li><Link to="/educacao" className='options'>O que é Blockchain?</Link></li>
-          <li><Link to="/educacao" className='options'>O que é Ethereum?</Link></li>
-          <li><Link to="/educacao" className='options'>O que é Litecoin?</Link></li>
-        </div>
+          <a href="https://www.instagram.com/CrypTop_22/" target="_blank"><img src={Instagram} alt="logoinsta" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100086384828388" target="_blank"><img src={Facebook} alt="logoface" /></a>
+          <a href="https://twitter.com/cryp_top2022" target="_blank"><img src={Twitter} alt="twitter" /></a>
+          </div>
       </div>
       <div class="footer2">
         <p> <b> Powered by Sistematicos - Unip 2022 - Tcc </b></p>
