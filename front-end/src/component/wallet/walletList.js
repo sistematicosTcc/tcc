@@ -4,24 +4,24 @@ import { UserContext } from "../../contexts/UserContexts";
 import { useState } from "react";
 import { useEffect } from "react";
 
+import Bit from "../../images/btc_coin.png"
+import Usdt from "../../images/usdt_coin.png"
+import Eth from "../../images/eth_coin.png"
+import Doge from "../../images/doge_coin.png"
+import Bnb from "../../images/bnb_coin.png"
+import Poly from "../../images/polygon_coin.png"
+import Xrp from "../../images/xrp_coin.png"
+
 export const WalletList = () => {
   const { Coins } = useContext(UserContext);
 
-  const [etherList, setEtherList] = useState();
-  const [usdList, setUsdList] = useState();
-  const [bnbList, setBnbList] = useState();
-  const [polyList, setPolyList] = useState();
-  const [xrpList, setXrpList] = useState();
-  const [dogeList, setDogeList] = useState();
+  const [etherList, setEtherList] = useState(false);
+  const [usdList, setUsdList] = useState(false);
+  const [bnbList, setBnbList] = useState(false);
+  const [polyList, setPolyList] = useState(false);
+  const [xrpList, setXrpList] = useState(false);
+  const [dogeList, setDogeList] = useState(false);
 
-  /*-----------------------------------------------------------------*/
-
-  const [etherSet, setEtherSet] = useState();
-  const [usdSet, setUsdSet] = useState();
-  const [bnbSet, setBnbSet] = useState();
-  const [polySet, setPolySet] = useState();
-  const [xrpSet, setXrpSet] = useState();
-  const [dogeSet, setDogeSet] = useState();
 
   /*-----------------------------------------------------------------*/
   const addToList = () => {
@@ -36,45 +36,34 @@ export const WalletList = () => {
     const select = document.getElementById("selecionarMoeda");
     const opcaoTexto = select.options[select.selectedIndex].text;
 
-    console.log(etherSet);
-    const valor1 = JSON.parse(localStorage.getItem("EtherVerification"));
-    console.log(valor1);
-    setEtherList(valor1);
-    const valor2 = JSON.parse(localStorage.getItem("UsdVerification"));
-    setUsdList(valor2);
-    const valor3 = JSON.parse(localStorage.getItem("BnBVerification"));
-    setBnbList(valor3);
-    const valor4 = JSON.parse(localStorage.getItem("PolyVerification"));
-    setPolyList(valor4);
-    const valor5 = JSON.parse(localStorage.getItem("XrpVerification"));
-    setXrpList(valor5);
-    const valor6 = JSON.parse(localStorage.getItem("DogeVerification"));
-    setDogeList(valor6);
     if (opcaoTexto === "Ethereum") {
       if (etherList === false) {
         var EtherStatus = true;
         setEtherList(
           localStorage.setItem("EtherVerification", JSON.stringify(EtherStatus))
         );
-        setEtherSet(true);
+
+        document.querySelector(".ethereum").style.display = "flex";
       } else {
         alert("Valor já foi adicionado");
       }
     } else if (opcaoTexto === "USD Coin") {
       if (usdList === false) {
         var usdStatus = true;
-        setUsdList(localStorage.setItem("UsdVerification", usdStatus));
+        setUsdList(
+          localStorage.setItem("UsdVerification", JSON.stringify(usdStatus))
+        );
 
-        setUsdSet(true);
+        document.querySelector(".usdCoin").style.display = "flex";
       } else {
         alert("Valor já foi adicionado");
       }
     } else if (opcaoTexto === "BNB") {
       if (bnbList === false) {
         var bnbStatus = true;
-        setBnbList(localStorage.setItem("BnBVerification", bnbStatus));
-
-        setBnbSet(true);
+        setBnbList(
+          localStorage.setItem("BnBVerification", JSON.stringify(bnbStatus))
+        );
 
         document.querySelector(".bnb").style.display = "flex";
       } else {
@@ -83,9 +72,9 @@ export const WalletList = () => {
     } else if (opcaoTexto === "Polygon") {
       if (polyList === false) {
         var polyStatus = true;
-        setPolyList(localStorage.setItem("PolyVerification", polyStatus));
-
-        setPolySet(true);
+        setPolyList(
+          localStorage.setItem("PolyVerification", JSON.stringify(polyStatus))
+        );
 
         document.querySelector(".polygon").style.display = "flex";
       } else {
@@ -93,10 +82,10 @@ export const WalletList = () => {
       }
     } else if (opcaoTexto === "XRP") {
       if (xrpList === false) {
-        var XrpStatus = true;
-        setXrpList(localStorage.setItem("XrpVerification", XrpStatus));
-
-        setXrpSet(true);
+        var xrpStatus = true;
+        setXrpList(
+          localStorage.setItem("XrpVerification", JSON.stringify(xrpStatus))
+        );
 
         document.querySelector(".xrp").style.display = "flex";
       } else {
@@ -105,9 +94,9 @@ export const WalletList = () => {
     } else if (opcaoTexto === "Dogecoin") {
       if (dogeList === false) {
         var dogeStatus = true;
-        setDogeList(localStorage.setItem("DogeVerification", dogeStatus));
-
-        setDogeSet(true);
+        setDogeList(
+          localStorage.setItem("DogeVerification", JSON.stringify(dogeStatus))
+        );
 
         document.querySelector(".dogeCoin").style.display = "flex";
       } else {
@@ -117,6 +106,30 @@ export const WalletList = () => {
   };
 
   useEffect(() => {
+    const valor1 = JSON.parse(localStorage.getItem("EtherVerification"));
+    if (valor1) {
+      document.querySelector(".ethereum").style.display = "flex";
+    }
+    const valor2 = JSON.parse(localStorage.getItem("UsdVerification"));
+    if (valor2) {
+      document.querySelector(".usdCoin").style.display = "flex";
+    }
+    const valor3 = JSON.parse(localStorage.getItem("BnBVerification"));
+    if (valor3) {
+      document.querySelector(".bnb").style.display = "flex";
+    }
+    const valor4 = JSON.parse(localStorage.getItem("PolyVerification"));
+    if (valor4) {
+      document.querySelector(".polygon").style.display = "flex";
+    }
+    const valor5 = JSON.parse(localStorage.getItem("XrpVerification"));
+    if (valor5) {
+      document.querySelector(".xrp").style.display = "flex";
+    }
+    const valor6 = JSON.parse(localStorage.getItem("DogeVerification"));
+    if (valor6) {
+      document.querySelector(".dogeCoin").style.display = "flex";
+    }
   }, []);
   return (
     <>
@@ -139,7 +152,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Bit} alt="Bit Coin" />
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -159,7 +174,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas ethereum ">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Eth} alt="Ethereum" />
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -179,7 +196,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas usdCoin">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Usdt} alt="USDTcoin" />
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -199,7 +218,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas bnb">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Bnb} alt="BinanceCoin" />
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -219,7 +240,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas polygon">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Poly} alt="polygon" id="polyImg"/>
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -239,7 +262,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas xrp">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Xrp} alt="XrpCoin" id="xrpImg"/>
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -259,7 +284,9 @@ export const WalletList = () => {
         </div>
         <div class="listaMoedas dogeCoin">
           <div class="walletMoedas-separadores borderRight">
-            <ul class="walletColumn"></ul>
+            <ul class="walletColumn">
+              <img src={Doge} alt="DogeCoin" />
+            </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
@@ -287,7 +314,7 @@ export const WalletList = () => {
             +
           </div>
           <div class="modal-selecionar-carteira">
-            <p>Escolha uma moeda para adicionar no sua carteira</p>
+            <p>Escolha uma moeda para</p><p> adicionar na sua carteira</p>
             <select id="selecionarMoeda" name="selecionarMoeda">
               <option value={Coins[1].preco}>{Coins[1].nome}</option>
               <option value={Coins[2].preco}>{Coins[2].nome}</option>

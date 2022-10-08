@@ -4,22 +4,15 @@
 
 .listAcima{
   display: flex;
-  border: 2px solid black;
+  border: solid 1px #000;
+  border-radius: 6px;
   width: 800px;
-  border-radius: 10px 10px 0 0;
   margin: 100px 0px 0px 0px;
-}
-
-
-.borderRight {
-  border-right: 1px solid black;
 }
 
 .listaMoedas{
   display:flex;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+
 }
 
 .walletMoedas-separadores{
@@ -28,20 +21,24 @@
   align-items: center;
   justify-content: center;
   width: 25%;
-  height: 20px;
+  height: 60px;
   padding: 10px;
+
+  border: solid 2px #000;
+  border-radius: 6px;
+
 }
 /*============== Bota de Adicionar na Walllet =============*/
 #button-choose {
   position: absolute;
-  right: 10%;
-  bottom: 10%; 
-  width: 70px;
-  height: 70px;
+  right: 30%;
+  bottom: 30%; 
+  width: 90px;
+  height: 90px;
   
   align-items: center;
-  border-radius: 6px;
-  background-color: aquamarine;
+  border-radius: 50px;
+  background-color: #56555e;
 }
 
 .wallet-separadores{
@@ -50,7 +47,7 @@
   justify-content: center;
 
   width: 25%;
-  height: 20px;
+  height: 40px;
   padding: 10px;
 }
 
@@ -75,6 +72,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.modal-selecionar-carteira p{
+  font-size: 20px;
+}
+
+.modal-selecionar-carteira button{
+  font-size: 20px;
+  background-color: #86846c;
+  width: 50px;
+  height: 30px;
+  border-radius: 6px;
 }
 
 #selecionarMoeda{
@@ -117,4 +126,12 @@
 
 .dogeCoin{
 display:none;
+}
+
+/*===========================imagens==============*/
+#polyImg{
+  width: 30px;
+}
+#xrpImg{
+  width: 30px;
 }
