@@ -135,8 +135,8 @@ export function UserStorage({ children }) {
   }
 
   const VenderTaxaZero = (
-    valorEmReal,
     valorEmToken,
+    valorEmReal,
     nomeToken,
   ) => {
     const carteiraRealAtualizada = real + valorEmReal;

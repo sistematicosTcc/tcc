@@ -92,3 +92,29 @@
   font-size: 50px;
   transform: rotate(45deg);
 }
+
+/*==========================Displays============================*/
+
+.ethereum{
+  display:none;
+}
+
+.usdCoin{
+  display:none;
+}
+
+.bnb{
+  display:none;
+}
+
+.polygon{
+  display:none;
+}
+
+.xrp{
+  display:none;
+}
+
+.dogeCoin{
+display:none;
+}
