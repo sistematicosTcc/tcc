@@ -82,7 +82,7 @@ export const Venda = () => {
           <button
             onClick={() => VenderTaxaZero(Number(inputs.coin), inputs.real, Coins[inputs.selecionarMoedas].nome)}
             id="addFundos"
-            // disabled={inputs.real <= 0}
+            disabled={inputs.real <= 0}
           >
             Venda com Taxa 0
           </button>

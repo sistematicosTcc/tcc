@@ -567,8 +567,23 @@ nav .profile-area .profile-photo {
 }
 
 .compra {
-    background-color: #b5b0ac;
+    color: #c99e07;
 }
 .inputCss{
     margin-right: 60px;
+}
+
+.venda{
+    color: #c99e07;
+    background-color:#020486;
+}
+
+.transacao {
+    border: solid 2px #000;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+}
+.text-coluna{
+    text-align: center;
 }

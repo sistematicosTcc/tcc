@@ -52,22 +52,22 @@ export const Transacoes = () => {
         <table>
           <thead>
             <tr>
-              <th>Moeda</th>
-              <th>Preco</th>
-              <th>Quantidade</th>
-              <th>Data</th>
+              <th><p class="transacao">Moeda</p></th>
+              <th><p class="transacao">Preco</p></th>
+              <th><p class="transacao">Quantidade</p></th>
+              <th><p class="transacao">Data</p></th>
             </tr>
           </thead>
           <tbody>
             {arrayHistorico.map((transacao) => {
               return (
                 <tr>
-                  <td>{transacao.nome}</td>
-                  <td>{transacao.preco}</td>
-                  <td>{transacao.quantidade}</td>
-                  <td>{transacao.data}</td>
+                  <td class="transacao"><p class="text-coluna">{transacao.nome}</p></td>
+                  <td class="transacao"><p class="text-coluna">{transacao.preco}</p></td>
+                  <td class="transacao"><p class="text-coluna">{transacao.quantidade}</p></td>
+                  <td class="transacao"><p class="text-coluna">{transacao.data}</p></td>
                 </tr>
-              );
+              )
             })}
           </tbody>
         </table>

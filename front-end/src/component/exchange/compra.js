@@ -45,8 +45,6 @@ export const Compra = () => {
         <h3>Comprar Criptomoedas</h3><br />
         <h3>Eu quero pagar</h3>
         <div>
-        <div class="inputCss">
-
           <span>R$ </span>
           <input
             type="number"
@@ -57,7 +55,7 @@ export const Compra = () => {
           />
 
         </div>
-        <h3>Vou receber=</h3>
+        <h3>Vou receber = </h3>
         <div>
           <span>Token </span>
           <input
@@ -92,7 +90,7 @@ export const Compra = () => {
           </button>
         </div>
 
-      </div>
+    
       </div>
 
     </>
