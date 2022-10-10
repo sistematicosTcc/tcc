@@ -172,18 +172,23 @@
   margin: 10px;
 }
 
+#menu-button-home:hover{
+  color: #FFC90A;
+}
+
 .menu-modal-home{
+  left: 92%;
   position: absolute;
-  left: 90%;
   display: none;
   z-index: 1;
 }
 
 .menu-content-home{
-  display: flex;
   background: var(--color-light);
+  display: flex;
+
   width: 130px;
-  height: 130px;
+  height: 70px;
   border-radius: 10px;
   
   flex-direction: column;
@@ -198,6 +203,7 @@
 }
 
 .menu-config-home:hover{
-  background-color: #f0eff5;
+  background-color: white;
   color: #FFC90A;
  }
+

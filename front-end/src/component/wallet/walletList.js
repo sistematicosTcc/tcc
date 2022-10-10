@@ -4,13 +4,13 @@ import { UserContext } from "../../contexts/UserContexts";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import Bit from "../../images/btc_coin.png"
-import Usdt from "../../images/usdt_coin.png"
-import Eth from "../../images/eth_coin.png"
-import Doge from "../../images/doge_coin.png"
-import Bnb from "../../images/bnb_coin.png"
-import Poly from "../../images/polygon_coin.png"
-import Xrp from "../../images/xrp_coin.png"
+import Bit from "../../images/btc_coin.png";
+import Usdt from "../../images/usdt_coin.png";
+import Eth from "../../images/eth_coin.png";
+import Doge from "../../images/doge_coin.png";
+import Bnb from "../../images/bnb_coin.png";
+import Poly from "../../images/polygon_coin.png";
+import Xrp from "../../images/xrp_coin.png";
 
 export const WalletList = () => {
   const { Coins } = useContext(UserContext);
@@ -21,7 +21,6 @@ export const WalletList = () => {
   const [polyList, setPolyList] = useState(false);
   const [xrpList, setXrpList] = useState(false);
   const [dogeList, setDogeList] = useState(false);
-
 
   /*-----------------------------------------------------------------*/
   const addToList = () => {
@@ -137,17 +136,17 @@ export const WalletList = () => {
         <div class="listAcima">
           <div class="wallet-separadores borderRight">
             <ul class="walletColumn">
-              <li>Imagem</li>
+              <p>Imagem</p>
             </ul>
           </div>
           <div class="wallet-separadores borderRight">
-            <ul class="walletColumn">Nome</ul>
+            <ul class="walletColumn"><p>Nome</p></ul>
           </div>
           <div class="wallet-separadores borderRight">
-            <ul class="walletColumn">Tokens</ul>
+            <ul class="walletColumn"><p>Tokens</p></ul>
           </div>
           <div class="wallet-separadores">
-            <ul class="walletColumn">Preco em R$</ul>
+            <ul class="walletColumn"><p>Preco em R$</p></ul>
           </div>
         </div>
         <div class="listaMoedas">
@@ -158,7 +157,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>Bitcoin</li>
+              <li><p>BitCoin</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -180,7 +179,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>Ethereum</li>
+              <li><p>Ethereum</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -202,7 +201,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>USD Coin</li>
+              <li><p>USD Coin</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -224,7 +223,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>BNB</li>
+              <li><p>BNB</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -241,12 +240,12 @@ export const WalletList = () => {
         <div class="listaMoedas polygon">
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <img src={Poly} alt="polygon" id="polyImg"/>
+              <img src={Poly} alt="polygon" id="polyImg" />
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>Polygon</li>
+              <li><p>Polygon</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -263,12 +262,12 @@ export const WalletList = () => {
         <div class="listaMoedas xrp">
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <img src={Xrp} alt="XrpCoin" id="xrpImg"/>
+              <img src={Xrp} alt="XrpCoin" id="xrpImg" />
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>XRP</li>
+              <li><p>XRP</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -290,7 +289,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>DogeCoin</li>
+              <li><p>DogeCoin</p></li>
             </ul>
           </div>
           <div class="walletMoedas-separadores borderRight">
@@ -304,6 +303,7 @@ export const WalletList = () => {
             </ul>
           </div>
         </div>
+        <div class="relativeToBtn"></div>
       </div>
       <button id="button-choose" onClick={addToList}>
         Adicionar Moeda
@@ -314,7 +314,8 @@ export const WalletList = () => {
             +
           </div>
           <div class="modal-selecionar-carteira">
-            <p>Escolha uma moeda para</p><p> adicionar na sua carteira</p>
+            <p>Escolha uma moeda para</p>
+            <p> adicionar na sua carteira</p>
             <select id="selecionarMoeda" name="selecionarMoeda">
               <option value={Coins[1].preco}>{Coins[1].nome}</option>
               <option value={Coins[2].preco}>{Coins[2].nome}</option>
@@ -323,7 +324,7 @@ export const WalletList = () => {
               <option value={Coins[5].preco}>{Coins[5].nome}</option>
               <option value={Coins[6].preco}>{Coins[6].nome}</option>
             </select>
-            <button onClick={CriarLista}>OK</button>
+            <button onClick={CriarLista}>Confirmar</button>
           </div>
         </div>
       </div>

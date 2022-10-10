@@ -30,6 +30,14 @@ import { HistoriaCripto } from "./pages/page-text/historiaCripto";
 import { SobreNos } from "./pages/page-text/sobreNos";
 import { Transparencia } from "./pages/page-text/transparencia";
 
+import { AjudaTextOn } from "./pages/page-text-on/ajudaTextOn";
+import { NftOn } from "./pages/page-text-on/nftOn";
+import { AprenderGanharOn } from "./pages/page-text-on/aprenderGanharOn";
+import { EducacaoOn } from "./pages/page-text-on/educacaoOn";
+import { HistoriaCriptoOn } from "./pages/page-text-on/historiaCriptoOn";
+import { SobreNosOn } from "./pages/page-text-on/sobreNosOn";
+import { TransparenciaOn } from "./pages/page-text-on/transparenciaOn";
+
 export function Routers() {
   return (
     <BrowserRouter>
@@ -50,15 +58,16 @@ export function Routers() {
           <Route path="/senha" element={<Senha />} />
           <Route path="/senha2" element={<Senha2 />} />
           <Route path="/senha3" element={<Senha3 />} />
-          <Route path="/ajudaText" element={<AjudaText/>} />
-          <Route path="/aprender" element={<AprenderGanhar/>} />
-          <Route path="/educacao" element={<Educacao/>} />
-          <Route path="/historia" element={<HistoriaCripto/>} />
+          <Route path="/ajudaText" element={<AjudaText />} />
+          <Route path="/aprender" element={<AprenderGanhar />} />
+          <Route path="/educacao" element={<Educacao />} />
+          <Route path="/historia" element={<HistoriaCripto />} />
           <Route path="/nft" element={<Nft />} />
           <Route path="/sobre" element={<SobreNos />} />
           <Route path="/transparencia" element={<Transparencia />} />
 
 
+{/* ============================================PRIVADAS ===========================*/}
           <Route
             path="/dashboard"
             element={
@@ -75,7 +84,6 @@ export function Routers() {
               </PrivateRouter>
             }
           />
-
 
           <Route
             path="/wallet"
@@ -101,6 +109,14 @@ export function Routers() {
               </PrivateRouter>
             }
           />
+          <Route path="/ajudaTextOn" element={<PrivateRouter><AjudaTextOn /></PrivateRouter>} />
+          <Route path="/aprenderOn" element={<PrivateRouter><AprenderGanharOn /></PrivateRouter>} />
+          <Route path="/educacaoOn" element={<PrivateRouter><EducacaoOn /></PrivateRouter>} />
+          <Route path="/historiaOn" element={<PrivateRouter><HistoriaCriptoOn /></PrivateRouter>} />
+          <Route path="/nftOn" element={<PrivateRouter><NftOn /></PrivateRouter>} />
+          <Route path="/sobreOn" element={<PrivateRouter><SobreNosOn /></PrivateRouter>} />
+          <Route path="/transparenciaOn" element={<PrivateRouter><TransparenciaOn /></PrivateRouter>} />
+
         </Routes>
       </UserStorage>
     </BrowserRouter>

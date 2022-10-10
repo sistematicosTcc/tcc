@@ -4,8 +4,6 @@
 
 .listAcima{
   display: flex;
-  border: solid 1px #000;
-  border-radius: 6px;
   width: 800px;
   margin: 100px 0px 0px 0px;
 }
@@ -18,37 +16,44 @@
 .walletMoedas-separadores{
 
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25%;
-  height: 60px;
-  padding: 10px;
 
+  width: 25%;
+  margin: 1px;
   border: solid 2px #000;
   border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  color: #000E56;
 
 }
 /*============== Bota de Adicionar na Walllet =============*/
 #button-choose {
-  position: absolute;
-  right: 3%;
-  bottom: 3%; 
-  width: 90px;
-  height: 90px;
-  
-  align-items: center;
-  border-radius: 50px;
-  background-color: #56555e;
+ margin-top: 120%;
+ margin-left: -100%;
+  width: 150px;
+  height: 50px;
+  border-radius: 6px;
+  color: white;
+  background-color: #020486;
+}
+
+#button-choose:hover {
+  color: #c99e07;
+  cursor: pointer;
 }
 
 .wallet-separadores{
   display: flex;
-  align-items: center;
-  justify-content: center;
 
-  width: 25%;
-  height: 40px;
-  padding: 10px;
+  width: 25%; 
+  margin: 1px;
+  border: solid 2px #000;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .bg-modal{
@@ -80,18 +85,28 @@
 
 .modal-selecionar-carteira button{
   font-size: 20px;
-  background-color: #86846c;
-  width: 50px;
-  height: 30px;
+  background-color: #020486;
+  width: 100px;
+  height: 33px;
   border-radius: 6px;
+  color: white;
 }
 
+.modal-selecionar-carteira button:hover{
+  cursor: pointer;
+  color: #c99e07;
+}
 #selecionarMoeda{
   border-radius: 10px;
   padding: 10px;
   width: 300px;
   margin: 20px auto;
   border: 1px solid black;
+}
+
+#selecionarMoeda:hover{
+  cursor: pointer;
+
 }
 
 #close-btn{
@@ -101,7 +116,9 @@
   font-size: 50px;
   transform: rotate(45deg);
 }
-
+#close-btn:hover{
+  color:#c99e07
+}
 /*==========================Displays============================*/
 
 .ethereum{
@@ -134,4 +151,8 @@ display:none;
 }
 #xrpImg{
   width: 30px;
+}
+
+.relativeToBtn{
+  position:relative ;
 }

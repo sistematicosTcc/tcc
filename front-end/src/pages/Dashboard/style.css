@@ -520,33 +520,6 @@ nav .profile-area .profile-photo {
     }
 }
 
-/*============================== transacoes ==============================*/
-
-.transacoesBorder {
-    width: 800px;
-    height: 100px;
-    display: flex;
-    border: 1px solid black;
-  
-    border-radius: 10px;
-    margin: 100px 0px 0px 0px;
-}
-  
-  .transacoesColumn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    width: 25%;
-    height: 20px;
-    padding: 10px;
-    border-bottom: 1px solid black;
-}
-  
-  .borderRight {
-    border-right: 1px solid black;
-}
-
 /* ==============================Exchange ============================== */
 .division-buttons{
     display: flex;

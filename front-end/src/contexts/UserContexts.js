@@ -51,7 +51,7 @@ export function UserStorage({ children }) {
       id: 2,
       nome: "USD Coin",
       token: parseFloat(tokenUSDCoin),
-      preco: 103270,
+      preco: 103270,//dolar hoje
     },
     {
       id: 3,

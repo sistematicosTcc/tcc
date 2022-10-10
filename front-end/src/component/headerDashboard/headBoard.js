@@ -32,16 +32,9 @@ function HeaderDashboard(){
         </div>
         <div className="profile-area">
           <div className="profile">
-            {/* <div className="profile-photo">
-                <img src={UserLogo} alt="perfil simples"/>
-            </div> */}
             <h5>{loginEmail}</h5>
             <h5>R$ {real}</h5>
-            {/* <span className="material-icons-sharp">expand_more</span> */}
           </div>
-          {/* <button id="menu-btn">
-            <span className="material-icons-sharp">menu</span>
-          </button> */}
           <button id="menu-button" onClick={openMenu}>
             MENU
           </button>
@@ -49,13 +42,7 @@ function HeaderDashboard(){
             <div class="menu-content">
               <div>
                 <div class="menu-config">
-                <h4 onClick={ganhe1000Gratis}>GANHE R$1000</h4>
-                </div>
-                <div class="menu-config">
-                    Trocar Nome
-                </div>
-                <div class="menu-config">
-                    Modo Noturno
+                  <h4 onClick={ganhe1000Gratis}>GANHE R$1000</h4>
                 </div>
                 <div class="menu-config" onClick={logout}>
                     Sair

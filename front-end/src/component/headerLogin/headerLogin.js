@@ -9,7 +9,7 @@ import { UserContext } from "../../contexts/UserContexts";
 
 function HeaderLogin() {
 
-  const { loginEmail,logout,carteira } = useContext(UserContext);
+  const { loginEmail,logout,ganhe1000Gratis } = useContext(UserContext);
 
   const openMenu = () => {
     const MenuStatus = document.querySelector(".menu-modal-home");
@@ -34,25 +34,19 @@ function HeaderLogin() {
             <li>
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
-                <li><Link to="/teste" className="options">Exchange</Link></li>
-                <li><Link to="/wallet" className="options">CripTop Wallet</Link></li>
-                <li><Link to="/login" className='options'>Sobre Nós</Link></li>
-                <li><Link to="/login" className='options'>Ajuda</Link></li>
-                <li><Link to="/login" className='options'>Educação</Link></li>
-                <li><Link to="/login" className='options'>Transparência</Link></li>
+              <li><Link to="/dashboard" className='options'>Exchange</Link></li>
+                <li><Link to="/wallet" className='options'>CripTop Wallet</Link></li>
+                <li><Link to="/sobreOn" className='options'>Sobre Nós</Link></li>
+                <li><Link to="/ajudaTextOn" className='options'>Ajuda</Link></li>
+                <li><Link to="/educacaoOn" className='options'>Educação</Link></li>
+                <li><Link to="/transparenciaOn" className='options'>Transparência</Link></li>
               </ul>
             </li>
           </ul>
           <div class="header-first">
-            <Link to="/dashboard" className="header-item">
-              Compre Crypto
-            </Link>
-            <Link to="/dashboard" className="header-item">
-              Mercado
-            </Link>
-            <Link to="/" className="header-item">
-              NFT
-            </Link>
+            <Link to="/dashboard" className='header-item'>Compre Crypto</Link>
+            <Link to="/aprenderOn" className='header-item'>Mercado</Link>
+            <Link to="/nftOn" className='header-item'>NFT</Link>
           </div>
         </div>
         <div class="header-second">
@@ -68,13 +62,10 @@ function HeaderLogin() {
         <div class="menu-content-home">
           <div>
             <div class="menu-config-home">
-                  Trocar Nome
-            </div>
-            <div class="menu-config-home">
-                  Modo Noturno
+              <h4 onClick={ganhe1000Gratis}>GANHE R$1000</h4>
             </div>
             <div class="menu-config-home" onClick={logout}>
-                  Sair
+                Sair
             </div>
           </div>
         </div>
