@@ -107,7 +107,7 @@ export function LoginOn() {
       </section>
       <section class="card-main">
         <section class="card-tree">
-        <Link to="/historia">
+        <Link to="/historiaOn">
           <div class="card1">
               <img src={WomanBook} alt="mulher_com_livro"/>
               <h1>Conheça a história dos criptoativos</h1>
@@ -122,7 +122,7 @@ export function LoginOn() {
           </Link>
         </section>
         <section class="card-tree">
-        <Link to="/nft">
+        <Link to="/nftOn">
           <div class="card1">
               <img src={Neftguax} alt="neftGuax"/>
               <h1>Rentabilidade em NFT</h1>
@@ -137,7 +137,7 @@ export function LoginOn() {
           </Link>
         </section>
         <section class="card-tree">
-        <Link to="/aprender">
+        <Link to="/aprenderOn">
           <div class="card1">
               <img src={WomanTree} alt="mulher e arvore"/>
               <h1>Aprender para ganhar</h1>
@@ -279,9 +279,9 @@ export function LoginOn() {
           </div>
         </div>
         <div class="redes">
-          <a href="https://www.instagram.com/CrypTop_22/" target="_blank"><img src={Instagram} alt="logoinsta" /></a>
-          <a href="https://www.facebook.com/profile.php?id=100086384828388" target="_blank"><img src={Facebook} alt="logoface" /></a>
-          <a href="https://twitter.com/cryp_top2022" target="_blank"><img src={Twitter} alt="twitter" /></a>
+          <a href="https://www.instagram.com/CrypTop_22/" target="_blank" rel="noreferrer"><img src={Instagram} alt="logoinsta" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100086384828388" target="_blank" rel="noreferrer"><img src={Facebook} alt="logoface" /></a>
+          <a href="https://twitter.com/cryp_top2022" target="_blank" rel="noreferrer"><img src={Twitter} alt="twitter" /></a>
           </div>
       </div>
       <div class="footer2">
