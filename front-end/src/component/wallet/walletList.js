@@ -185,7 +185,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>{Coins[0].token}</li>
+              <li>{Coins[1].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores">
@@ -207,7 +207,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>{Coins[0].token}</li>
+              <li>{Coins[2].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores">
@@ -229,7 +229,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>{Coins[0].token}</li>
+              <li>{Coins[3].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores">
@@ -251,7 +251,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>{Coins[0].token}</li>
+              <li>{Coins[4].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores">
@@ -273,7 +273,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>{Coins[0].token}</li>
+              <li>{Coins[5].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores">
@@ -295,7 +295,7 @@ export const WalletList = () => {
           </div>
           <div class="walletMoedas-separadores borderRight">
             <ul class="walletColumn">
-              <li>{Coins[0].token}</li>
+              <li>{Coins[6].token}</li>
             </ul>
           </div>
           <div class="walletMoedas-separadores">
