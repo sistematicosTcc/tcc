@@ -34,7 +34,7 @@ function HeaderLogin() {
             <li>
               <img class="header-opt" src={OptDown} alt="logo" />
               <ul>
-              <li><Link to="/dashboard" className='options'>Exchange</Link></li>
+              <li><Link to="/dashboard" className='options'>Dashboard</Link></li>
                 <li><Link to="/wallet" className='options'>CripTop Wallet</Link></li>
                 <li><Link to="/sobreOn" className='options'>Sobre Nós</Link></li>
                 <li><Link to="/ajudaTextOn" className='options'>Ajuda</Link></li>
@@ -44,7 +44,7 @@ function HeaderLogin() {
             </li>
           </ul>
           <div class="header-first">
-            <Link to="/dashboard" className='header-item'>Compre Crypto</Link>
+            <Link to="/exchange" className='header-item'>Compre Crypto</Link>
             <Link to="/aprenderOn" className='header-item'>Mercado</Link>
             <Link to="/nftOn" className='header-item'>NFT</Link>
           </div>

@@ -27,7 +27,7 @@ function Header(){
             </li>
           </ul>
           <div class="header-first">
-            <Link to="/dashboard" className='header-item'>Compre Crypto</Link>
+            <Link to="/exchange" className='header-item'>Compre Crypto</Link>
             <Link to="/aprender" className='header-item'>Mercado</Link>
             <Link to="/nft" className='header-item'>NFT</Link>
           </div>
