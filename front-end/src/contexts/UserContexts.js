@@ -139,7 +139,7 @@ export function UserStorage({ children }) {
     valorEmReal,
     nomeToken,
   ) => {
-    const carteiraRealAtualizada = real + valorEmReal;
+    const carteiraRealAtualizada = real + parseFloat(valorEmReal);
 
     if (nomeToken === "BitCoin") {
       if (tokenBitCoin - valorEmToken < 0) {
