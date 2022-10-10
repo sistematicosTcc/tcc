@@ -35,7 +35,7 @@ export function LoginOn() {
               <span class="black-word">na</span>
               <b class="blue-word"> Cryptop</b>
             </h1>
-            <Link to="/cad">
+            <Link to="/dashboard">
               <button class="main-button">
                 Começar
               </button>
@@ -232,7 +232,7 @@ export function LoginOn() {
               </h3>
             </div>
             <section class="button-security">
-              <Link to="/cad">
+              <Link to="/dashboard">
                 <button class="main-button">
                   Começar
                 </button>
@@ -250,31 +250,31 @@ export function LoginOn() {
             <div class="support">
               <ul>
                 <li> <b> Sobre nós </b></li>
-                <li><Link to="/sobre" className='options'>Quem somos</Link></li>
+                <li><Link to="/sobreOn" className='options'>Quem somos</Link></li>
               </ul>
             </div>
           </div>
           <div class="support">
             <ul>
               <li> <b> Ajuda </b></li>
-              <li><Link to="/ajudaText" className='options'>Começar a investir</Link></li>
-              <li><Link to="/ajudaText" className='options'>Criar carteira de crypto</Link></li>
+              <li><Link to="/ajudaTextOn" className='options'>Começar a investir</Link></li>
+              <li><Link to="/ajudaTextOn" className='options'>Criar carteira de crypto</Link></li>
             </ul>
           </div>
           <div class="support">
             <ul>
               <li> <b> Educação </b></li>
-              <li><Link to="/educacao" className='options'>O que é Bitcoin?</Link></li>
-              <li><Link to="/educacao" className='options'>O que é Blockchain?</Link></li>
-              <li><Link to="/educacao" className='options'>O que é Ethereum?</Link></li>
-              <li><Link to="/educacao" className='options'>O que é Litecoin?</Link></li>
+              <li><Link to="/educacaoOn" className='options'>O que é Bitcoin?</Link></li>
+              <li><Link to="/educacaoOn" className='options'>O que é Blockchain?</Link></li>
+              <li><Link to="/educacaoOn" className='options'>O que é Ethereum?</Link></li>
+              <li><Link to="/educacaoOn" className='options'>O que é Litecoin?</Link></li>
             </ul>
           </div>
           <div class="support">
             <ul>
               <li> <b> Transparência </b></li>
-              <li><Link to="/transparencia" className='options'>Termos de Uso</Link></li>
-              <li><Link to="/transparencia" className='options'>Políticas de privacidade</Link></li>
+              <li><Link to="/transparenciaOn" className='options'>Termos de Uso</Link></li>
+              <li><Link to="/transparenciaOn" className='options'>Políticas de privacidade</Link></li>
             </ul>
           </div>
         </div>
